@@ -1,4 +1,6 @@
-﻿namespace ProjetoSebo.telas
+﻿using ProjetoSebo.views;
+
+namespace ProjetoSebo.telas
 {
     partial class Login
     {
@@ -37,17 +39,13 @@
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.pnlTitulo = new TituloPanel(this);
+            
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lblPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblUser)).BeginInit();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.pnlTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMain
@@ -137,54 +135,8 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFechar.FlatAppearance.BorderSize = 0;
-            this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.ForeColor = System.Drawing.Color.White;
-            this.btnFechar.Location = new System.Drawing.Point(320, 0);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(30, 30);
-            this.btnFechar.TabIndex = 1;
-            this.btnFechar.Text = "X";
-            this.btnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(45, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Login";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pnlTitulo
-            // 
-            this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(52)))), ((int)(((byte)(58)))));
-            this.pnlTitulo.Controls.Add(this.pictureBox2);
-            this.pnlTitulo.Controls.Add(this.label1);
-            this.pnlTitulo.Controls.Add(this.btnFechar);
-            this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(350, 30);
-            this.pnlTitulo.TabIndex = 0;
+           
+            
             // 
             // Login
             // 
@@ -204,7 +156,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lblUser)).EndInit();
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             this.ResumeLayout(false);
@@ -212,6 +163,7 @@
         }
 
         #endregion
+        private TituloPanel pnlTitulo;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtUser;
@@ -220,9 +172,5 @@
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel pnlTitulo;
     }
 }
