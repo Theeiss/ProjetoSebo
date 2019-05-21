@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoSebo", "ProjetoSebo.csproj", "{096CC707-30D5-490F-A860-2B2DBBBF89F8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLScripts", "SQLScripts", "{BA4F4859-3000-4901-B52F-2FD727C03571}"
+	ProjectSection(SolutionItems) = preProject
+		SQLScripts\create_schema.sql = SQLScripts\create_schema.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
