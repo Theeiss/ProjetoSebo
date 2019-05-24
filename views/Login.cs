@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoSebo.views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,12 @@ namespace ProjetoSebo.telas
 
         private void Login_Load(object sender, EventArgs e)
         {
+            pnlTitulo.ExibirBotoes(TituloPanel.Botoes.Fechar);
+        }
 
+        private void BtnEntrar_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
