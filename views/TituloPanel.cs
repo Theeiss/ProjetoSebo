@@ -13,9 +13,9 @@ namespace ProjetoSebo.views
 
     public TituloPanel(Form tela)
         {
-            InitializeComponent();
-
             _tela = tela;
+
+            InitializeComponent();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)

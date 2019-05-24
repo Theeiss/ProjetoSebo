@@ -30,17 +30,22 @@ namespace ProjetoSebo.telas
         /// </summary>
         private void InitializeComponent()
         {
+            //
+            //this
+            //
+            this.Name = "Login";
+            this.Text = "Login";
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.PictureBox();
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.btnEntrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlTitulo = new TituloPanel(this);
-            
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lblPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblUser)).BeginInit();
@@ -62,6 +67,19 @@ namespace ProjetoSebo.telas
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(350, 350);
             this.pnlMain.TabIndex = 1;
+            // 
+            // btnEntrar
+            // 
+            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.btnEntrar.FlatAppearance.BorderSize = 0;
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.Location = new System.Drawing.Point(120, 262);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(120, 35);
+            this.btnEntrar.TabIndex = 5;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = false;
             // 
             // txtSenha
             // 
@@ -113,19 +131,6 @@ namespace ProjetoSebo.telas
             this.pnlLogo.Size = new System.Drawing.Size(350, 120);
             this.pnlLogo.TabIndex = 2;
             // 
-            // btnEntrar
-            // 
-            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.btnEntrar.FlatAppearance.BorderSize = 0;
-            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(120, 262);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(120, 35);
-            this.btnEntrar.TabIndex = 5;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -135,8 +140,14 @@ namespace ProjetoSebo.telas
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-           
-            
+            // 
+            // pnlTitulo
+            // 
+            this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(52)))), ((int)(((byte)(58)))));
+            this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitulo.Name = "pnlTitulo";
+            this.pnlTitulo.Size = new System.Drawing.Size(350, 30);
+            this.pnlTitulo.TabIndex = 0;
             // 
             // Login
             // 
@@ -147,8 +158,6 @@ namespace ProjetoSebo.telas
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
-            this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
@@ -156,8 +165,6 @@ namespace ProjetoSebo.telas
             ((System.ComponentModel.ISupportInitialize)(this.lblUser)).EndInit();
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlTitulo.ResumeLayout(false);
-            this.pnlTitulo.PerformLayout();
             this.ResumeLayout(false);
 
         }

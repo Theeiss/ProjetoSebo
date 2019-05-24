@@ -1,9 +1,5 @@
 ﻿using ProjetoSebo.telas;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace ProjetoSebo.views
@@ -11,6 +7,11 @@ namespace ProjetoSebo.views
     partial class TituloPanel : Panel
     {
         private System.ComponentModel.IContainer components = null;
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int msg, int wparam, int lparam);
 
         protected override void Dispose(bool disposing)
         {
@@ -21,9 +22,18 @@ namespace ProjetoSebo.views
             base.Dispose(disposing);
         }
 
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(_tela.Handle, 0x112, 0xf012, 0);
+
+            base.OnMouseDown(e);
+        }
+
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager();
+            //resources.ResourceSetType
 
             this.btnFechar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -35,7 +45,7 @@ namespace ProjetoSebo.views
             // 
             // imgLogoTitulo
             // 
-            this.imgLogoTitulo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            //this.imgLogoTitulo.ImageLocation = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.imgLogoTitulo.Location = new System.Drawing.Point(1, 0);
             this.imgLogoTitulo.Name = "pictureBox2";
             this.imgLogoTitulo.Size = new System.Drawing.Size(30, 30);
@@ -53,7 +63,7 @@ namespace ProjetoSebo.views
             this.lblTitulo.Name = "label1";
             this.lblTitulo.Size = new System.Drawing.Size(52, 21);
             this.lblTitulo.TabIndex = 2;
-            this.lblTitulo.Text = "Login";
+            this.lblTitulo.Text = this._tela.Text;
 
             // 
             // btnFechar
