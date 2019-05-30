@@ -1,4 +1,6 @@
-﻿using ProjetoSebo.views;
+﻿using ProjetoSebo.dao;
+using ProjetoSebo.model;
+using ProjetoSebo.views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +15,11 @@ namespace ProjetoSebo.telas
 {
     public partial class Login : Form
     {
-        public Login()
+        private readonly SeboContext _context;
+        public Login(SeboContext context)
         {
+            _context = context;
+
             InitializeComponent();
         }
 
@@ -25,7 +30,32 @@ namespace ProjetoSebo.telas
 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
-           
+            string login = txtUser.Text;
+            string senha = txtSenha.Text;
+
+            IQueryable<Usuario> resultado = _context.Usuarios.Where(usuario => usuario.Login == login)
+                 .Where(usuario => usuario.Senha == senha)
+                 .Select(usuario => usuario);
+
+            if(resultado.GetEnumerator().MoveNext())
+            {
+                MessageBox.Show("Achou filha da puta");
+            }
+            else
+            {
+                MessageBox.Show("Que pena! Você perdeu.");
+            }
+
+            //foreach (Usuario usuario in _context.Usuarios)
+            //{
+            //    if(usuario.Login == login && usuario.Senha == senha)
+            //    {
+            //        MessageBox.Show("Achou filha da puta");
+            //        return;
+            //    }
+            //}
+
+            //MessageBox.Show("Que pena! Você perdeu.");
         }
     }
 }
