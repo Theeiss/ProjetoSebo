@@ -57,7 +57,7 @@ namespace ProjetoSebo.views
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
             this.lblTitulo.Location = new System.Drawing.Point(45, 3);
             this.lblTitulo.Name = "label1";
             this.lblTitulo.Size = new System.Drawing.Size(52, 21);
@@ -71,7 +71,7 @@ namespace ProjetoSebo.views
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.ForeColor = System.Drawing.Color.White;
+            this.btnFechar.ForeColor = System.Drawing.Color.Black;
             this.btnFechar.Location = new System.Drawing.Point(320, 0);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(30, 30);
@@ -88,7 +88,7 @@ namespace ProjetoSebo.views
             this.btnMinimizar.FlatAppearance.BorderSize = 0;
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
+            this.btnMinimizar.ForeColor = System.Drawing.Color.Black;
             this.btnMinimizar.Location = new System.Drawing.Point(260, 0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(30, 30);
@@ -105,7 +105,7 @@ namespace ProjetoSebo.views
             this.btnMaximizar.FlatAppearance.BorderSize = 0;
             this.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximizar.ForeColor = System.Drawing.Color.White;
+            this.btnMaximizar.ForeColor = System.Drawing.Color.Black;
             this.btnMaximizar.Location = new System.Drawing.Point(290, 0);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(30, 30);
@@ -122,7 +122,7 @@ namespace ProjetoSebo.views
             this.btnRestaurar.FlatAppearance.BorderSize = 0;
             this.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestaurar.ForeColor = System.Drawing.Color.White;
+            this.btnRestaurar.ForeColor = System.Drawing.Color.Black;
             this.btnRestaurar.Location = new System.Drawing.Point(290, 0);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(30, 30);

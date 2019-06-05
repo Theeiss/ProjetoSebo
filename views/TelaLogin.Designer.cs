@@ -2,7 +2,7 @@
 
 namespace ProjetoSebo.telas
 {
-    partial class Login
+    partial class TelaLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,11 @@ namespace ProjetoSebo.telas
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLogin));
             this.pnlMain = new System.Windows.Forms.Panel();
             this.btnEntrar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.PictureBox();
@@ -53,8 +55,10 @@ namespace ProjetoSebo.telas
             // 
             this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(52)))), ((int)(((byte)(58)))));
+            this.pnlMain.BackColor = System.Drawing.Color.LightGray;
             this.pnlMain.Controls.Add(this.btnEntrar);
+            this.pnlMain.Controls.Add(this.panel2);
+            this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.txtSenha);
             this.pnlMain.Controls.Add(this.txtUser);
             this.pnlMain.Controls.Add(this.lblPassword);
@@ -66,43 +70,65 @@ namespace ProjetoSebo.telas
             // 
             // btnEntrar
             // 
-            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.FlatAppearance.BorderSize = 0;
+            this.btnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(120, 262);
+            this.btnEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEntrar.Location = new System.Drawing.Point(78, 239);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(120, 35);
-            this.btnEntrar.TabIndex = 5;
+            this.btnEntrar.Size = new System.Drawing.Size(200, 50);
+            this.btnEntrar.TabIndex = 8;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(42, 173);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(270, 1);
+            this.panel2.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(40, 74);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(270, 1);
+            this.panel1.TabIndex = 6;
+            // 
             // txtSenha
             // 
-            this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtSenha.BackColor = System.Drawing.Color.LightGray;
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(91, 92);
+            this.txtSenha.Location = new System.Drawing.Point(78, 145);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(219, 22);
+            this.txtSenha.Size = new System.Drawing.Size(200, 22);
             this.txtSenha.TabIndex = 4;
+            this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
             // txtUser
             // 
-            this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtUser.BackColor = System.Drawing.Color.LightGray;
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(91, 46);
+            this.txtUser.Location = new System.Drawing.Point(78, 46);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(219, 22);
+            this.txtUser.Size = new System.Drawing.Size(200, 22);
             this.txtUser.TabIndex = 3;
+            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblPassword
             // 
             this.lblPassword.Image = ((System.Drawing.Image)(resources.GetObject("lblPassword.Image")));
-            this.lblPassword.Location = new System.Drawing.Point(42, 84);
+            this.lblPassword.Location = new System.Drawing.Point(42, 137);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(30, 30);
             this.lblPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -124,7 +150,7 @@ namespace ProjetoSebo.telas
             this.pnlLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(52)))), ((int)(((byte)(58)))));
+            this.pnlLogo.BackColor = System.Drawing.Color.LightGray;
             this.pnlLogo.Controls.Add(this.pictureBox1);
             this.pnlLogo.Location = new System.Drawing.Point(0, 30);
             this.pnlLogo.Name = "pnlLogo";
@@ -134,7 +160,7 @@ namespace ProjetoSebo.telas
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(120, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(117, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(120, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -146,13 +172,13 @@ namespace ProjetoSebo.telas
             this.pnlTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(52)))), ((int)(((byte)(58)))));
+            this.pnlTitulo.BackColor = System.Drawing.Color.LightGray;
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(350, 30);
             this.pnlTitulo.TabIndex = 0;
             // 
-            // Login
+            // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -161,7 +187,8 @@ namespace ProjetoSebo.telas
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
+            this.Name = "TelaLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.pnlMain.ResumeLayout(false);
@@ -181,8 +208,10 @@ namespace ProjetoSebo.telas
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.PictureBox lblPassword;
         private System.Windows.Forms.PictureBox lblUser;
-        private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnEntrar;
     }
 }

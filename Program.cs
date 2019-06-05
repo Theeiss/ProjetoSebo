@@ -14,9 +14,6 @@ namespace ProjetoSebo
     {
         private static SeboContext _context;
 
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
@@ -26,7 +23,7 @@ namespace ProjetoSebo
             _context = new SeboContext();
             _context.Database.Initialize(true);
 
-            Application.Run(new Login(_context));
+            Application.Run(new TelaLogin(_context));
         }
     }
 }

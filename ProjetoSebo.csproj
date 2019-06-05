@@ -89,17 +89,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GlobalResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="views\TelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\TelaPrincipal.Designer.cs">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\TituloPanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="views\TituloPanel.Designer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\Login.cs">
+    <Compile Include="views\TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="views\TelaLogin.Designer.cs">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,8 +120,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GlobalResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="views\TelaLogin.resx">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\TelaPrincipal.resx">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -132,9 +141,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\compra.png" />
+    <Content Include="images\doacoes.png" />
     <Content Include="images\keys.png" />
+    <Content Include="images\livro.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\logoff.png" />
+    <Content Include="images\menu.png" />
+    <Content Include="images\produtos.png" />
+    <Content Include="images\relatorios.png" />
     <Content Include="images\user.png" />
+    <Content Include="images\usuarios.png" />
+    <Content Include="images\venda.png" />
     <Content Include="MySql.Data.dll" />
     <None Include="Resources\Logo.png" />
   </ItemGroup>
