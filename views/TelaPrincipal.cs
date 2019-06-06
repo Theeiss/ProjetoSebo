@@ -10,11 +10,16 @@ namespace ProjetoSebo.views
     {
         private readonly SeboContext _context;
 
+        const int TAM_MENU_MINIMIZADO = 70;
+        const int TAM_MENU_MAXIMIZADO = 250;
+
         public TelaPrincipal(SeboContext context)
         {
             this._context = context;
 
             InitializeComponent();
+
+            this.pnlMenuLateral.Width = TAM_MENU_MINIMIZADO;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -24,42 +29,42 @@ namespace ProjetoSebo.views
 
         private void BtnMenu_Click(object sender, EventArgs e)
         {
-            if(this.pnlMenuLateral.Width == 250)
+            if(this.pnlMenuLateral.Width == TAM_MENU_MAXIMIZADO)
             {
-                this.pnlMenuLateral.Width = 70;
+                this.pnlMenuLateral.Width = TAM_MENU_MINIMIZADO;
             }
             else
             {
-                this.pnlMenuLateral.Width = 250;
+                this.pnlMenuLateral.Width = TAM_MENU_MAXIMIZADO;
             }
         }
 
-        private void BtnFechar_Click_1(object sender, EventArgs e)
+        private void BtnFechar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Environment.Exit(0);
         }
 
-        private void BtnMaximizar_Click_1(object sender, EventArgs e)
+        private void BtnMaximizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             this.btnMaximizar.Visible = false;
             this.btnRestaurar.Visible = true;
         }
-        private void BtnRestaurar_Click_1(object sender, EventArgs e)
+        private void BtnRestaurar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
             this.btnRestaurar.Visible = false;
             this.btnMaximizar.Visible = true;
         }
 
-        private void BtnMinimizar_Click_1(object sender, EventArgs e)
+        private void BtnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
         private void BtnSair_Click(object sender, EventArgs e)
         {
-            new TelaLogin(this._context).ShowDialog();
+            this.Hide();
         }
 
         private void PnlBarraTitulo_MouseDown(object sender, MouseEventArgs e)

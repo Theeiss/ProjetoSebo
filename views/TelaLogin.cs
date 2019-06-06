@@ -46,8 +46,9 @@ namespace ProjetoSebo.telas
             //    MessageBox.Show("Que pena! Você perdeu.");
             //}
 
+            this.Hide();
             new TelaPrincipal(_context).ShowDialog();
-            this.Close();
+            this.Show();
         }
     }
 }

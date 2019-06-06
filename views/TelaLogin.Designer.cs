@@ -40,16 +40,13 @@ namespace ProjetoSebo.telas
             this.lblPassword = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.PictureBox();
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblNomeSistema = new System.Windows.Forms.Label();
+            this.pnlTitulo = new TituloPanel(this);
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lblPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblUser)).BeginInit();
             this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-
-            this.pnlTitulo = new TituloPanel(this);
-
             // 
             // pnlMain
             // 
@@ -70,18 +67,18 @@ namespace ProjetoSebo.telas
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
             this.panel2.Location = new System.Drawing.Point(78, 134);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(232, 1);
+            this.panel2.Size = new System.Drawing.Size(207, 1);
             this.panel2.TabIndex = 10;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
             this.panel1.Location = new System.Drawing.Point(78, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(232, 1);
+            this.panel1.Size = new System.Drawing.Size(208, 1);
             this.panel1.TabIndex = 9;
             // 
             // btnEntrar
@@ -89,9 +86,12 @@ namespace ProjetoSebo.telas
             this.btnEntrar.BackColor = System.Drawing.Color.White;
             this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.FlatAppearance.BorderSize = 0;
+            this.btnEntrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnEntrar.Image = global::ProjetoSebo.Properties.Resources.enviar;
             this.btnEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntrar.Location = new System.Drawing.Point(78, 202);
             this.btnEntrar.Name = "btnEntrar";
@@ -108,7 +108,7 @@ namespace ProjetoSebo.telas
             this.txtSenha.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(78, 106);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(231, 22);
+            this.txtSenha.Size = new System.Drawing.Size(208, 22);
             this.txtSenha.TabIndex = 4;
             this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSenha.UseSystemPasswordChar = true;
@@ -120,7 +120,7 @@ namespace ProjetoSebo.telas
             this.txtUser.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(78, 56);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(231, 22);
+            this.txtUser.Size = new System.Drawing.Size(208, 22);
             this.txtUser.TabIndex = 3;
             this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -136,7 +136,7 @@ namespace ProjetoSebo.telas
             // 
             // lblUser
             // 
-            this.lblUser.Image = ((System.Drawing.Image)(resources.GetObject("lblUser.Image")));
+            this.lblUser.Image = global::ProjetoSebo.Properties.Resources.usuario_login;
             this.lblUser.Location = new System.Drawing.Point(42, 55);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(30, 30);
@@ -150,21 +150,22 @@ namespace ProjetoSebo.telas
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlLogo.BackColor = System.Drawing.Color.White;
-            this.pnlLogo.Controls.Add(this.pictureBox1);
+            this.pnlLogo.Controls.Add(this.lblNomeSistema);
             this.pnlLogo.Location = new System.Drawing.Point(0, 30);
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(350, 120);
             this.pnlLogo.TabIndex = 2;
             // 
-            // pictureBox1
+            // lblNomeSistema
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(117, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.lblNomeSistema.AutoSize = true;
+            this.lblNomeSistema.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeSistema.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblNomeSistema.Location = new System.Drawing.Point(104, 46);
+            this.lblNomeSistema.Name = "lblNomeSistema";
+            this.lblNomeSistema.Size = new System.Drawing.Size(148, 28);
+            this.lblNomeSistema.TabIndex = 0;
+            this.lblNomeSistema.Text = "Sistema Sebo";
             // 
             // pnlTitulo
             // 
@@ -195,22 +196,22 @@ namespace ProjetoSebo.telas
             ((System.ComponentModel.ISupportInitialize)(this.lblPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblUser)).EndInit();
             this.pnlLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlLogo.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private TituloPanel pnlTitulo;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.PictureBox lblPassword;
         private System.Windows.Forms.PictureBox lblUser;
         private System.Windows.Forms.Panel pnlLogo;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private TituloPanel pnlTitulo;
+        private System.Windows.Forms.Label lblNomeSistema;
     }
 }
