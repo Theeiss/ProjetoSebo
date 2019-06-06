@@ -148,6 +148,7 @@
     <Content Include="images\logo.png" />
     <Content Include="images\logoff.png" />
     <Content Include="images\menu.png" />
+    <Content Include="images\preferencias.png" />
     <Content Include="images\produtos.png" />
     <Content Include="images\relatorios.png" />
     <Content Include="images\user.png" />
