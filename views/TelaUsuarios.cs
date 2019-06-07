@@ -1,29 +1,25 @@
 ﻿using ProjetoSebo.dao;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoSebo.views
 {
     public partial class TelaUsuarios : Form
     {
-        private SeboContext _context;
+        public Form TelaSelecionada { get; private set; }
+
+        private readonly SeboContext _context;
         public TelaUsuarios(SeboContext context)
         {
-            _context = context;
+            this._context = context;
 
             InitializeComponent();
         }
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
-
+            TelaSelecionada = new TelaUsuariosCadastro(this._context);
+            MessageBox.Show("Abrir tela de usuários - cadastro.");
         }
     }
 }

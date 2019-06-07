@@ -121,17 +121,17 @@
   <data name="preferencias" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\preferencias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuario_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\usuario_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="salvar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\salvar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="relatorios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\relatorios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doacoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\doacoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="usuario_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\usuario_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="enviar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\enviar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="senha_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\senha_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="produtos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\produtos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,14 +139,23 @@
   <data name="line" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\line.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="enviar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\enviar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="livro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\livro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="doacoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\doacoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="venda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\venda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="foto_usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\foto_usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logoff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\logoff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,7 +166,7 @@
   <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="senha_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\senha_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="voltar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\voltar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
