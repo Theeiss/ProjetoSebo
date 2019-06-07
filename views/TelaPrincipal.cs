@@ -72,5 +72,24 @@ namespace ProjetoSebo.views
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void BtnUsuarios_Click(object sender, EventArgs e)
+        {
+            TelaUsuarios telaUsuarios = new TelaUsuarios(_context);
+            AbrirTelaInterna(telaUsuarios);
+        }
+
+        private void AbrirTelaInterna(object telaInterna)
+        {
+            if (this.pnlPrincipal.Controls.Count > 0)
+                this.pnlPrincipal.Controls.RemoveAt(0);
+
+            Form nova = telaInterna as Form;
+            nova.TopLevel = false;
+            nova.Dock = DockStyle.Fill;
+            this.pnlPrincipal.Controls.Add(nova);
+            this.pnlPrincipal.Tag = nova;
+            nova.Show();
+        }
     }
 }

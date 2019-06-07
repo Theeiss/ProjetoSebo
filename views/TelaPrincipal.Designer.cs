@@ -31,11 +31,11 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
             this.lblNomeSistema = new System.Windows.Forms.Label();
+            this.imgLogoSistema = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
             this.btnPreferencias = new System.Windows.Forms.Button();
             this.btnRelatorios = new System.Windows.Forms.Button();
@@ -46,12 +46,12 @@
             this.btnProdutos = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.PictureBox();
-            this.imgLogoSistema = new System.Windows.Forms.PictureBox();
+            this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.pnlBarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogoSistema)).BeginInit();
             this.pnlMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLogoSistema)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBarraTitulo
@@ -80,6 +80,16 @@
             this.lblNomeSistema.Size = new System.Drawing.Size(153, 19);
             this.lblNomeSistema.TabIndex = 3;
             this.lblNomeSistema.Text = "Nome Do Meu Sistema";
+            // 
+            // imgLogoSistema
+            // 
+            this.imgLogoSistema.Image = global::ProjetoSebo.Properties.Resources.line;
+            this.imgLogoSistema.Location = new System.Drawing.Point(3, 4);
+            this.imgLogoSistema.Name = "imgLogoSistema";
+            this.imgLogoSistema.Size = new System.Drawing.Size(40, 40);
+            this.imgLogoSistema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgLogoSistema.TabIndex = 2;
+            this.imgLogoSistema.TabStop = false;
             // 
             // btnRestaurar
             // 
@@ -141,15 +151,6 @@
             this.btnFechar.Text = "X";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
-            // 
-            // pnlPrincipal
-            // 
-            this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPrincipal.Location = new System.Drawing.Point(0, 50);
-            this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(900, 650);
-            this.pnlPrincipal.TabIndex = 2;
             // 
             // pnlMenuLateral
             // 
@@ -222,6 +223,7 @@
             this.btnUsuarios.TabIndex = 3;
             this.btnUsuarios.Text = "Usuários";
             this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.BtnUsuarios_Click);
             // 
             // btnDoações
             // 
@@ -321,23 +323,22 @@
             this.btnMenu.TabStop = false;
             this.btnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
             // 
-            // imgLogoSistema
+            // pnlPrincipal
             // 
-            this.imgLogoSistema.Image = global::ProjetoSebo.Properties.Resources.line;
-            this.imgLogoSistema.Location = new System.Drawing.Point(3, 4);
-            this.imgLogoSistema.Name = "imgLogoSistema";
-            this.imgLogoSistema.Size = new System.Drawing.Size(40, 40);
-            this.imgLogoSistema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgLogoSistema.TabIndex = 2;
-            this.imgLogoSistema.TabStop = false;
+            this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPrincipal.Location = new System.Drawing.Point(250, 50);
+            this.pnlPrincipal.Name = "pnlPrincipal";
+            this.pnlPrincipal.Size = new System.Drawing.Size(650, 650);
+            this.pnlPrincipal.TabIndex = 4;
             // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 700);
-            this.Controls.Add(this.pnlMenuLateral);
             this.Controls.Add(this.pnlPrincipal);
+            this.Controls.Add(this.pnlMenuLateral);
             this.Controls.Add(this.pnlBarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaPrincipal";
@@ -345,10 +346,10 @@
             this.Text = "TelaPrincipal";
             this.pnlBarraTitulo.ResumeLayout(false);
             this.pnlBarraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogoSistema)).EndInit();
             this.pnlMenuLateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLogoSistema)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -357,7 +358,6 @@
 
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel pnlBarraTitulo;
-        private System.Windows.Forms.Panel pnlPrincipal;
         private System.Windows.Forms.Button btnRestaurar;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
@@ -374,5 +374,6 @@
         private System.Windows.Forms.PictureBox btnMenu;
         private System.Windows.Forms.PictureBox imgLogoSistema;
         private System.Windows.Forms.Label lblNomeSistema;
+        private System.Windows.Forms.Panel pnlPrincipal;
     }
 }

@@ -100,6 +100,18 @@
     <Compile Include="views\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\TelaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\TelaUsuarios.Designer.cs">
+      <DependentUpon>TelaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\TelaUsuariosCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\TelaUsuariosCadastro.Designer.cs">
+      <DependentUpon>TelaUsuariosCadastro.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\TituloPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -126,6 +138,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\TelaUsuarios.resx">
+      <DependentUpon>TelaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\TelaUsuariosCadastro.resx">
+      <DependentUpon>TelaUsuariosCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
