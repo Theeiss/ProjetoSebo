@@ -1,5 +1,6 @@
 ﻿using ProjetoSebo.dao;
 using ProjetoSebo.telas;
+using ProjetoSebo.views.telas_finais;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -75,17 +76,8 @@ namespace ProjetoSebo.views
 
         private void BtnUsuarios_Click(object sender, EventArgs e)
         {
-            TelaUsuarios telaUsuarios = new TelaUsuarios(_context);
-            do
-            {
-                AbrirTelaInterna(telaUsuarios);
-
-                if (telaUsuarios.TelaSelecionada != null)
-                {
-                    AbrirTelaInterna(telaUsuarios.TelaSelecionada);
-                }
-            }
-            while (telaUsuarios.TelaSelecionada != null);
+            TelaUsuarios telaUsuariosCadastro = new TelaUsuarios(_context);
+            AbrirTelaInterna(telaUsuariosCadastro);
         }
 
         private void AbrirTelaInterna(object telaInterna)
@@ -99,6 +91,12 @@ namespace ProjetoSebo.views
             this.pnlPrincipal.Controls.Add(nova);
             this.pnlPrincipal.Tag = nova;
             nova.Show();
+        }
+
+        private void BtnVendas_Click(object sender, EventArgs e)
+        {
+            TelaVendas telaVendas = new TelaVendas();
+            AbrirTelaInterna(telaVendas);
         }
     }
 }

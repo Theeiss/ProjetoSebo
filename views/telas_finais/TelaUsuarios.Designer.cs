@@ -30,26 +30,26 @@
         {
             this.pnlDireita = new System.Windows.Forms.Panel();
             this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlInferior = new System.Windows.Forms.Panel();
             this.pnlCentral = new System.Windows.Forms.Panel();
+            this.lblIdentificacaoTela = new System.Windows.Forms.Label();
+            this.pnlLinhaConfirmarSenha = new System.Windows.Forms.Panel();
+            this.pnlLinhaSenha = new System.Windows.Forms.Panel();
+            this.pnlLinhaLogin = new System.Windows.Forms.Panel();
+            this.imgFoto = new System.Windows.Forms.PictureBox();
             this.lblConfirmarSenha = new System.Windows.Forms.Label();
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
-            this.imgFoto = new System.Windows.Forms.PictureBox();
             this.btnEntrar = new System.Windows.Forms.Button();
-            this.btnVoltar = new System.Windows.Forms.PictureBox();
-            this.pnlLinhaLogin = new System.Windows.Forms.Panel();
-            this.pnlLinhaSenha = new System.Windows.Forms.Panel();
-            this.pnlLinhaConfirmarSenha = new System.Windows.Forms.Panel();
-            this.lblIdentificacaoTela = new System.Windows.Forms.Label();
             this.pnlSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.pnlCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgFoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDireita
@@ -68,6 +68,17 @@
             this.pnlSuperior.Name = "pnlSuperior";
             this.pnlSuperior.Size = new System.Drawing.Size(800, 80);
             this.pnlSuperior.TabIndex = 1;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Image = global::ProjetoSebo.Properties.Resources.voltar;
+            this.btnVoltar.Location = new System.Drawing.Point(16, 15);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(32, 32);
+            this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnVoltar.TabIndex = 0;
+            this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // pnlEsquerda
             // 
@@ -106,6 +117,55 @@
             this.pnlCentral.Size = new System.Drawing.Size(700, 490);
             this.pnlCentral.TabIndex = 4;
             // 
+            // lblIdentificacaoTela
+            // 
+            this.lblIdentificacaoTela.AutoSize = true;
+            this.lblIdentificacaoTela.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdentificacaoTela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblIdentificacaoTela.Location = new System.Drawing.Point(40, 23);
+            this.lblIdentificacaoTela.Name = "lblIdentificacaoTela";
+            this.lblIdentificacaoTela.Size = new System.Drawing.Size(112, 31);
+            this.lblIdentificacaoTela.TabIndex = 21;
+            this.lblIdentificacaoTela.Text = "Usuários";
+            // 
+            // pnlLinhaConfirmarSenha
+            // 
+            this.pnlLinhaConfirmarSenha.BackColor = System.Drawing.Color.DarkGray;
+            this.pnlLinhaConfirmarSenha.Location = new System.Drawing.Point(190, 245);
+            this.pnlLinhaConfirmarSenha.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.pnlLinhaConfirmarSenha.Name = "pnlLinhaConfirmarSenha";
+            this.pnlLinhaConfirmarSenha.Size = new System.Drawing.Size(212, 2);
+            this.pnlLinhaConfirmarSenha.TabIndex = 20;
+            // 
+            // pnlLinhaSenha
+            // 
+            this.pnlLinhaSenha.BackColor = System.Drawing.Color.DarkGray;
+            this.pnlLinhaSenha.Location = new System.Drawing.Point(190, 191);
+            this.pnlLinhaSenha.Name = "pnlLinhaSenha";
+            this.pnlLinhaSenha.Size = new System.Drawing.Size(212, 2);
+            this.pnlLinhaSenha.TabIndex = 19;
+            // 
+            // pnlLinhaLogin
+            // 
+            this.pnlLinhaLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlLinhaLogin.BackColor = System.Drawing.Color.DarkGray;
+            this.pnlLinhaLogin.Location = new System.Drawing.Point(191, 138);
+            this.pnlLinhaLogin.Name = "pnlLinhaLogin";
+            this.pnlLinhaLogin.Size = new System.Drawing.Size(467, 2);
+            this.pnlLinhaLogin.TabIndex = 18;
+            // 
+            // imgFoto
+            // 
+            this.imgFoto.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.imgFoto.Image = global::ProjetoSebo.Properties.Resources.foto_usuario;
+            this.imgFoto.Location = new System.Drawing.Point(538, 165);
+            this.imgFoto.Name = "imgFoto";
+            this.imgFoto.Size = new System.Drawing.Size(120, 160);
+            this.imgFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFoto.TabIndex = 17;
+            this.imgFoto.TabStop = false;
+            // 
             // lblConfirmarSenha
             // 
             this.lblConfirmarSenha.AutoSize = true;
@@ -130,7 +190,7 @@
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(40, 176);
+            this.lblSenha.Location = new System.Drawing.Point(122, 172);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(57, 21);
             this.lblSenha.TabIndex = 14;
@@ -150,7 +210,7 @@
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(40, 123);
+            this.lblLogin.Location = new System.Drawing.Point(127, 119);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(52, 21);
             this.lblLogin.TabIndex = 12;
@@ -167,25 +227,14 @@
             this.txtLogin.Size = new System.Drawing.Size(468, 22);
             this.txtLogin.TabIndex = 11;
             // 
-            // imgFoto
-            // 
-            this.imgFoto.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.imgFoto.Image = global::ProjetoSebo.Properties.Resources.foto_usuario;
-            this.imgFoto.Location = new System.Drawing.Point(538, 165);
-            this.imgFoto.Name = "imgFoto";
-            this.imgFoto.Size = new System.Drawing.Size(120, 160);
-            this.imgFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgFoto.TabIndex = 17;
-            this.imgFoto.TabStop = false;
-            // 
             // btnEntrar
             // 
             this.btnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.FlatAppearance.BorderSize = 0;
-            this.btnEntrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnEntrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
+            this.btnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
@@ -197,55 +246,6 @@
             this.btnEntrar.TabIndex = 10;
             this.btnEntrar.Text = "Gravar";
             this.btnEntrar.UseVisualStyleBackColor = false;
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Image = global::ProjetoSebo.Properties.Resources.voltar;
-            this.btnVoltar.Location = new System.Drawing.Point(16, 15);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(32, 32);
-            this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnVoltar.TabIndex = 0;
-            this.btnVoltar.TabStop = false;
-            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
-            // 
-            // pnlLinhaLogin
-            // 
-            this.pnlLinhaLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlLinhaLogin.BackColor = System.Drawing.Color.Black;
-            this.pnlLinhaLogin.Location = new System.Drawing.Point(191, 138);
-            this.pnlLinhaLogin.Name = "pnlLinhaLogin";
-            this.pnlLinhaLogin.Size = new System.Drawing.Size(467, 2);
-            this.pnlLinhaLogin.TabIndex = 18;
-            // 
-            // pnlLinhaSenha
-            // 
-            this.pnlLinhaSenha.BackColor = System.Drawing.Color.Black;
-            this.pnlLinhaSenha.Location = new System.Drawing.Point(190, 191);
-            this.pnlLinhaSenha.Name = "pnlLinhaSenha";
-            this.pnlLinhaSenha.Size = new System.Drawing.Size(212, 2);
-            this.pnlLinhaSenha.TabIndex = 19;
-            // 
-            // pnlLinhaConfirmarSenha
-            // 
-            this.pnlLinhaConfirmarSenha.BackColor = System.Drawing.Color.Black;
-            this.pnlLinhaConfirmarSenha.Location = new System.Drawing.Point(190, 245);
-            this.pnlLinhaConfirmarSenha.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.pnlLinhaConfirmarSenha.Name = "pnlLinhaConfirmarSenha";
-            this.pnlLinhaConfirmarSenha.Size = new System.Drawing.Size(212, 2);
-            this.pnlLinhaConfirmarSenha.TabIndex = 20;
-            // 
-            // lblIdentificacaoTela
-            // 
-            this.lblIdentificacaoTela.AutoSize = true;
-            this.lblIdentificacaoTela.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentificacaoTela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblIdentificacaoTela.Location = new System.Drawing.Point(40, 23);
-            this.lblIdentificacaoTela.Name = "lblIdentificacaoTela";
-            this.lblIdentificacaoTela.Size = new System.Drawing.Size(112, 31);
-            this.lblIdentificacaoTela.TabIndex = 21;
-            this.lblIdentificacaoTela.Text = "Usuários";
             // 
             // TelaUsuariosCadastro
             // 
@@ -261,10 +261,10 @@
             this.Name = "TelaUsuariosCadastro";
             this.Text = "TelaUsuariosCadastro";
             this.pnlSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.pnlCentral.ResumeLayout(false);
             this.pnlCentral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgFoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.ResumeLayout(false);
 
         }

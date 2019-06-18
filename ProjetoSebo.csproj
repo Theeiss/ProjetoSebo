@@ -100,17 +100,23 @@
     <Compile Include="views\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\TelaUsuarios.cs">
+    <Compile Include="views\telas_finais\TelaVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\TelaUsuarios.Designer.cs">
+    <Compile Include="views\telas_finais\TelaVendas.Designer.cs">
+      <DependentUpon>TelaVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\telas_intermediarias\TelaChamadaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_intermediarias\TelaChamadaUsuarios.Designer.cs">
+      <DependentUpon>TelaChamadaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaUsuarios.Designer.cs">
       <DependentUpon>TelaUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="views\TelaUsuariosCadastro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="views\TelaUsuariosCadastro.Designer.cs">
-      <DependentUpon>TelaUsuariosCadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="views\TituloPanel.cs">
       <SubType>Component</SubType>
@@ -118,10 +124,10 @@
     <Compile Include="views\TituloPanel.Designer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\TelaLogin.cs">
+    <Compile Include="views\telas_finais\TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\TelaLogin.Designer.cs">
+    <Compile Include="views\telas_finais\TelaLogin.Designer.cs">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -133,17 +139,20 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GlobalResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\TelaLogin.resx">
+    <EmbeddedResource Include="views\telas_finais\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\TelaUsuarios.resx">
-      <DependentUpon>TelaUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="views\telas_finais\TelaVendas.resx">
+      <DependentUpon>TelaVendas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\TelaUsuariosCadastro.resx">
-      <DependentUpon>TelaUsuariosCadastro.cs</DependentUpon>
+    <EmbeddedResource Include="views\telas_intermediarias\TelaChamadaUsuarios.resx">
+      <DependentUpon>TelaChamadaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\telas_finais\TelaUsuarios.resx">
+      <DependentUpon>TelaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
