@@ -73,14 +73,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dao\SeboContext.cs" />
-    <Compile Include="dao\SeboInitializer.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="controller\ResultadoOperacao.cs" />
+    <Compile Include="controller\UsuarioController.cs" />
+    <Compile Include="context\SeboContext.cs" />
+    <Compile Include="context\SeboInitializer.cs" />
     <Compile Include="model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,10 +114,10 @@
     <Compile Include="views\telas_finais\TelaUsuarios.Designer.cs">
       <DependentUpon>TelaUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\TituloPanel.cs">
+    <Compile Include="views\components\TituloPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="views\TituloPanel.Designer.cs">
+    <Compile Include="views\components\TituloPanel.Designer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\telas_finais\TelaLogin.cs">

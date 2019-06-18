@@ -1,4 +1,5 @@
-﻿using ProjetoSebo.dao;
+﻿using ProjetoSebo.controller;
+using ProjetoSebo.dao;
 using ProjetoSebo.model;
 using ProjetoSebo.views;
 using System;
@@ -15,10 +16,13 @@ namespace ProjetoSebo.telas
 {
     public partial class TelaLogin : Form
     {
-        private readonly SeboContext _context;
+        public UsuarioController UsuarioController { private get; set; }
         public TelaLogin(SeboContext context)
         {
-            _context = context;
+            this.UsuarioController = new UsuarioController()
+            {
+                Context = context
+            };
 
             InitializeComponent();
         }
@@ -30,25 +34,52 @@ namespace ProjetoSebo.telas
 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
-            //string login = txtUser.Text;
-            //string senha = txtSenha.Text;
+            ResultadoOperacao resultado = ValidarCampos();
+            if(resultado.VerificarFalhaOperacao())
+            {
+                resultado.Exibir();
+                return;
+            }
 
-            //IQueryable<Usuario> resultado = _context.Usuarios.Where(usuario => usuario.Login == login)
-            //     .Where(usuario => usuario.Senha == senha)
-            //     .Select(usuario => usuario);
+            string login = this.txtLogin.Text;
+            string senha = this.txtSenha.Text;
 
-            //if(resultado.GetEnumerator().MoveNext())
-            //{
-            //    MessageBox.Show("Achou filha da puta");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Que pena! Você perdeu.");
-            //}
+            resultado = this.UsuarioController.ValidarLogin(login, senha);
+            if(resultado.VerificarFalhaOperacao())
+            {
+                resultado.Exibir();
+                return;
+            }
 
             this.Hide();
-            new TelaPrincipal(_context).ShowDialog();
+            Limpar();
+            new TelaPrincipal(this.UsuarioController.Context).ShowDialog();
             this.Show();
+        }
+
+        public ResultadoOperacao ValidarCampos()
+        {
+            if (this.txtLogin.TextLength == 0)
+            {
+                this.txtLogin.Focus();
+                return new ResultadoAviso("O login deve ser informado.");
+            }
+
+            if (this.txtSenha.TextLength == 0)
+            {
+                this.txtSenha.Focus();
+                return new ResultadoAviso("A senha deve ser informada.");
+            }
+
+            return new ResultadoSucesso();
+        }
+
+        public void Limpar()
+        {
+            this.txtLogin.Clear();
+            this.txtSenha.Clear();
+
+            this.txtLogin.Focus();
         }
     }
 }

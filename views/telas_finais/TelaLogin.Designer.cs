@@ -36,7 +36,7 @@ namespace ProjetoSebo.telas
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.PictureBox();
             this.pnlLogo = new System.Windows.Forms.Panel();
@@ -57,7 +57,7 @@ namespace ProjetoSebo.telas
             this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.btnEntrar);
             this.pnlMain.Controls.Add(this.txtSenha);
-            this.pnlMain.Controls.Add(this.txtUser);
+            this.pnlMain.Controls.Add(this.txtLogin);
             this.pnlMain.Controls.Add(this.lblPassword);
             this.pnlMain.Controls.Add(this.lblUser);
             this.pnlMain.Location = new System.Drawing.Point(0, 150);
@@ -115,14 +115,14 @@ namespace ProjetoSebo.telas
             // 
             // txtUser
             // 
-            this.txtUser.BackColor = System.Drawing.Color.White;
-            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUser.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(78, 56);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(208, 22);
-            this.txtUser.TabIndex = 3;
-            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLogin.BackColor = System.Drawing.Color.White;
+            this.txtLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLogin.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogin.Location = new System.Drawing.Point(78, 56);
+            this.txtLogin.Name = "txtUser";
+            this.txtLogin.Size = new System.Drawing.Size(208, 22);
+            this.txtLogin.TabIndex = 3;
+            this.txtLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblPassword
             // 
@@ -204,7 +204,7 @@ namespace ProjetoSebo.telas
         #endregion
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.PictureBox lblPassword;
         private System.Windows.Forms.PictureBox lblUser;
         private System.Windows.Forms.Panel pnlLogo;
