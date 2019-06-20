@@ -29,11 +29,12 @@ namespace ProjetoSebo.views.components
 
         private void Carregar()
         {
-            Items.Clear();
-
             List<TipoProduto> tiposProduto = TpProdCtrl.BuscarTodos();
-            foreach (TipoProduto tipo in tiposProduto)
-                Items.Add(tipo.Descricao);
+
+            tiposProduto.Sort();
+
+            Items.Clear();
+            tiposProduto.ForEach(tipo => Items.Add(tipo.Descricao));
         }
         protected override void OnDropDown(EventArgs e)
         {
