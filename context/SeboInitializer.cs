@@ -15,10 +15,19 @@ namespace ProjetoSebo.dao
             {
             new Usuario{Login="moacir",Senha="urso"},
             new Usuario{Login="theiss",Senha="gtheiss"},
-            new Usuario{Login="linguica",Senha="apertarcu"}
             };
 
             usuarios.ForEach(usuario => context.Usuarios.Add(usuario));
+
+            var tiposProduto = new List<TipoProduto>
+            {
+                new TipoProduto{Descricao="Livro"},
+                new TipoProduto{Descricao="DVD"},
+                new TipoProduto{Descricao="CD"},
+            };
+
+            tiposProduto.ForEach(tipo => context.TiposProduto.Add(tipo));
+
             context.SaveChanges();
         }
     }
