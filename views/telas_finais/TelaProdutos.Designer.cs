@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.pnlDireita = new System.Windows.Forms.Panel();
             this.pnlInferior = new System.Windows.Forms.Panel();
             this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlCentral = new System.Windows.Forms.Panel();
+            this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
             this.pnlLinhaPreco = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.cbxLocal = new System.Windows.Forms.ComboBox();
-            this.cbxTipo = new System.Windows.Forms.ComboBox();
             this.pnlLinhaPalavrasChave = new System.Windows.Forms.Panel();
             this.pnlLinhaLocal = new System.Windows.Forms.Panel();
             this.pnlLinhaDescricao = new System.Windows.Forms.Panel();
@@ -115,11 +116,11 @@
             // 
             // pnlCentral
             // 
+            this.pnlCentral.Controls.Add(this.cbxTipo);
             this.pnlCentral.Controls.Add(this.pnlLinhaPreco);
             this.pnlCentral.Controls.Add(this.pictureBox2);
             this.pnlCentral.Controls.Add(this.txtPreco);
             this.pnlCentral.Controls.Add(this.cbxLocal);
-            this.pnlCentral.Controls.Add(this.cbxTipo);
             this.pnlCentral.Controls.Add(this.pnlLinhaPalavrasChave);
             this.pnlCentral.Controls.Add(this.pnlLinhaLocal);
             this.pnlCentral.Controls.Add(this.pnlLinhaDescricao);
@@ -142,7 +143,18 @@
             this.pnlCentral.Location = new System.Drawing.Point(100, 80);
             this.pnlCentral.Name = "pnlCentral";
             this.pnlCentral.Size = new System.Drawing.Size(700, 490);
-            this.pnlCentral.TabIndex = 1;
+            this.pnlCentral.TabIndex = 2;
+            // 
+            // cbxTipo
+            // 
+            this.cbxTipo.DropDownWidth = 250;
+            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Location = new System.Drawing.Point(46, 221);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(250, 29);
+            this.cbxTipo.TabIndex = 8;
             // 
             // pnlLinhaPreco
             // 
@@ -172,7 +184,7 @@
             this.txtPreco.Location = new System.Drawing.Point(46, 171);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(654, 22);
-            this.txtPreco.TabIndex = 40;
+            this.txtPreco.TabIndex = 7;
             this.txtPreco.Text = "Preço";
             // 
             // cbxLocal
@@ -183,19 +195,8 @@
             this.cbxLocal.Location = new System.Drawing.Point(46, 332);
             this.cbxLocal.Name = "cbxLocal";
             this.cbxLocal.Size = new System.Drawing.Size(654, 29);
-            this.cbxLocal.TabIndex = 39;
+            this.cbxLocal.TabIndex = 10;
             this.cbxLocal.Tag = "";
-            // 
-            // cbxTipo
-            // 
-            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Location = new System.Drawing.Point(46, 222);
-            this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(250, 29);
-            this.cbxTipo.TabIndex = 38;
-            this.cbxTipo.Tag = "";
             // 
             // pnlLinhaPalavrasChave
             // 
@@ -275,7 +276,7 @@
             this.txtPalavrasChave.Location = new System.Drawing.Point(46, 391);
             this.txtPalavrasChave.Name = "txtPalavrasChave";
             this.txtPalavrasChave.Size = new System.Drawing.Size(654, 22);
-            this.txtPalavrasChave.TabIndex = 34;
+            this.txtPalavrasChave.TabIndex = 11;
             this.txtPalavrasChave.Text = "Palavras-chave";
             // 
             // imgLocal
@@ -336,7 +337,7 @@
             this.txtQuantidade.Location = new System.Drawing.Point(46, 279);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(654, 22);
-            this.txtQuantidade.TabIndex = 27;
+            this.txtQuantidade.TabIndex = 9;
             this.txtQuantidade.Text = "Quantidade";
             // 
             // txtCodBarras
@@ -347,7 +348,7 @@
             this.txtCodBarras.Location = new System.Drawing.Point(46, 117);
             this.txtCodBarras.Name = "txtCodBarras";
             this.txtCodBarras.Size = new System.Drawing.Size(654, 22);
-            this.txtCodBarras.TabIndex = 25;
+            this.txtCodBarras.TabIndex = 6;
             this.txtCodBarras.Text = "Código Barras";
             // 
             // txtDescricao
@@ -358,7 +359,7 @@
             this.txtDescricao.Location = new System.Drawing.Point(46, 64);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(654, 22);
-            this.txtDescricao.TabIndex = 24;
+            this.txtDescricao.TabIndex = 5;
             this.txtDescricao.Text = "Descrição";
             // 
             // btnGravar
@@ -377,7 +378,7 @@
             this.btnGravar.Location = new System.Drawing.Point(500, 440);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(200, 50);
-            this.btnGravar.TabIndex = 23;
+            this.btnGravar.TabIndex = 12;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
             this.btnGravar.Click += new System.EventHandler(this.BtnGravar_Click);
@@ -390,7 +391,7 @@
             this.lblIdentificacaoTela.Location = new System.Drawing.Point(3, 3);
             this.lblIdentificacaoTela.Name = "lblIdentificacaoTela";
             this.lblIdentificacaoTela.Size = new System.Drawing.Size(118, 31);
-            this.lblIdentificacaoTela.TabIndex = 22;
+            this.lblIdentificacaoTela.TabIndex = 4;
             this.lblIdentificacaoTela.Text = "Produtos";
             // 
             // TelaProdutos
@@ -447,10 +448,10 @@
         private System.Windows.Forms.Panel pnlLinhaCodigoBarras;
         private System.Windows.Forms.Panel pnlLinhasTipo;
         private System.Windows.Forms.Panel pnlLinhaQuantidade;
-        private System.Windows.Forms.ComboBox cbxTipo;
         private System.Windows.Forms.ComboBox cbxLocal;
         private System.Windows.Forms.Panel pnlLinhaPreco;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtPreco;
+        private components.ComboTipoProduto cbxTipo;
     }
 }

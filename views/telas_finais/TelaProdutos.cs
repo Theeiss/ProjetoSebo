@@ -18,6 +18,8 @@ namespace ProjetoSebo.views.telas_finais
             };
 
             InitializeComponent();
+
+            this.cbxTipo.SetContext(context);
         }
 
         private void BtnGravar_Click(object sender, System.EventArgs e)

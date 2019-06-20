@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="controller\ProdutoController.cs" />
     <Compile Include="controller\ResultadoOperacao.cs" />
+    <Compile Include="controller\TipoProdutoController.cs" />
     <Compile Include="controller\UsuarioController.cs" />
     <Compile Include="context\SeboContext.cs" />
     <Compile Include="context\SeboInitializer.cs" />
@@ -88,6 +89,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="views\components\ComboTipoProduto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\components\ComboTipoProduto.Designer.cs">
+      <DependentUpon>ComboTipoProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="views\components\NossoTextBox.cs">
       <SubType>Component</SubType>
@@ -143,6 +150,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\components\ComboTipoProduto.resx">
+      <DependentUpon>ComboTipoProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\GlobalResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
