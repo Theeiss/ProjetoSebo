@@ -122,7 +122,7 @@
             this.lblIdentificacaoTela.AutoSize = true;
             this.lblIdentificacaoTela.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdentificacaoTela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblIdentificacaoTela.Location = new System.Drawing.Point(40, 23);
+            this.lblIdentificacaoTela.Location = new System.Drawing.Point(3, 3);
             this.lblIdentificacaoTela.Name = "lblIdentificacaoTela";
             this.lblIdentificacaoTela.Size = new System.Drawing.Size(112, 31);
             this.lblIdentificacaoTela.TabIndex = 21;

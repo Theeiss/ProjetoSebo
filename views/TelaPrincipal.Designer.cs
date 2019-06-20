@@ -297,6 +297,7 @@
             this.btnProdutos.TabIndex = 2;
             this.btnProdutos.Text = "Produtos";
             this.btnProdutos.UseVisualStyleBackColor = true;
+            this.btnProdutos.Click += new System.EventHandler(this.BtnProdutos_Click);
             // 
             // btnSair
             // 

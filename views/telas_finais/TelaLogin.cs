@@ -34,22 +34,22 @@ namespace ProjetoSebo.telas
 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
-            ResultadoOperacao resultado = ValidarCampos();
-            if(resultado.VerificarFalhaOperacao())
-            {
-                resultado.Exibir();
-                return;
-            }
+            //ResultadoOperacao resultado = ValidarCampos();
+            //if(resultado.VerificarFalhaOperacao())
+            //{
+            //    resultado.Exibir();
+            //    return;
+            //}
 
-            string login = this.txtLogin.Text;
-            string senha = this.txtSenha.Text;
+            //string login = this.txtLogin.Text;
+            //string senha = this.txtSenha.Text;
 
-            resultado = this.UsuarioController.ValidarLogin(login, senha);
-            if(resultado.VerificarFalhaOperacao())
-            {
-                resultado.Exibir();
-                return;
-            }
+            //resultado = this.UsuarioController.ValidarLogin(login, senha);
+            //if(resultado.VerificarFalhaOperacao())
+            //{
+            //    resultado.Exibir();
+            //    return;
+            //}
 
             this.Hide();
             Limpar();

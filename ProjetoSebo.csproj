@@ -73,10 +73,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\ProdutoController.cs" />
     <Compile Include="controller\ResultadoOperacao.cs" />
     <Compile Include="controller\UsuarioController.cs" />
     <Compile Include="context\SeboContext.cs" />
     <Compile Include="context\SeboInitializer.cs" />
+    <Compile Include="model\LocalProduto.cs" />
+    <Compile Include="model\Produto.cs" />
+    <Compile Include="model\TipoProduto.cs" />
     <Compile Include="model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,6 +88,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="views\components\NossoTextBox.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="views\GlobalResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -95,6 +102,12 @@
     </Compile>
     <Compile Include="views\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaProdutos.Designer.cs">
+      <DependentUpon>TelaProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="views\telas_finais\TelaVendas.cs">
       <SubType>Form</SubType>
@@ -141,6 +154,9 @@
     <EmbeddedResource Include="views\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\telas_finais\TelaProdutos.resx">
+      <DependentUpon>TelaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\telas_finais\TelaVendas.resx">
       <DependentUpon>TelaVendas.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,7 +166,7 @@
     <EmbeddedResource Include="views\telas_finais\TelaUsuarios.resx">
       <DependentUpon>TelaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="views\config\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -162,33 +178,40 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="views\config\App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="images\codigo_barras.png" />
     <Content Include="images\compra.png" />
+    <None Include="images\descricao.png" />
     <Content Include="images\doacoes.png" />
     <None Include="Resources\senha_login.png" />
     <None Include="images\enviar.png" />
     <None Include="images\line.png" />
     <None Include="images\foto_usuario.png" />
     <Content Include="images\livro.png" />
+    <None Include="images\local.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\logoff.png" />
     <Content Include="images\menu.png" />
+    <None Include="images\preco.png" />
+    <None Include="images\palavras-chave.png" />
     <Content Include="images\preferencias.png" />
     <Content Include="images\produtos.png" />
     <Content Include="images\relatorios.png" />
     <None Include="images\senha_login.png" />
     <None Include="images\salvar.png" />
+    <None Include="images\tipo.png" />
     <Content Include="images\usuarios.png" />
     <None Include="images\usuario_login.png" />
     <Content Include="images\venda.png" />
     <None Include="images\voltar.png" />
-    <Content Include="MySql.Data.dll" />
+    <Content Include="views\config\MySql.Data.dll" />
     <None Include="Resources\Logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

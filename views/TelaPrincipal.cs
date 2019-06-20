@@ -1,5 +1,4 @@
 ﻿using ProjetoSebo.dao;
-using ProjetoSebo.telas;
 using ProjetoSebo.views.telas_finais;
 using System;
 using System.Runtime.InteropServices;
@@ -74,12 +73,6 @@ namespace ProjetoSebo.views
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void BtnUsuarios_Click(object sender, EventArgs e)
-        {
-            TelaUsuariosCadastro telaUsuariosCadastro = new TelaUsuariosCadastro(_context);
-            AbrirTelaInterna(telaUsuariosCadastro);
-        }
-
         private void AbrirTelaInterna(object telaInterna)
         {
             if (this.pnlPrincipal.Controls.Count > 0)
@@ -93,10 +86,22 @@ namespace ProjetoSebo.views
             nova.Show();
         }
 
+        private void BtnProdutos_Click(object sender, EventArgs e)
+        {
+            TelaProdutos telaProdutos = new TelaProdutos(_context);
+            AbrirTelaInterna(telaProdutos);
+        }
+
         private void BtnVendas_Click(object sender, EventArgs e)
         {
             TelaVendas telaVendas = new TelaVendas();
             AbrirTelaInterna(telaVendas);
+        }
+
+        private void BtnUsuarios_Click(object sender, EventArgs e)
+        {
+            TelaUsuariosCadastro telaUsuariosCadastro = new TelaUsuariosCadastro(_context);
+            AbrirTelaInterna(telaUsuariosCadastro);
         }
     }
 }
