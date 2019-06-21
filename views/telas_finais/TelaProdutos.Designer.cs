@@ -147,6 +147,8 @@
             // 
             // cbxTipo
             // 
+            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
             this.cbxTipo.DropDownWidth = 250;
             this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,12 +160,10 @@
             // 
             // pnlLinhaPreco
             // 
-            this.pnlLinhaPreco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlLinhaPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
             this.pnlLinhaPreco.Location = new System.Drawing.Point(0, 198);
             this.pnlLinhaPreco.Name = "pnlLinhaPreco";
-            this.pnlLinhaPreco.Size = new System.Drawing.Size(700, 1);
+            this.pnlLinhaPreco.Size = new System.Drawing.Size(300, 1);
             this.pnlLinhaPreco.TabIndex = 42;
             // 
             // pictureBox2
@@ -178,17 +178,21 @@
             // 
             // txtPreco
             // 
+            this.txtPreco.BackColor = System.Drawing.SystemColors.Control;
             this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPreco.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPreco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
             this.txtPreco.Location = new System.Drawing.Point(46, 171);
             this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(654, 22);
+            this.txtPreco.Size = new System.Drawing.Size(250, 22);
             this.txtPreco.TabIndex = 7;
             this.txtPreco.Text = "Preço";
             // 
             // cbxLocal
             // 
+            this.cbxLocal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxLocal.BackColor = System.Drawing.SystemColors.Control;
             this.cbxLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxLocal.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxLocal.FormattingEnabled = true;
@@ -240,8 +244,6 @@
             // 
             // pnlLinhasTipo
             // 
-            this.pnlLinhasTipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlLinhasTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
             this.pnlLinhasTipo.Location = new System.Drawing.Point(0, 252);
             this.pnlLinhasTipo.Name = "pnlLinhasTipo";
@@ -250,12 +252,10 @@
             // 
             // pnlLinhaQuantidade
             // 
-            this.pnlLinhaQuantidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlLinhaQuantidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
             this.pnlLinhaQuantidade.Location = new System.Drawing.Point(0, 306);
             this.pnlLinhaQuantidade.Name = "pnlLinhaQuantidade";
-            this.pnlLinhaQuantidade.Size = new System.Drawing.Size(700, 1);
+            this.pnlLinhaQuantidade.Size = new System.Drawing.Size(300, 1);
             this.pnlLinhaQuantidade.TabIndex = 36;
             // 
             // imgPalavraChave
@@ -270,6 +270,9 @@
             // 
             // txtPalavrasChave
             // 
+            this.txtPalavrasChave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPalavrasChave.BackColor = System.Drawing.SystemColors.Control;
             this.txtPalavrasChave.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPalavrasChave.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPalavrasChave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
@@ -291,7 +294,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::ProjetoSebo.Properties.Resources.preco;
+            this.pictureBox4.Image = global::ProjetoSebo.Properties.Resources.quantidade;
             this.pictureBox4.Location = new System.Drawing.Point(0, 268);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 40);
@@ -331,17 +334,21 @@
             // 
             // txtQuantidade
             // 
+            this.txtQuantidade.BackColor = System.Drawing.SystemColors.Control;
             this.txtQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQuantidade.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
             this.txtQuantidade.Location = new System.Drawing.Point(46, 279);
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(654, 22);
+            this.txtQuantidade.Size = new System.Drawing.Size(250, 22);
             this.txtQuantidade.TabIndex = 9;
             this.txtQuantidade.Text = "Quantidade";
             // 
             // txtCodBarras
             // 
+            this.txtCodBarras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCodBarras.BackColor = System.Drawing.SystemColors.Control;
             this.txtCodBarras.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodBarras.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodBarras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
@@ -353,6 +360,9 @@
             // 
             // txtDescricao
             // 
+            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescricao.BackColor = System.Drawing.SystemColors.Control;
             this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescricao.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));

@@ -79,10 +79,12 @@
     <Compile Include="controller\UsuarioController.cs" />
     <Compile Include="context\SeboContext.cs" />
     <Compile Include="context\SeboInitializer.cs" />
+    <Compile Include="controller\VendasController.cs" />
     <Compile Include="model\LocalProduto.cs" />
     <Compile Include="model\Produto.cs" />
     <Compile Include="model\TipoProduto.cs" />
     <Compile Include="model\Usuario.cs" />
+    <Compile Include="model\Venda.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -192,8 +194,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\codigo_barras.png" />
+    <None Include="images\adicionar.png" />
     <Content Include="images\compra.png" />
     <None Include="images\descricao.png" />
+    <None Include="images\desconto.png" />
     <Content Include="images\doacoes.png" />
     <None Include="Resources\senha_login.png" />
     <None Include="images\enviar.png" />
@@ -208,6 +212,7 @@
     <None Include="images\palavras-chave.png" />
     <Content Include="images\preferencias.png" />
     <Content Include="images\produtos.png" />
+    <None Include="images\quantidade.png" />
     <Content Include="images\relatorios.png" />
     <None Include="images\senha_login.png" />
     <None Include="images\salvar.png" />

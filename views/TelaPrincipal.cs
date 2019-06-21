@@ -27,14 +27,41 @@ namespace ProjetoSebo.views
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int msg, int wparam, int lparam);
 
+        private void Maximizar()
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.btnMaximizar.Visible = false;
+            this.btnRestaurar.Visible = true;
+        }
+
+        private void Minimizar()
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Restaurar()
+        {
+            if (this.pnlMenuLateral.Width == TAM_MENU_MAXIMIZADO)
+                this.pnlMenuLateral.Width = TAM_MENU_MINIMIZADO;
+
+            this.WindowState = FormWindowState.Normal;
+            this.btnRestaurar.Visible = false;
+            this.btnMaximizar.Visible = true;
+        }
+
         private void BtnMenu_Click(object sender, EventArgs e)
         {
-            if(this.pnlMenuLateral.Width == TAM_MENU_MAXIMIZADO)
+            if (this.pnlMenuLateral.Width == TAM_MENU_MAXIMIZADO)
             {
                 this.pnlMenuLateral.Width = TAM_MENU_MINIMIZADO;
             }
             else
             {
+                if (this.WindowState == FormWindowState.Normal)
+                {
+                    this.Maximizar();
+                }
+
                 this.pnlMenuLateral.Width = TAM_MENU_MAXIMIZADO;
             }
         }
@@ -46,20 +73,16 @@ namespace ProjetoSebo.views
 
         private void BtnMaximizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            this.btnMaximizar.Visible = false;
-            this.btnRestaurar.Visible = true;
+            this.Maximizar();
         }
         private void BtnRestaurar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
-            this.btnRestaurar.Visible = false;
-            this.btnMaximizar.Visible = true;
+            this.Restaurar();
         }
 
         private void BtnMinimizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            this.Minimizar();
         }
 
         private void BtnSair_Click(object sender, EventArgs e)
@@ -94,7 +117,7 @@ namespace ProjetoSebo.views
 
         private void BtnVendas_Click(object sender, EventArgs e)
         {
-            TelaVendas telaVendas = new TelaVendas();
+            TelaVendas telaVendas = new TelaVendas(_context);
             AbrirTelaInterna(telaVendas);
         }
 

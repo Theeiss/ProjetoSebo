@@ -16,6 +16,7 @@ namespace ProjetoSebo.dao
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<TipoProduto> TiposProduto { get; set; }
         public DbSet<LocalProduto> LocaisProduto { get; set; }
+        public DbSet<Venda> Vendas { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
