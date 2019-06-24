@@ -37,19 +37,22 @@
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
+            this.pnlBotoes = new System.Windows.Forms.Panel();
+            this.btnClientes = new System.Windows.Forms.Button();
             this.btnPreferencias = new System.Windows.Forms.Button();
-            this.btnRelatorios = new System.Windows.Forms.Button();
-            this.btnUsuarios = new System.Windows.Forms.Button();
-            this.btnDoações = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
+            this.btnDoações = new System.Windows.Forms.Button();
+            this.btnRelatorios = new System.Windows.Forms.Button();
             this.btnCompras = new System.Windows.Forms.Button();
             this.btnProdutos = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.PictureBox();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.pnlBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogoSistema)).BeginInit();
             this.pnlMenuLateral.SuspendLayout();
+            this.pnlBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.SuspendLayout();
@@ -155,13 +158,7 @@
             // pnlMenuLateral
             // 
             this.pnlMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.pnlMenuLateral.Controls.Add(this.btnPreferencias);
-            this.pnlMenuLateral.Controls.Add(this.btnRelatorios);
-            this.pnlMenuLateral.Controls.Add(this.btnUsuarios);
-            this.pnlMenuLateral.Controls.Add(this.btnDoações);
-            this.pnlMenuLateral.Controls.Add(this.btnVendas);
-            this.pnlMenuLateral.Controls.Add(this.btnCompras);
-            this.pnlMenuLateral.Controls.Add(this.btnProdutos);
+            this.pnlMenuLateral.Controls.Add(this.pnlBotoes);
             this.pnlMenuLateral.Controls.Add(this.btnSair);
             this.pnlMenuLateral.Controls.Add(this.btnMenu);
             this.pnlMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
@@ -169,6 +166,40 @@
             this.pnlMenuLateral.Name = "pnlMenuLateral";
             this.pnlMenuLateral.Size = new System.Drawing.Size(250, 650);
             this.pnlMenuLateral.TabIndex = 3;
+            // 
+            // pnlBotoes
+            // 
+            this.pnlBotoes.Controls.Add(this.btnClientes);
+            this.pnlBotoes.Controls.Add(this.btnPreferencias);
+            this.pnlBotoes.Controls.Add(this.btnVendas);
+            this.pnlBotoes.Controls.Add(this.btnDoações);
+            this.pnlBotoes.Controls.Add(this.btnRelatorios);
+            this.pnlBotoes.Controls.Add(this.btnCompras);
+            this.pnlBotoes.Controls.Add(this.btnProdutos);
+            this.pnlBotoes.Controls.Add(this.btnUsuarios);
+            this.pnlBotoes.Location = new System.Drawing.Point(0, 56);
+            this.pnlBotoes.Name = "pnlBotoes";
+            this.pnlBotoes.Size = new System.Drawing.Size(250, 536);
+            this.pnlBotoes.TabIndex = 2;
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
+            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.Color.White;
+            this.btnClientes.Image = global::ProjetoSebo.Properties.Resources.clientes_menu;
+            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.Location = new System.Drawing.Point(0, 278);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(250, 50);
+            this.btnClientes.TabIndex = 7;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
             // 
             // btnPreferencias
             // 
@@ -181,67 +212,12 @@
             this.btnPreferencias.ForeColor = System.Drawing.Color.White;
             this.btnPreferencias.Image = global::ProjetoSebo.Properties.Resources.preferencias;
             this.btnPreferencias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPreferencias.Location = new System.Drawing.Point(0, 522);
+            this.btnPreferencias.Location = new System.Drawing.Point(0, 483);
             this.btnPreferencias.Name = "btnPreferencias";
             this.btnPreferencias.Size = new System.Drawing.Size(250, 50);
             this.btnPreferencias.TabIndex = 6;
             this.btnPreferencias.Text = " Preferências";
             this.btnPreferencias.UseVisualStyleBackColor = true;
-            // 
-            // btnRelatorios
-            // 
-            this.btnRelatorios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRelatorios.FlatAppearance.BorderSize = 0;
-            this.btnRelatorios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
-            this.btnRelatorios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
-            this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRelatorios.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRelatorios.ForeColor = System.Drawing.Color.White;
-            this.btnRelatorios.Image = global::ProjetoSebo.Properties.Resources.relatorios;
-            this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRelatorios.Location = new System.Drawing.Point(0, 452);
-            this.btnRelatorios.Name = "btnRelatorios";
-            this.btnRelatorios.Size = new System.Drawing.Size(250, 50);
-            this.btnRelatorios.TabIndex = 5;
-            this.btnRelatorios.Text = "Relatórios";
-            this.btnRelatorios.UseVisualStyleBackColor = true;
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
-            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.Image = global::ProjetoSebo.Properties.Resources.usuarios;
-            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(0, 382);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(250, 50);
-            this.btnUsuarios.TabIndex = 3;
-            this.btnUsuarios.Text = "Usuários";
-            this.btnUsuarios.UseVisualStyleBackColor = true;
-            this.btnUsuarios.Click += new System.EventHandler(this.BtnUsuarios_Click);
-            // 
-            // btnDoações
-            // 
-            this.btnDoações.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDoações.FlatAppearance.BorderSize = 0;
-            this.btnDoações.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
-            this.btnDoações.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
-            this.btnDoações.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoações.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoações.ForeColor = System.Drawing.Color.White;
-            this.btnDoações.Image = global::ProjetoSebo.Properties.Resources.doacoes;
-            this.btnDoações.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoações.Location = new System.Drawing.Point(0, 312);
-            this.btnDoações.Name = "btnDoações";
-            this.btnDoações.Size = new System.Drawing.Size(250, 50);
-            this.btnDoações.TabIndex = 3;
-            this.btnDoações.Text = "Doações";
-            this.btnDoações.UseVisualStyleBackColor = true;
             // 
             // btnVendas
             // 
@@ -254,13 +230,49 @@
             this.btnVendas.ForeColor = System.Drawing.Color.White;
             this.btnVendas.Image = global::ProjetoSebo.Properties.Resources.venda;
             this.btnVendas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendas.Location = new System.Drawing.Point(0, 242);
+            this.btnVendas.Location = new System.Drawing.Point(0, 143);
             this.btnVendas.Name = "btnVendas";
             this.btnVendas.Size = new System.Drawing.Size(250, 50);
             this.btnVendas.TabIndex = 4;
             this.btnVendas.Text = "Vendas";
             this.btnVendas.UseVisualStyleBackColor = true;
             this.btnVendas.Click += new System.EventHandler(this.BtnVendas_Click);
+            // 
+            // btnDoações
+            // 
+            this.btnDoações.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDoações.FlatAppearance.BorderSize = 0;
+            this.btnDoações.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
+            this.btnDoações.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
+            this.btnDoações.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoações.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoações.ForeColor = System.Drawing.Color.White;
+            this.btnDoações.Image = global::ProjetoSebo.Properties.Resources.doacoes;
+            this.btnDoações.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoações.Location = new System.Drawing.Point(0, 213);
+            this.btnDoações.Name = "btnDoações";
+            this.btnDoações.Size = new System.Drawing.Size(250, 50);
+            this.btnDoações.TabIndex = 3;
+            this.btnDoações.Text = "Doações";
+            this.btnDoações.UseVisualStyleBackColor = true;
+            // 
+            // btnRelatorios
+            // 
+            this.btnRelatorios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRelatorios.FlatAppearance.BorderSize = 0;
+            this.btnRelatorios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
+            this.btnRelatorios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
+            this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelatorios.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelatorios.ForeColor = System.Drawing.Color.White;
+            this.btnRelatorios.Image = global::ProjetoSebo.Properties.Resources.relatorios;
+            this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRelatorios.Location = new System.Drawing.Point(0, 413);
+            this.btnRelatorios.Name = "btnRelatorios";
+            this.btnRelatorios.Size = new System.Drawing.Size(250, 50);
+            this.btnRelatorios.TabIndex = 5;
+            this.btnRelatorios.Text = "Relatórios";
+            this.btnRelatorios.UseVisualStyleBackColor = true;
             // 
             // btnCompras
             // 
@@ -273,7 +285,7 @@
             this.btnCompras.ForeColor = System.Drawing.Color.White;
             this.btnCompras.Image = global::ProjetoSebo.Properties.Resources.compra;
             this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.Location = new System.Drawing.Point(0, 172);
+            this.btnCompras.Location = new System.Drawing.Point(0, 73);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(250, 50);
             this.btnCompras.TabIndex = 3;
@@ -291,13 +303,32 @@
             this.btnProdutos.ForeColor = System.Drawing.Color.White;
             this.btnProdutos.Image = global::ProjetoSebo.Properties.Resources.livro;
             this.btnProdutos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProdutos.Location = new System.Drawing.Point(0, 102);
+            this.btnProdutos.Location = new System.Drawing.Point(0, 3);
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.Size = new System.Drawing.Size(250, 50);
             this.btnProdutos.TabIndex = 2;
             this.btnProdutos.Text = "Produtos";
             this.btnProdutos.UseVisualStyleBackColor = true;
             this.btnProdutos.Click += new System.EventHandler(this.BtnProdutos_Click);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
+            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.Image = global::ProjetoSebo.Properties.Resources.usuarios;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 343);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(250, 50);
+            this.btnUsuarios.TabIndex = 3;
+            this.btnUsuarios.Text = "Usuários";
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.BtnUsuarios_Click);
             // 
             // btnSair
             // 
@@ -350,6 +381,7 @@
             this.pnlBarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogoSistema)).EndInit();
             this.pnlMenuLateral.ResumeLayout(false);
+            this.pnlBotoes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.ResumeLayout(false);
@@ -377,5 +409,7 @@
         private System.Windows.Forms.PictureBox imgLogoSistema;
         private System.Windows.Forms.Label lblNomeSistema;
         private System.Windows.Forms.Panel pnlPrincipal;
+        private System.Windows.Forms.Panel pnlBotoes;
+        private System.Windows.Forms.Button btnClientes;
     }
 }

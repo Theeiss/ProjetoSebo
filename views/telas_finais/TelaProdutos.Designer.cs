@@ -58,6 +58,7 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
             this.lblIdentificacaoTela = new System.Windows.Forms.Label();
+            this.lblDescricao = new System.Windows.Forms.Label();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.pnlCentral.SuspendLayout();
@@ -116,6 +117,7 @@
             // 
             // pnlCentral
             // 
+            this.pnlCentral.Controls.Add(this.lblDescricao);
             this.pnlCentral.Controls.Add(this.cbxTipo);
             this.pnlCentral.Controls.Add(this.pnlLinhaPreco);
             this.pnlCentral.Controls.Add(this.pictureBox2);
@@ -365,12 +367,11 @@
             this.txtDescricao.BackColor = System.Drawing.SystemColors.Control;
             this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescricao.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.txtDescricao.Location = new System.Drawing.Point(46, 64);
+            this.txtDescricao.ForeColor = System.Drawing.Color.Black;
+            this.txtDescricao.Location = new System.Drawing.Point(136, 64);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(654, 22);
+            this.txtDescricao.Size = new System.Drawing.Size(564, 22);
             this.txtDescricao.TabIndex = 5;
-            this.txtDescricao.Text = "Descrição";
             // 
             // btnGravar
             // 
@@ -403,6 +404,17 @@
             this.lblIdentificacaoTela.Size = new System.Drawing.Size(118, 31);
             this.lblIdentificacaoTela.TabIndex = 4;
             this.lblIdentificacaoTela.Text = "Produtos";
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblDescricao.Location = new System.Drawing.Point(43, 64);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(87, 21);
+            this.lblDescricao.TabIndex = 43;
+            this.lblDescricao.Text = "Descrição:";
             // 
             // TelaProdutos
             // 
@@ -463,5 +475,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtPreco;
         private components.ComboTipoProduto cbxTipo;
+        private System.Windows.Forms.Label lblDescricao;
     }
 }

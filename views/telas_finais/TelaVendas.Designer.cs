@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlDireita = new System.Windows.Forms.Panel();
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
@@ -46,20 +48,28 @@
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.pnlLinhasTipo = new System.Windows.Forms.Panel();
             this.txtPreço = new System.Windows.Forms.TextBox();
-            this.imgCodBarras = new System.Windows.Forms.PictureBox();
+            this.imgPreco = new System.Windows.Forms.PictureBox();
             this.pnlLinhaDescricao = new System.Windows.Forms.Panel();
             this.txtProduto = new System.Windows.Forms.TextBox();
-            this.lblProduto = new System.Windows.Forms.Label();
-            this.comboTipoProduto1 = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
+            this.lblTipo = new System.Windows.Forms.Label();
             this.lblIdentificacaoTela = new System.Windows.Forms.Label();
             this.btnGravar = new System.Windows.Forms.Button();
+            this.lblPreco = new System.Windows.Forms.Label();
+            this.lblDesconto = new System.Windows.Forms.Label();
+            this.imgTipo = new System.Windows.Forms.PictureBox();
+            this.imgProduto = new System.Windows.Forms.PictureBox();
+            this.lblProduto = new System.Windows.Forms.Label();
+            this.lblQuantidade = new System.Windows.Forms.Label();
+            this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.pnlCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblListaCompras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDesconto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgQuantidade)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCodBarras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPreco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTipo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgProduto)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDireita
@@ -108,6 +118,12 @@
             // 
             // pnlCentral
             // 
+            this.pnlCentral.Controls.Add(this.lblQuantidade);
+            this.pnlCentral.Controls.Add(this.imgProduto);
+            this.pnlCentral.Controls.Add(this.lblProduto);
+            this.pnlCentral.Controls.Add(this.imgTipo);
+            this.pnlCentral.Controls.Add(this.lblDesconto);
+            this.pnlCentral.Controls.Add(this.lblPreco);
             this.pnlCentral.Controls.Add(this.btnAdicionar);
             this.pnlCentral.Controls.Add(this.lblListaCompras);
             this.pnlCentral.Controls.Add(this.tblListaCompras);
@@ -119,11 +135,11 @@
             this.pnlCentral.Controls.Add(this.txtQuantidade);
             this.pnlCentral.Controls.Add(this.pnlLinhasTipo);
             this.pnlCentral.Controls.Add(this.txtPreço);
-            this.pnlCentral.Controls.Add(this.imgCodBarras);
+            this.pnlCentral.Controls.Add(this.imgPreco);
             this.pnlCentral.Controls.Add(this.pnlLinhaDescricao);
             this.pnlCentral.Controls.Add(this.txtProduto);
-            this.pnlCentral.Controls.Add(this.lblProduto);
-            this.pnlCentral.Controls.Add(this.comboTipoProduto1);
+            this.pnlCentral.Controls.Add(this.lblTipo);
+            this.pnlCentral.Controls.Add(this.cbxTipo);
             this.pnlCentral.Controls.Add(this.lblIdentificacaoTela);
             this.pnlCentral.Controls.Add(this.btnGravar);
             this.pnlCentral.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -151,6 +167,7 @@
             this.btnAdicionar.TabIndex = 50;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
             // 
             // lblListaCompras
             // 
@@ -168,26 +185,45 @@
             this.tblListaCompras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblListaCompras.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(180)))), ((int)(((byte)(242)))));
+            this.tblListaCompras.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tblListaCompras.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblListaCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.tblListaCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblListaCompras.EnableHeadersVisualStyles = false;
+            this.tblListaCompras.GridColor = System.Drawing.Color.SteelBlue;
             this.tblListaCompras.Location = new System.Drawing.Point(9, 283);
             this.tblListaCompras.Name = "tblListaCompras";
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.tblListaCompras.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.tblListaCompras.Size = new System.Drawing.Size(685, 151);
             this.tblListaCompras.TabIndex = 48;
             // 
             // pnlLinhaDesconto
             // 
             this.pnlLinhaDesconto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.pnlLinhaDesconto.Location = new System.Drawing.Point(10, 223);
+            this.pnlLinhaDesconto.Location = new System.Drawing.Point(-46, 239);
             this.pnlLinhaDesconto.Name = "pnlLinhaDesconto";
-            this.pnlLinhaDesconto.Size = new System.Drawing.Size(300, 1);
+            this.pnlLinhaDesconto.Size = new System.Drawing.Size(351, 1);
             this.pnlLinhaDesconto.TabIndex = 47;
             // 
             // imgDesconto
             // 
             this.imgDesconto.Image = global::ProjetoSebo.Properties.Resources.desconto;
-            this.imgDesconto.Location = new System.Drawing.Point(10, 185);
+            this.imgDesconto.Location = new System.Drawing.Point(0, 180);
             this.imgDesconto.Name = "imgDesconto";
-            this.imgDesconto.Size = new System.Drawing.Size(40, 40);
+            this.imgDesconto.Size = new System.Drawing.Size(30, 30);
             this.imgDesconto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgDesconto.TabIndex = 46;
             this.imgDesconto.TabStop = false;
@@ -197,17 +233,16 @@
             this.txtDesconto.BackColor = System.Drawing.SystemColors.Control;
             this.txtDesconto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDesconto.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesconto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.txtDesconto.Location = new System.Drawing.Point(56, 196);
+            this.txtDesconto.ForeColor = System.Drawing.Color.Black;
+            this.txtDesconto.Location = new System.Drawing.Point(2, 212);
             this.txtDesconto.Name = "txtDesconto";
-            this.txtDesconto.Size = new System.Drawing.Size(250, 22);
+            this.txtDesconto.Size = new System.Drawing.Size(299, 22);
             this.txtDesconto.TabIndex = 45;
-            this.txtDesconto.Text = "Desconto";
             // 
             // pnlLinhaQuantidade
             // 
             this.pnlLinhaQuantidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.pnlLinhaQuantidade.Location = new System.Drawing.Point(398, 168);
+            this.pnlLinhaQuantidade.Location = new System.Drawing.Point(398, 164);
             this.pnlLinhaQuantidade.Name = "pnlLinhaQuantidade";
             this.pnlLinhaQuantidade.Size = new System.Drawing.Size(300, 1);
             this.pnlLinhaQuantidade.TabIndex = 44;
@@ -215,9 +250,9 @@
             // imgQuantidade
             // 
             this.imgQuantidade.Image = global::ProjetoSebo.Properties.Resources.quantidade;
-            this.imgQuantidade.Location = new System.Drawing.Point(398, 130);
+            this.imgQuantidade.Location = new System.Drawing.Point(398, 105);
             this.imgQuantidade.Name = "imgQuantidade";
-            this.imgQuantidade.Size = new System.Drawing.Size(40, 40);
+            this.imgQuantidade.Size = new System.Drawing.Size(30, 30);
             this.imgQuantidade.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgQuantidade.TabIndex = 43;
             this.imgQuantidade.TabStop = false;
@@ -227,17 +262,16 @@
             this.txtQuantidade.BackColor = System.Drawing.SystemColors.Control;
             this.txtQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQuantidade.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.txtQuantidade.Location = new System.Drawing.Point(444, 141);
+            this.txtQuantidade.ForeColor = System.Drawing.Color.Black;
+            this.txtQuantidade.Location = new System.Drawing.Point(398, 137);
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(250, 22);
+            this.txtQuantidade.Size = new System.Drawing.Size(300, 22);
             this.txtQuantidade.TabIndex = 42;
-            this.txtQuantidade.Text = "Quantidade";
             // 
             // pnlLinhasTipo
             // 
             this.pnlLinhasTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.pnlLinhasTipo.Location = new System.Drawing.Point(9, 169);
+            this.pnlLinhasTipo.Location = new System.Drawing.Point(1, 165);
             this.pnlLinhasTipo.Name = "pnlLinhasTipo";
             this.pnlLinhasTipo.Size = new System.Drawing.Size(300, 1);
             this.pnlLinhasTipo.TabIndex = 41;
@@ -247,31 +281,30 @@
             this.txtPreço.BackColor = System.Drawing.SystemColors.Control;
             this.txtPreço.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPreço.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreço.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.txtPreço.Location = new System.Drawing.Point(55, 141);
+            this.txtPreço.ForeColor = System.Drawing.Color.Black;
+            this.txtPreço.Location = new System.Drawing.Point(2, 137);
             this.txtPreço.Name = "txtPreço";
-            this.txtPreço.Size = new System.Drawing.Size(250, 22);
+            this.txtPreço.Size = new System.Drawing.Size(299, 22);
             this.txtPreço.TabIndex = 40;
-            this.txtPreço.Text = "Preço";
             // 
-            // imgCodBarras
+            // imgPreco
             // 
-            this.imgCodBarras.Image = global::ProjetoSebo.Properties.Resources.preco;
-            this.imgCodBarras.Location = new System.Drawing.Point(9, 130);
-            this.imgCodBarras.Name = "imgCodBarras";
-            this.imgCodBarras.Size = new System.Drawing.Size(40, 40);
-            this.imgCodBarras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgCodBarras.TabIndex = 39;
-            this.imgCodBarras.TabStop = false;
+            this.imgPreco.Image = global::ProjetoSebo.Properties.Resources.preco;
+            this.imgPreco.Location = new System.Drawing.Point(0, 105);
+            this.imgPreco.Name = "imgPreco";
+            this.imgPreco.Size = new System.Drawing.Size(30, 30);
+            this.imgPreco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgPreco.TabIndex = 39;
+            this.imgPreco.TabStop = false;
             // 
             // pnlLinhaDescricao
             // 
             this.pnlLinhaDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlLinhaDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.pnlLinhaDescricao.Location = new System.Drawing.Point(244, 107);
+            this.pnlLinhaDescricao.Location = new System.Drawing.Point(267, 98);
             this.pnlLinhaDescricao.Name = "pnlLinhaDescricao";
-            this.pnlLinhaDescricao.Size = new System.Drawing.Size(450, 1);
+            this.pnlLinhaDescricao.Size = new System.Drawing.Size(430, 1);
             this.pnlLinhaDescricao.TabIndex = 38;
             // 
             // txtProduto
@@ -281,34 +314,22 @@
             this.txtProduto.BackColor = System.Drawing.SystemColors.Control;
             this.txtProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtProduto.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProduto.Location = new System.Drawing.Point(244, 79);
+            this.txtProduto.ForeColor = System.Drawing.Color.Black;
+            this.txtProduto.Location = new System.Drawing.Point(267, 70);
             this.txtProduto.Name = "txtProduto";
-            this.txtProduto.Size = new System.Drawing.Size(450, 22);
+            this.txtProduto.Size = new System.Drawing.Size(427, 22);
             this.txtProduto.TabIndex = 16;
             // 
-            // lblProduto
+            // lblTipo
             // 
-            this.lblProduto.AutoSize = true;
-            this.lblProduto.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblProduto.Location = new System.Drawing.Point(5, 55);
-            this.lblProduto.Name = "lblProduto";
-            this.lblProduto.Size = new System.Drawing.Size(72, 21);
-            this.lblProduto.TabIndex = 15;
-            this.lblProduto.Text = "Produto";
-            // 
-            // comboTipoProduto1
-            // 
-            this.comboTipoProduto1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboTipoProduto1.BackColor = System.Drawing.SystemColors.Control;
-            this.comboTipoProduto1.DropDownWidth = 250;
-            this.comboTipoProduto1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboTipoProduto1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboTipoProduto1.FormattingEnabled = true;
-            this.comboTipoProduto1.Location = new System.Drawing.Point(9, 79);
-            this.comboTipoProduto1.Name = "comboTipoProduto1";
-            this.comboTipoProduto1.Size = new System.Drawing.Size(230, 29);
-            this.comboTipoProduto1.TabIndex = 14;
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblTipo.Location = new System.Drawing.Point(33, 46);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(38, 19);
+            this.lblTipo.TabIndex = 15;
+            this.lblTipo.Text = "Tipo:";
             // 
             // lblIdentificacaoTela
             // 
@@ -341,6 +362,83 @@
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
             // 
+            // lblPreco
+            // 
+            this.lblPreco.AutoSize = true;
+            this.lblPreco.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblPreco.Location = new System.Drawing.Point(33, 113);
+            this.lblPreco.Name = "lblPreco";
+            this.lblPreco.Size = new System.Drawing.Size(47, 19);
+            this.lblPreco.TabIndex = 51;
+            this.lblPreco.Text = "Preço:";
+            // 
+            // lblDesconto
+            // 
+            this.lblDesconto.AutoSize = true;
+            this.lblDesconto.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesconto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblDesconto.Location = new System.Drawing.Point(33, 188);
+            this.lblDesconto.Name = "lblDesconto";
+            this.lblDesconto.Size = new System.Drawing.Size(71, 19);
+            this.lblDesconto.TabIndex = 52;
+            this.lblDesconto.Text = "Desconto:";
+            // 
+            // imgTipo
+            // 
+            this.imgTipo.Image = global::ProjetoSebo.Properties.Resources.tipo;
+            this.imgTipo.Location = new System.Drawing.Point(0, 38);
+            this.imgTipo.Name = "imgTipo";
+            this.imgTipo.Size = new System.Drawing.Size(30, 30);
+            this.imgTipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgTipo.TabIndex = 53;
+            this.imgTipo.TabStop = false;
+            // 
+            // imgProduto
+            // 
+            this.imgProduto.Image = global::ProjetoSebo.Properties.Resources.preco;
+            this.imgProduto.Location = new System.Drawing.Point(267, 38);
+            this.imgProduto.Name = "imgProduto";
+            this.imgProduto.Size = new System.Drawing.Size(30, 30);
+            this.imgProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgProduto.TabIndex = 55;
+            this.imgProduto.TabStop = false;
+            // 
+            // lblProduto
+            // 
+            this.lblProduto.AutoSize = true;
+            this.lblProduto.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblProduto.Location = new System.Drawing.Point(300, 46);
+            this.lblProduto.Name = "lblProduto";
+            this.lblProduto.Size = new System.Drawing.Size(62, 19);
+            this.lblProduto.TabIndex = 54;
+            this.lblProduto.Text = "Produto:";
+            // 
+            // lblQuantidade
+            // 
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblQuantidade.Location = new System.Drawing.Point(431, 113);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(84, 19);
+            this.lblQuantidade.TabIndex = 56;
+            this.lblQuantidade.Text = "Quantidade:";
+            // 
+            // cbxTipo
+            // 
+            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
+            this.cbxTipo.DropDownWidth = 250;
+            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Location = new System.Drawing.Point(0, 70);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(239, 29);
+            this.cbxTipo.TabIndex = 14;
+            // 
             // TelaVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,6 +452,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaVendas";
             this.Text = "TelaVendas";
+            this.Load += new System.EventHandler(this.TelaVendas_Load);
             this.pnlSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.pnlCentral.ResumeLayout(false);
@@ -361,7 +460,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblListaCompras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDesconto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgQuantidade)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCodBarras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPreco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTipo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgProduto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,12 +477,11 @@
         private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.TextBox txtProduto;
-        private System.Windows.Forms.Label lblProduto;
-        private components.ComboTipoProduto comboTipoProduto1;
+        private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblIdentificacaoTela;
         private System.Windows.Forms.Panel pnlLinhaDescricao;
         private System.Windows.Forms.TextBox txtPreço;
-        private System.Windows.Forms.PictureBox imgCodBarras;
+        private System.Windows.Forms.PictureBox imgPreco;
         private System.Windows.Forms.Panel pnlLinhasTipo;
         private System.Windows.Forms.Panel pnlLinhaQuantidade;
         private System.Windows.Forms.PictureBox imgQuantidade;
@@ -392,5 +492,12 @@
         private System.Windows.Forms.Panel pnlLinhaDesconto;
         private System.Windows.Forms.PictureBox imgDesconto;
         private System.Windows.Forms.TextBox txtDesconto;
+        private System.Windows.Forms.Label lblPreco;
+        private System.Windows.Forms.PictureBox imgTipo;
+        private System.Windows.Forms.Label lblDesconto;
+        private System.Windows.Forms.Label lblQuantidade;
+        private System.Windows.Forms.PictureBox imgProduto;
+        private System.Windows.Forms.Label lblProduto;
+        private components.ComboTipoProduto cbxTipo;
     }
 }

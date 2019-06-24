@@ -10,6 +10,8 @@ namespace ProjetoSebo.model
     {
         public int Id { get; set; }
         public List<Produto> Produtos { get; private set; }
+        public DateTime DataHoraVenda { get; set; }
+        public Cliente Cliente { get; set; }
 
         public void AdicionarProduto(Produto produto)
         {

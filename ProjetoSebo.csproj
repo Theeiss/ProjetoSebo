@@ -80,6 +80,8 @@
     <Compile Include="context\SeboContext.cs" />
     <Compile Include="context\SeboInitializer.cs" />
     <Compile Include="controller\VendasController.cs" />
+    <Compile Include="model\Cliente.cs" />
+    <Compile Include="model\ItemVenda.cs" />
     <Compile Include="model\LocalProduto.cs" />
     <Compile Include="model\Produto.cs" />
     <Compile Include="model\TipoProduto.cs" />
@@ -112,11 +114,23 @@
     <Compile Include="views\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\telas_finais\TelaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaClientes.Designer.cs">
+      <DependentUpon>TelaClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\telas_finais\TelaProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\telas_finais\TelaProdutos.Designer.cs">
       <DependentUpon>TelaProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaTeste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaTeste.Designer.cs">
+      <DependentUpon>TelaTeste.cs</DependentUpon>
     </Compile>
     <Compile Include="views\telas_finais\TelaVendas.cs">
       <SubType>Form</SubType>
@@ -160,6 +174,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GlobalResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\telas_finais\TelaClientes.resx">
+      <DependentUpon>TelaClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\telas_finais\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\telas_finais\TelaProdutos.resx">
       <DependentUpon>TelaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\telas_finais\TelaTeste.resx">
+      <DependentUpon>TelaTeste.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\telas_finais\TelaVendas.resx">
       <DependentUpon>TelaVendas.cs</DependentUpon>
@@ -195,6 +215,8 @@
   <ItemGroup>
     <None Include="images\codigo_barras.png" />
     <None Include="images\adicionar.png" />
+    <None Include="images\clientes.png" />
+    <None Include="images\clientes_menu.png" />
     <Content Include="images\compra.png" />
     <None Include="images\descricao.png" />
     <None Include="images\desconto.png" />
@@ -203,6 +225,7 @@
     <None Include="images\enviar.png" />
     <None Include="images\line.png" />
     <None Include="images\foto_usuario.png" />
+    <None Include="images\fechar.png" />
     <Content Include="images\livro.png" />
     <None Include="images\local.png" />
     <Content Include="images\logo.png" />

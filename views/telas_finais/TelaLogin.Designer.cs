@@ -113,13 +113,13 @@ namespace ProjetoSebo.telas
             this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
-            // txtUser
+            // txtLogin
             // 
             this.txtLogin.BackColor = System.Drawing.Color.White;
             this.txtLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLogin.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogin.Location = new System.Drawing.Point(78, 56);
-            this.txtLogin.Name = "txtUser";
+            this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(208, 22);
             this.txtLogin.TabIndex = 3;
             this.txtLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

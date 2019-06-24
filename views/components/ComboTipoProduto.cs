@@ -39,6 +39,8 @@ namespace ProjetoSebo.views.components
         protected override void OnDropDown(EventArgs e)
         {
             Carregar();
+
+            base.OnDropDown(e);
         }
 
         protected override void OnLostFocus(EventArgs e)
@@ -57,6 +59,8 @@ namespace ProjetoSebo.views.components
                 resultado.Exibir();
                 return;
             }
+
+            base.OnLostFocus(e);
         }
 
         public void SetContext(SeboContext context)

@@ -126,5 +126,11 @@ namespace ProjetoSebo.views
             TelaUsuariosCadastro telaUsuariosCadastro = new TelaUsuariosCadastro(_context);
             AbrirTelaInterna(telaUsuariosCadastro);
         }
+
+        private void BtnClientes_Click(object sender, EventArgs e)
+        {
+            TelaClientes telaClientes = new TelaClientes();
+            AbrirTelaInterna(telaClientes);
+        }
     }
 }
