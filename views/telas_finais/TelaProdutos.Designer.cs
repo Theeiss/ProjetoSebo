@@ -36,7 +36,14 @@
             this.pnlInferior = new System.Windows.Forms.Panel();
             this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlCentral = new System.Windows.Forms.Panel();
+            this.lblPalavrasChave = new System.Windows.Forms.Label();
+            this.lblLocal = new System.Windows.Forms.Label();
+            this.lblQuantidade = new System.Windows.Forms.Label();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.lblPreco = new System.Windows.Forms.Label();
+            this.lblCodigoBarras = new System.Windows.Forms.Label();
             this.lblDescricao = new System.Windows.Forms.Label();
+            this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
             this.pnlLinhaPreco = new System.Windows.Forms.Panel();
             this.imgPreco = new System.Windows.Forms.PictureBox();
             this.txtPreco = new System.Windows.Forms.TextBox();
@@ -58,13 +65,6 @@
             this.txtCodBarras = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
-            this.lblCodigoBarras = new System.Windows.Forms.Label();
-            this.lblPreco = new System.Windows.Forms.Label();
-            this.lblTipo = new System.Windows.Forms.Label();
-            this.lblQuantidade = new System.Windows.Forms.Label();
-            this.lblLocal = new System.Windows.Forms.Label();
-            this.lblPalavrasChave = new System.Windows.Forms.Label();
-            this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.pnlCentral.SuspendLayout();
@@ -170,6 +170,72 @@
             this.pnlCentral.Size = new System.Drawing.Size(700, 490);
             this.pnlCentral.TabIndex = 2;
             // 
+            // lblPalavrasChave
+            // 
+            this.lblPalavrasChave.AutoSize = true;
+            this.lblPalavrasChave.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPalavrasChave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblPalavrasChave.Location = new System.Drawing.Point(33, 377);
+            this.lblPalavrasChave.Name = "lblPalavrasChave";
+            this.lblPalavrasChave.Size = new System.Drawing.Size(104, 19);
+            this.lblPalavrasChave.TabIndex = 49;
+            this.lblPalavrasChave.Text = "Palavras-chave:";
+            // 
+            // lblLocal
+            // 
+            this.lblLocal.AutoSize = true;
+            this.lblLocal.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblLocal.Location = new System.Drawing.Point(33, 303);
+            this.lblLocal.Name = "lblLocal";
+            this.lblLocal.Size = new System.Drawing.Size(44, 19);
+            this.lblLocal.TabIndex = 48;
+            this.lblLocal.Text = "Local:";
+            // 
+            // lblQuantidade
+            // 
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblQuantidade.Location = new System.Drawing.Point(434, 236);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(84, 19);
+            this.lblQuantidade.TabIndex = 47;
+            this.lblQuantidade.Text = "Quantidade:";
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblTipo.Location = new System.Drawing.Point(33, 162);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(38, 19);
+            this.lblTipo.TabIndex = 46;
+            this.lblTipo.Text = "Tipo:";
+            // 
+            // lblPreco
+            // 
+            this.lblPreco.AutoSize = true;
+            this.lblPreco.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblPreco.Location = new System.Drawing.Point(33, 236);
+            this.lblPreco.Name = "lblPreco";
+            this.lblPreco.Size = new System.Drawing.Size(47, 19);
+            this.lblPreco.TabIndex = 45;
+            this.lblPreco.Text = "Preço:";
+            // 
+            // lblCodigoBarras
+            // 
+            this.lblCodigoBarras.AutoSize = true;
+            this.lblCodigoBarras.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoBarras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblCodigoBarras.Location = new System.Drawing.Point(33, 93);
+            this.lblCodigoBarras.Name = "lblCodigoBarras";
+            this.lblCodigoBarras.Size = new System.Drawing.Size(117, 19);
+            this.lblCodigoBarras.TabIndex = 44;
+            this.lblCodigoBarras.Text = "Código de Barras:";
+            // 
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
@@ -180,6 +246,19 @@
             this.lblDescricao.Size = new System.Drawing.Size(72, 19);
             this.lblDescricao.TabIndex = 43;
             this.lblDescricao.Text = "Descrição:";
+            // 
+            // cbxTipo
+            // 
+            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
+            this.cbxTipo.DropDownWidth = 250;
+            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Location = new System.Drawing.Point(-5, 193);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(301, 29);
+            this.cbxTipo.TabIndex = 7;
             // 
             // pnlLinhaPreco
             // 
@@ -208,7 +287,7 @@
             this.txtPreco.Location = new System.Drawing.Point(3, 260);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(293, 22);
-            this.txtPreco.TabIndex = 7;
+            this.txtPreco.TabIndex = 8;
             // 
             // cbxLocal
             // 
@@ -411,85 +490,6 @@
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
             this.btnGravar.Click += new System.EventHandler(this.BtnGravar_Click);
-            // 
-            // lblCodigoBarras
-            // 
-            this.lblCodigoBarras.AutoSize = true;
-            this.lblCodigoBarras.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoBarras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblCodigoBarras.Location = new System.Drawing.Point(33, 93);
-            this.lblCodigoBarras.Name = "lblCodigoBarras";
-            this.lblCodigoBarras.Size = new System.Drawing.Size(117, 19);
-            this.lblCodigoBarras.TabIndex = 44;
-            this.lblCodigoBarras.Text = "Código de Barras:";
-            // 
-            // lblPreco
-            // 
-            this.lblPreco.AutoSize = true;
-            this.lblPreco.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblPreco.Location = new System.Drawing.Point(33, 236);
-            this.lblPreco.Name = "lblPreco";
-            this.lblPreco.Size = new System.Drawing.Size(47, 19);
-            this.lblPreco.TabIndex = 45;
-            this.lblPreco.Text = "Preço:";
-            // 
-            // lblTipo
-            // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblTipo.Location = new System.Drawing.Point(33, 162);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(38, 19);
-            this.lblTipo.TabIndex = 46;
-            this.lblTipo.Text = "Tipo:";
-            // 
-            // lblQuantidade
-            // 
-            this.lblQuantidade.AutoSize = true;
-            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblQuantidade.Location = new System.Drawing.Point(434, 236);
-            this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(84, 19);
-            this.lblQuantidade.TabIndex = 47;
-            this.lblQuantidade.Text = "Quantidade:";
-            // 
-            // lblLocal
-            // 
-            this.lblLocal.AutoSize = true;
-            this.lblLocal.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblLocal.Location = new System.Drawing.Point(33, 303);
-            this.lblLocal.Name = "lblLocal";
-            this.lblLocal.Size = new System.Drawing.Size(44, 19);
-            this.lblLocal.TabIndex = 48;
-            this.lblLocal.Text = "Local:";
-            // 
-            // lblPalavrasChave
-            // 
-            this.lblPalavrasChave.AutoSize = true;
-            this.lblPalavrasChave.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPalavrasChave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblPalavrasChave.Location = new System.Drawing.Point(33, 377);
-            this.lblPalavrasChave.Name = "lblPalavrasChave";
-            this.lblPalavrasChave.Size = new System.Drawing.Size(104, 19);
-            this.lblPalavrasChave.TabIndex = 49;
-            this.lblPalavrasChave.Text = "Palavras-chave:";
-            // 
-            // cbxTipo
-            // 
-            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
-            this.cbxTipo.DropDownWidth = 250;
-            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Location = new System.Drawing.Point(0, 186);
-            this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(301, 29);
-            this.cbxTipo.TabIndex = 8;
             // 
             // TelaProdutos
             // 

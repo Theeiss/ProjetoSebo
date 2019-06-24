@@ -30,6 +30,7 @@
         {
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
+            this.lblIdentificacaoTela = new System.Windows.Forms.Label();
             this.pnlDireita = new System.Windows.Forms.Panel();
             this.pnlCentral = new System.Windows.Forms.Panel();
             this.pnlLinhaSexo = new System.Windows.Forms.Panel();
@@ -48,7 +49,6 @@
             this.pnlLinhaNome = new System.Windows.Forms.Panel();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.lblIdentificacaoTela = new System.Windows.Forms.Label();
             this.imgNome = new System.Windows.Forms.PictureBox();
             this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlInferior = new System.Windows.Forms.Panel();
@@ -81,6 +81,17 @@
             this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnVoltar.TabIndex = 1;
             this.btnVoltar.TabStop = false;
+            // 
+            // lblIdentificacaoTela
+            // 
+            this.lblIdentificacaoTela.AutoSize = true;
+            this.lblIdentificacaoTela.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdentificacaoTela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblIdentificacaoTela.Location = new System.Drawing.Point(102, 46);
+            this.lblIdentificacaoTela.Name = "lblIdentificacaoTela";
+            this.lblIdentificacaoTela.Size = new System.Drawing.Size(105, 31);
+            this.lblIdentificacaoTela.TabIndex = 22;
+            this.lblIdentificacaoTela.Text = "Clientes";
             // 
             // pnlDireita
             // 
@@ -211,7 +222,7 @@
             this.btnGravar.Location = new System.Drawing.Point(599, 439);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(200, 50);
-            this.btnGravar.TabIndex = 42;
+            this.btnGravar.TabIndex = 49;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
             // 
@@ -288,17 +299,6 @@
             this.lblNome.Size = new System.Drawing.Size(50, 19);
             this.lblNome.TabIndex = 36;
             this.lblNome.Text = "Nome:";
-            // 
-            // lblIdentificacaoTela
-            // 
-            this.lblIdentificacaoTela.AutoSize = true;
-            this.lblIdentificacaoTela.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentificacaoTela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblIdentificacaoTela.Location = new System.Drawing.Point(102, 46);
-            this.lblIdentificacaoTela.Name = "lblIdentificacaoTela";
-            this.lblIdentificacaoTela.Size = new System.Drawing.Size(105, 31);
-            this.lblIdentificacaoTela.TabIndex = 22;
-            this.lblIdentificacaoTela.Text = "Clientes";
             // 
             // imgNome
             // 
