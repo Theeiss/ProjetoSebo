@@ -120,6 +120,24 @@
     <Compile Include="views\telas_finais\TelaClientes.Designer.cs">
       <DependentUpon>TelaClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\telas_finais\TelaCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaCompras.Designer.cs">
+      <DependentUpon>TelaCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaDoacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaDoacoes.Designer.cs">
+      <DependentUpon>TelaDoacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaPreferencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaPreferencias.Designer.cs">
+      <DependentUpon>TelaPreferencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\telas_finais\TelaProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,11 +195,20 @@
     <EmbeddedResource Include="views\telas_finais\TelaClientes.resx">
       <DependentUpon>TelaClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\telas_finais\TelaCompras.resx">
+      <DependentUpon>TelaCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\telas_finais\TelaDoacoes.resx">
+      <DependentUpon>TelaDoacoes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\telas_finais\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\telas_finais\TelaPreferencias.resx">
+      <DependentUpon>TelaPreferencias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\telas_finais\TelaProdutos.resx">
       <DependentUpon>TelaProdutos.cs</DependentUpon>

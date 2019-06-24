@@ -69,6 +69,7 @@
             // pnlSuperior
             // 
             this.pnlSuperior.Controls.Add(this.btnVoltar);
+            this.pnlSuperior.Controls.Add(this.lblIdentificacaoTela);
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnlSuperior.Name = "pnlSuperior";
@@ -114,7 +115,6 @@
             this.pnlCentral.Controls.Add(this.imgConfirmar);
             this.pnlCentral.Controls.Add(this.imgSenha);
             this.pnlCentral.Controls.Add(this.imgLogin);
-            this.pnlCentral.Controls.Add(this.lblIdentificacaoTela);
             this.pnlCentral.Controls.Add(this.pnlLinhaConfirmarSenha);
             this.pnlCentral.Controls.Add(this.pnlLinhaSenha);
             this.pnlCentral.Controls.Add(this.pnlLinhaLogin);
@@ -196,7 +196,7 @@
             this.lblIdentificacaoTela.AutoSize = true;
             this.lblIdentificacaoTela.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdentificacaoTela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblIdentificacaoTela.Location = new System.Drawing.Point(3, 3);
+            this.lblIdentificacaoTela.Location = new System.Drawing.Point(103, 46);
             this.lblIdentificacaoTela.Name = "lblIdentificacaoTela";
             this.lblIdentificacaoTela.Size = new System.Drawing.Size(112, 31);
             this.lblIdentificacaoTela.TabIndex = 21;
@@ -312,6 +312,7 @@
             this.Name = "TelaUsuariosCadastro";
             this.Text = "TelaUsuariosCadastro";
             this.pnlSuperior.ResumeLayout(false);
+            this.pnlSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.pnlCentral.ResumeLayout(false);
             this.pnlCentral.PerformLayout();

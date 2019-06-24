@@ -218,6 +218,7 @@
             this.btnPreferencias.TabIndex = 6;
             this.btnPreferencias.Text = " Preferências";
             this.btnPreferencias.UseVisualStyleBackColor = true;
+            this.btnPreferencias.Click += new System.EventHandler(this.BtnPreferencias_Click);
             // 
             // btnVendas
             // 
@@ -255,6 +256,7 @@
             this.btnDoações.TabIndex = 3;
             this.btnDoações.Text = "Doações";
             this.btnDoações.UseVisualStyleBackColor = true;
+            this.btnDoações.Click += new System.EventHandler(this.BtnDoações_Click);
             // 
             // btnRelatorios
             // 
@@ -291,6 +293,7 @@
             this.btnCompras.TabIndex = 3;
             this.btnCompras.Text = "Compras";
             this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.BtnCompras_Click);
             // 
             // btnProdutos
             // 
