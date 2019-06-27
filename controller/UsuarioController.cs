@@ -5,10 +5,8 @@ using System.Linq;
 
 namespace ProjetoSebo.controller
 {
-    public class UsuarioController
+    public class UsuarioController : BaseParaController
     {
-        public SeboContext Context { get; set; }
-
         private const int QTD_MINIMA_LOGIN = 5;
         private const int QTD_MINIMA_SENHA = 8;
 

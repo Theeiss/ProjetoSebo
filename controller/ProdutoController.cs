@@ -3,10 +3,8 @@ using ProjetoSebo.model;
 
 namespace ProjetoSebo.controller
 {
-    public class ProdutoController
+    public class ProdutoController : BaseParaController
     {
-        public SeboContext Context { get; set; }
-
         public ResultadoOperacao Gravar(Produto produto)
         {
             ResultadoOperacao resultado = ConsistirDados(produto);

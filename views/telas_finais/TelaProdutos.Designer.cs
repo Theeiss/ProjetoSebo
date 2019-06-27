@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public override void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             this.pnlSuperior = new System.Windows.Forms.Panel();
@@ -97,6 +97,7 @@
             this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnVoltar.TabIndex = 1;
             this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // lblIdentificacaoTela
             // 
@@ -251,13 +252,14 @@
             // 
             this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
+            this.cbxTipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbxTipo.DropDownWidth = 250;
             this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTipo.FormattingEnabled = true;
             this.cbxTipo.Location = new System.Drawing.Point(-5, 193);
             this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(301, 29);
+            this.cbxTipo.Size = new System.Drawing.Size(301, 30);
             this.cbxTipo.TabIndex = 7;
             // 
             // pnlLinhaPreco

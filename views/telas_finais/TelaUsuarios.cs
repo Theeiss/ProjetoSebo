@@ -1,30 +1,23 @@
 ﻿using ProjetoSebo.controller;
 using ProjetoSebo.dao;
 using ProjetoSebo.model;
+using ProjetoSebo.views.components;
 using System;
-using System.Windows.Forms;
 
 namespace ProjetoSebo.views
 {
-    public partial class TelaUsuariosCadastro : Form
+    public partial class TelaUsuariosCadastro : BaseParaTela<UsuarioController>
     {
-        public UsuarioController UsuarioController { private get; set; }
-
-        public TelaUsuariosCadastro(SeboContext context)
+        public TelaUsuariosCadastro(SeboContext context) :
+            base(context, new UsuarioController())
         {
-            this.UsuarioController = new UsuarioController
-            {
-                Context = context
-            };
-
-            InitializeComponent();
         }
 
-        private void BtnVoltar_Click(object sender, EventArgs e)
+        public void BtnVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
-        
+
         private void BtnGravar_Click(object sender, EventArgs e)
         {
             ResultadoOperacao resultado = ValidarCampos();
@@ -40,7 +33,7 @@ namespace ProjetoSebo.views
                 Senha = this.txtSenha.Text
             };
 
-            resultado = UsuarioController.Gravar(usuario);
+            resultado = Controller.Gravar(usuario);
 
             if (resultado.VerificarSucessoOperacao())
             {
@@ -59,7 +52,7 @@ namespace ProjetoSebo.views
                 return new ResultadoAviso("O login deve ser informado.");
             }
 
-            ResultadoOperacao resultado = UsuarioController.ConsistirLogin(login);
+            ResultadoOperacao resultado = Controller.ConsistirLogin(login);
             if (resultado.VerificarFalhaOperacao())
             {
                 this.txtLogin.Focus();
@@ -73,7 +66,7 @@ namespace ProjetoSebo.views
                 return new ResultadoAviso("A senha deve ser informada.");
             }
 
-            resultado = UsuarioController.ConsistirSenha(senha);
+            resultado = Controller.ConsistirSenha(senha);
             if (resultado.VerificarFalhaOperacao())
             {
                 this.txtSenha.Focus();

@@ -1,25 +1,22 @@
 ﻿using ProjetoSebo.controller;
 using ProjetoSebo.dao;
 using ProjetoSebo.model;
+using ProjetoSebo.views.components;
 using System;
-using System.Windows.Forms;
 
 namespace ProjetoSebo.views.telas_finais
 {
-    public partial class TelaProdutos : Form
+    public partial class TelaProdutos : BaseParaTela<ProdutoController>
     {
-        public ProdutoController ProdCtrl { private get; set; }
-
-        public TelaProdutos(SeboContext context)
+        public TelaProdutos(SeboContext context) :
+            base(context, new ProdutoController())
         {
-            this.ProdCtrl = new ProdutoController()
-            {
-                Context = context
-            };
-
-            InitializeComponent();
-
             this.cbxTipo.SetContext(context);
+        }
+
+        public void BtnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
 
         private void BtnGravar_Click(object sender, System.EventArgs e)
@@ -40,7 +37,7 @@ namespace ProjetoSebo.views.telas_finais
                 PalavrasChave = this.txtPalavrasChave.Text
             };
 
-            resultado = ProdCtrl.Gravar(produto);
+            resultado = Controller.Gravar(produto);
 
             if (resultado.VerificarSucessoOperacao())
             {
