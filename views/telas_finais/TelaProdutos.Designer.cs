@@ -257,9 +257,9 @@
             this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Location = new System.Drawing.Point(-5, 193);
+            this.cbxTipo.Location = new System.Drawing.Point(3, 186);
             this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(301, 30);
+            this.cbxTipo.Size = new System.Drawing.Size(300, 30);
             this.cbxTipo.TabIndex = 7;
             // 
             // pnlLinhaPreco

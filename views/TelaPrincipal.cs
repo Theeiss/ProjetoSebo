@@ -129,7 +129,7 @@ namespace ProjetoSebo.views
 
         private void BtnClientes_Click(object sender, EventArgs e)
         {
-            TelaClientes telaClientes = new TelaClientes();
+            TelaClientes telaClientes = new TelaClientes(_context);
             AbrirTelaInterna(telaClientes);
         }
 

@@ -74,6 +74,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controller\BaseParaController.cs" />
+    <Compile Include="controller\ClienteController.cs" />
+    <Compile Include="controller\ItemVendaController.cs" />
+    <Compile Include="controller\LocalController.cs" />
     <Compile Include="controller\ProdutoController.cs" />
     <Compile Include="controller\ResultadoOperacao.cs" />
     <Compile Include="controller\TipoProdutoController.cs" />
@@ -83,6 +86,7 @@
     <Compile Include="controller\VendasController.cs" />
     <Compile Include="model\Cliente.cs" />
     <Compile Include="model\ItemVenda.cs" />
+    <Compile Include="model\Local.cs" />
     <Compile Include="model\LocalProduto.cs" />
     <Compile Include="model\Produto.cs" />
     <Compile Include="model\TipoProduto.cs" />
@@ -97,6 +101,9 @@
     </Compile>
     <Compile Include="views\components\BaseParaTelas.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\components\ComboLocais.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="views\components\ComboTipoProduto.cs">
       <SubType>Component</SubType>
@@ -251,12 +258,14 @@
     <Content Include="images\compra.png" />
     <None Include="images\descricao.png" />
     <None Include="images\desconto.png" />
+    <None Include="images\data_nascimento.png" />
     <Content Include="images\doacoes.png" />
     <None Include="Resources\senha_login.png" />
     <None Include="images\enviar.png" />
     <None Include="images\line.png" />
     <None Include="images\foto_usuario.png" />
     <None Include="images\fechar.png" />
+    <None Include="images\documento.png" />
     <Content Include="images\livro.png" />
     <None Include="images\local.png" />
     <Content Include="images\logo.png" />
@@ -271,6 +280,7 @@
     <None Include="images\senha_login.png" />
     <None Include="images\salvar.png" />
     <None Include="images\tipo.png" />
+    <None Include="images\sexo.png" />
     <Content Include="images\usuarios.png" />
     <None Include="images\usuario_login.png" />
     <Content Include="images\venda.png" />

@@ -8,7 +8,7 @@ namespace ProjetoSebo.views
 {
     public partial class TelaUsuariosCadastro : BaseParaTela<UsuarioController>
     {
-        public TelaUsuariosCadastro(SeboContext context) :
+        public TelaUsuariosCadastro(SeboContext context) : 
             base(context, new UsuarioController())
         {
         }

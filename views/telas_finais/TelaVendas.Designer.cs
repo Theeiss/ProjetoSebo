@@ -34,6 +34,7 @@
             this.pnlDireita = new System.Windows.Forms.Panel();
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
+            this.lblIdentificacaoTela = new System.Windows.Forms.Label();
             this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlInferior = new System.Windows.Forms.Panel();
             this.pnlCentral = new System.Windows.Forms.Panel();
@@ -53,14 +54,13 @@
             this.imgQuantidade = new System.Windows.Forms.PictureBox();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.pnlLinhasTipo = new System.Windows.Forms.Panel();
-            this.txtPreço = new System.Windows.Forms.TextBox();
+            this.txtPreco = new System.Windows.Forms.TextBox();
             this.imgPreco = new System.Windows.Forms.PictureBox();
             this.pnlLinhaDescricao = new System.Windows.Forms.Panel();
             this.txtProduto = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
-            this.lblIdentificacaoTela = new System.Windows.Forms.Label();
-            this.btnGravar = new System.Windows.Forms.Button();
             this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
+            this.btnGravar = new System.Windows.Forms.Button();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.pnlCentral.SuspendLayout();
@@ -101,6 +101,17 @@
             this.btnVoltar.TabIndex = 2;
             this.btnVoltar.TabStop = false;
             // 
+            // lblIdentificacaoTela
+            // 
+            this.lblIdentificacaoTela.AutoSize = true;
+            this.lblIdentificacaoTela.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdentificacaoTela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblIdentificacaoTela.Location = new System.Drawing.Point(102, 46);
+            this.lblIdentificacaoTela.Name = "lblIdentificacaoTela";
+            this.lblIdentificacaoTela.Size = new System.Drawing.Size(98, 31);
+            this.lblIdentificacaoTela.TabIndex = 5;
+            this.lblIdentificacaoTela.Text = "Vendas";
+            // 
             // pnlEsquerda
             // 
             this.pnlEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
@@ -135,7 +146,7 @@
             this.pnlCentral.Controls.Add(this.imgQuantidade);
             this.pnlCentral.Controls.Add(this.txtQuantidade);
             this.pnlCentral.Controls.Add(this.pnlLinhasTipo);
-            this.pnlCentral.Controls.Add(this.txtPreço);
+            this.pnlCentral.Controls.Add(this.txtPreco);
             this.pnlCentral.Controls.Add(this.imgPreco);
             this.pnlCentral.Controls.Add(this.pnlLinhaDescricao);
             this.pnlCentral.Controls.Add(this.txtProduto);
@@ -249,6 +260,7 @@
             this.tblListaCompras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblListaCompras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tblListaCompras.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(180)))), ((int)(((byte)(242)))));
             this.tblListaCompras.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tblListaCompras.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -340,16 +352,16 @@
             this.pnlLinhasTipo.Size = new System.Drawing.Size(300, 1);
             this.pnlLinhasTipo.TabIndex = 41;
             // 
-            // txtPreço
+            // txtPreco
             // 
-            this.txtPreço.BackColor = System.Drawing.SystemColors.Control;
-            this.txtPreço.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPreço.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreço.ForeColor = System.Drawing.Color.Black;
-            this.txtPreço.Location = new System.Drawing.Point(2, 137);
-            this.txtPreço.Name = "txtPreço";
-            this.txtPreço.Size = new System.Drawing.Size(299, 22);
-            this.txtPreço.TabIndex = 40;
+            this.txtPreco.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPreco.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreco.ForeColor = System.Drawing.Color.Black;
+            this.txtPreco.Location = new System.Drawing.Point(2, 137);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(299, 22);
+            this.txtPreco.TabIndex = 40;
             // 
             // imgPreco
             // 
@@ -395,16 +407,19 @@
             this.lblTipo.TabIndex = 15;
             this.lblTipo.Text = "Tipo:";
             // 
-            // lblIdentificacaoTela
+            // cbxTipo
             // 
-            this.lblIdentificacaoTela.AutoSize = true;
-            this.lblIdentificacaoTela.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentificacaoTela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblIdentificacaoTela.Location = new System.Drawing.Point(102, 46);
-            this.lblIdentificacaoTela.Name = "lblIdentificacaoTela";
-            this.lblIdentificacaoTela.Size = new System.Drawing.Size(98, 31);
-            this.lblIdentificacaoTela.TabIndex = 5;
-            this.lblIdentificacaoTela.Text = "Vendas";
+            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
+            this.cbxTipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxTipo.DropDownWidth = 250;
+            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Location = new System.Drawing.Point(0, 70);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(239, 30);
+            this.cbxTipo.TabIndex = 14;
             // 
             // btnGravar
             // 
@@ -425,19 +440,6 @@
             this.btnGravar.TabIndex = 13;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
-            // 
-            // cbxTipo
-            // 
-            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
-            this.cbxTipo.DropDownWidth = 250;
-            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Location = new System.Drawing.Point(0, 70);
-            this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(239, 29);
-            this.cbxTipo.TabIndex = 14;
             // 
             // TelaVendas
             // 
@@ -481,7 +483,7 @@
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblIdentificacaoTela;
         private System.Windows.Forms.Panel pnlLinhaDescricao;
-        private System.Windows.Forms.TextBox txtPreço;
+        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.PictureBox imgPreco;
         private System.Windows.Forms.Panel pnlLinhasTipo;
         private System.Windows.Forms.Panel pnlLinhaQuantidade;

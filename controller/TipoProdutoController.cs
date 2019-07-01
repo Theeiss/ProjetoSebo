@@ -5,10 +5,8 @@ using System.Linq;
 
 namespace ProjetoSebo.controller
 {
-    public class TipoProdutoController
+    public class TipoProdutoController : BaseParaController
     {
-        public SeboContext Context { get; set; }
-
         public ResultadoOperacao Gravar(TipoProduto tipoProduto)
         {
             ResultadoOperacao resultado = ConsistirDados(tipoProduto);
