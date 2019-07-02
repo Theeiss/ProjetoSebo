@@ -5,12 +5,7 @@ using System.Windows.Forms;
 
 namespace ProjetoSebo.views.components
 {
-    public interface IBaseParaTela
-    {
-        void InitializeComponent();
-    }
-
-    public class BaseParaTela<TController> : Form, IBaseParaTela
+    public class BaseParaTela<TController> : Form
         where TController : BaseParaController
     {
         public TController Controller { get; set; }
@@ -26,9 +21,8 @@ namespace ProjetoSebo.views.components
             InitializeComponent();
         }
 
-        public virtual void InitializeComponent()
+        protected virtual void InitializeComponent()
         {
-            throw new NotImplementedException();
         }
     }
 }

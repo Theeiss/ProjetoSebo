@@ -22,10 +22,18 @@ namespace ProjetoSebo.controller
             return new ResultadoSucesso("Usuário cadastrado com sucesso.");
         }
 
-        public ResultadoOperacao ValidarLogin(string login, string senha)
+        public ResultadoOperacao ConsistirAcesso(string login, string senha)
         {
             if (Context.Usuarios.Where(u => u.Login == login && u.Senha == senha).Count() == 0)
                 return new ResultadoAviso("Usuário e/ou senha não encontrados.");
+
+            return new ResultadoSucesso();
+        }
+
+        public ResultadoOperacao ConsistirConfirmacaoSenha(string senha, string confirmacao)
+        {
+            if (senha != confirmacao)
+                return new ResultadoAviso("As senhas digitadas são diferentes.");
 
             return new ResultadoSucesso();
         }

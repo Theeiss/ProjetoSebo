@@ -13,11 +13,6 @@ namespace ProjetoSebo.views
         {
         }
 
-        public void BtnVoltar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
         private void BtnGravar_Click(object sender, EventArgs e)
         {
             ResultadoOperacao resultado = ValidarCampos();
@@ -45,28 +40,14 @@ namespace ProjetoSebo.views
 
         private ResultadoOperacao ValidarCampos()
         {
-            string login = this.txtLogin.Text;
-            if (login.Length == 0)
-            {
-                this.txtLogin.Focus();
-                return new ResultadoAviso("O login deve ser informado.");
-            }
-
-            ResultadoOperacao resultado = Controller.ConsistirLogin(login);
+            ResultadoOperacao resultado = Controller.ConsistirLogin(this.txtLogin.Text);
             if (resultado.VerificarFalhaOperacao())
             {
                 this.txtLogin.Focus();
                 return resultado;
             }
 
-            string senha = this.txtSenha.Text;
-            if (senha.Length == 0)
-            {
-                this.txtSenha.Focus();
-                return new ResultadoAviso("A senha deve ser informada.");
-            }
-
-            resultado = Controller.ConsistirSenha(senha);
+            resultado = Controller.ConsistirSenha(this.txtSenha.Text);
             if (resultado.VerificarFalhaOperacao())
             {
                 this.txtSenha.Focus();
@@ -79,7 +60,8 @@ namespace ProjetoSebo.views
                 return new ResultadoAviso("É necessário confirmar a senha.");
             }
 
-            if (this.txtConfirmarSenha.Text != senha)
+            resultado = Controller.ConsistirConfirmacaoSenha(this.txtSenha.Text, this.txtConfirmarSenha.Text);
+            if (resultado.VerificarFalhaOperacao())
             {
                 this.txtConfirmarSenha.Focus();
                 return new ResultadoAviso("As senhas digitadas são diferentes.");
@@ -94,6 +76,11 @@ namespace ProjetoSebo.views
             this.txtConfirmarSenha.Clear();
 
             this.txtLogin.Focus();
+        }
+
+        public void BtnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        public override void InitializeComponent()
+        protected override void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             this.pnlSuperior = new System.Windows.Forms.Panel();
@@ -46,7 +46,6 @@
             this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
             this.pnlLinhaPreco = new System.Windows.Forms.Panel();
             this.imgPreco = new System.Windows.Forms.PictureBox();
-            this.txtPreco = new System.Windows.Forms.TextBox();
             this.cbxLocal = new System.Windows.Forms.ComboBox();
             this.pnlLinhaPalavrasChave = new System.Windows.Forms.Panel();
             this.pnlLinhaLocal = new System.Windows.Forms.Panel();
@@ -146,7 +145,6 @@
             this.pnlCentral.Controls.Add(this.cbxTipo);
             this.pnlCentral.Controls.Add(this.pnlLinhaPreco);
             this.pnlCentral.Controls.Add(this.imgPreco);
-            this.pnlCentral.Controls.Add(this.txtPreco);
             this.pnlCentral.Controls.Add(this.cbxLocal);
             this.pnlCentral.Controls.Add(this.pnlLinhaPalavrasChave);
             this.pnlCentral.Controls.Add(this.pnlLinhaLocal);
@@ -279,17 +277,6 @@
             this.imgPreco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPreco.TabIndex = 41;
             this.imgPreco.TabStop = false;
-            // 
-            // txtPreco
-            // 
-            this.txtPreco.BackColor = System.Drawing.SystemColors.Control;
-            this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPreco.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreco.ForeColor = System.Drawing.Color.Black;
-            this.txtPreco.Location = new System.Drawing.Point(3, 260);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(293, 22);
-            this.txtPreco.TabIndex = 8;
             // 
             // cbxLocal
             // 
@@ -551,7 +538,6 @@
         private System.Windows.Forms.ComboBox cbxLocal;
         private System.Windows.Forms.Panel pnlLinhaPreco;
         private System.Windows.Forms.PictureBox imgPreco;
-        private System.Windows.Forms.TextBox txtPreco;
         private components.ComboTipoProduto cbxTipo;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Label lblPalavrasChave;

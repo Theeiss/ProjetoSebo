@@ -12,14 +12,11 @@ namespace ProjetoSebo.views.telas_finais
     public partial class TelaVendas : BaseParaTela<VendasController>
     {
         public List<ItemVenda> Itens { get; set; }
-        private DataGridView gridViewItemVenda = new DataGridView();
 
         public TelaVendas(SeboContext context) :
             base(context, new VendasController())
         {
             Itens = new List<ItemVenda>();
-
-            InitializeComponent();
 
             this.cbxTipo.SetContext(context);
         }
@@ -41,7 +38,7 @@ namespace ProjetoSebo.views.telas_finais
                 Preco = 12,
                 Quantidade = 1,
                 Tipo = new TipoProduto(),
-                CodigoBarras = 1111,
+                CodigoBarras = "7891040789",
                 PalavrasChave = "borracha"
             };
 
@@ -114,7 +111,7 @@ namespace ProjetoSebo.views.telas_finais
                        orderby item.Produto.Descricao
                        select new
                        {
-                           Produto = item.Produto.Descricao,
+                           Produto = item.Produto.ToString(),
                            item.Quantidade,
                            item.Preco,
                            item.Desconto,
@@ -123,6 +120,11 @@ namespace ProjetoSebo.views.telas_finais
                        };
 
             this.tblListaCompras.DataSource = data.ToList();
+        }
+
+        public void BtnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

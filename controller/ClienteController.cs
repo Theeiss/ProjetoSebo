@@ -22,21 +22,42 @@ namespace ProjetoSebo.controller
             return new ResultadoSucesso();
         }
 
-        public ResultadoOperacao ValidarCpf(string cpf)
+        public ResultadoOperacao ConsistirDataNascimento(DateTime dataNascimento)
         {
+            if(dataNascimento == DateTime.MinValue)
+                return new ResultadoAviso("A data de nascimento deve ser informada.");
+
+            if (dataNascimento > DateTime.Now)
+                return new ResultadoAviso("A data de nascimento não pode ser uma data futura.");
+
             return new ResultadoSucesso();
         }
 
-        public ResultadoOperacao ValidarDataNascimento(DateTime dataNascimento)
+        public ResultadoOperacao ConsistirNome(string nome)
         {
-            if (dataNascimento > DateTime.Now)
-                return new ResultadoAviso("A data de nascimento não pode ser uma data furura.");
+            if (nome.Length == 0)
+            {
+                return new ResultadoAviso("Nome do cliente deve ser informado.");
+            }
+
+            return new ResultadoSucesso();
+        }
+
+        public ResultadoOperacao ConsistirSexo(Cliente.TipoSexo sexo)
+        {
+            if(sexo == Cliente.TipoSexo.Nenhum)
+                return new ResultadoAviso("Sexo deve ser informado.");
 
             return new ResultadoSucesso();
         }
 
         public ResultadoOperacao ConsistirCpf(string cpf)
         {
+            cpf = cpf.Replace(".", "").Replace(",", "").Replace("-", "").Trim();
+
+            if (cpf.Length == 0)
+                return new ResultadoAviso("CPF do cliente deve ser informado.");
+ 
             string msg = "O CPF informado é inválido.";
             int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
             int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -46,8 +67,6 @@ namespace ProjetoSebo.controller
 
             int soma;
             int resto;
-
-            cpf = cpf.Trim().Replace(".", "").Replace(",", "").Replace("-", "");
 
             if (cpf.Length != 11)
                 return new ResultadoAviso(msg);
