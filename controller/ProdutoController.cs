@@ -19,7 +19,21 @@ namespace ProjetoSebo.controller
 
         public ResultadoOperacao ConsistirDados(Produto produto)
         {
+            ResultadoOperacao resultado = ConsistirDescricao(produto.Descricao);
+            if (resultado.VerificarFalhaOperacao())
+                return resultado;
+
             return new ResultadoSucesso();
         }
+
+        public ResultadoOperacao ConsistirDescricao(string descricao)
+        {
+            if (descricao.Length == 0)
+                return new ResultadoAviso("Descrição deve ser informada");
+
+            return new ResultadoSucesso();
+        }
+
+
     }
 }

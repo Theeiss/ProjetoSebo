@@ -1,23 +1,16 @@
 ﻿using ProjetoSebo.controller;
 using ProjetoSebo.dao;
 using ProjetoSebo.model;
+using ProjetoSebo.views.components;
 using System;
-using System.Windows.Forms;
 
 namespace ProjetoSebo.views.telas_finais
 {
-    public partial class TelaClientes : Form
+    public partial class TelaClientes : BaseParaTela<ClienteController>
     {
-        ClienteController ClienteController { get; set; }
-
-        public TelaClientes(SeboContext context)
+        public TelaClientes(SeboContext context) :
+            base(context, new ClienteController())
         {
-            this.ClienteController = new ClienteController
-            {
-                Context = context
-            };
-
-            InitializeComponent();
         }
 
         private void BtnGravar_Click(object sender, EventArgs e)
@@ -34,10 +27,10 @@ namespace ProjetoSebo.views.telas_finais
                 Nome = this.txtNome.Text,
                 Cpf = this.txtCpf.Text,
                 DataNascimento = Convert.ToDateTime(this.txtDataNascimento.Text),
-                Sexo = this.rdbMasculino.Checked ? Cliente.TipoSexo.Masculino : Cliente.TipoSexo.Feminino
+                Sexo = ObterSexoInformado()
             };
 
-            resultado = this.ClienteController.Gravar(cliente);
+            resultado = this.Controller.Gravar(cliente);
             if (resultado.VerificarSucessoOperacao())
             {
                 Limpar();
@@ -48,20 +41,14 @@ namespace ProjetoSebo.views.telas_finais
 
         private ResultadoOperacao ValidarCampos()
         {
-            if(this.txtNome.TextLength == 0)
+            ResultadoOperacao resultado = this.Controller.ConsistirNome(this.txtNome.Text);
+            if (resultado.VerificarFalhaOperacao())
             {
                 this.txtNome.Focus();
-                return new ResultadoAviso("Nome do cliente deve ser informado.");
+                return resultado;
             }
 
-            string cpf = this.txtCpf.Text;
-            if (cpf.Length == 0)
-            {
-                this.txtCpf.Focus();
-                return new ResultadoAviso("CPF do cliente deve ser informado.");
-            }
-
-            ResultadoOperacao resultado = this.ClienteController.ConsistirCpf(cpf);
+            resultado = this.Controller.ConsistirCpf(this.txtCpf.Text);
             if(resultado.VerificarFalhaOperacao())
             {
                 this.txtCpf.Focus();
@@ -74,9 +61,25 @@ namespace ProjetoSebo.views.telas_finais
                 return new ResultadoAviso("Data de nascimento deve ser informada.");
             }
 
+            resultado = this.Controller.ConsistirSexo(ObterSexoInformado());
+            if (resultado.VerificarFalhaOperacao())
+            {
+                this.rdbMasculino.Focus();
+                return resultado;
+            }
+
             return new ResultadoSucesso();
         }
 
+        private Cliente.TipoSexo ObterSexoInformado()
+        {
+            if (this.rdbMasculino.Checked)
+                return Cliente.TipoSexo.Masculino;
+            else if (this.rdbFeminino.Checked)
+                return Cliente.TipoSexo.Feminino;
+
+            return Cliente.TipoSexo.Nenhum;
+        }
         private void Limpar()
         {
             this.txtNome.Clear();
@@ -84,6 +87,11 @@ namespace ProjetoSebo.views.telas_finais
             this.txtDataNascimento.Clear();
             this.rdbMasculino.Checked = false;
             this.rdbFeminino.Checked = false;
+        }
+
+        public void BtnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

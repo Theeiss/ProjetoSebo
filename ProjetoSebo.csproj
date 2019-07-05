@@ -114,6 +114,12 @@
     <Compile Include="views\components\TextBoxValor.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="views\components\TextBoxValor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\components\TextBoxValor.Designer.cs">
+      <DependentUpon>TextBoxValor.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\GlobalResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\components\ComboTipoProduto.resx">
       <DependentUpon>ComboTipoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\components\TextBoxValor.resx">
+      <DependentUpon>TextBoxValor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\GlobalResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

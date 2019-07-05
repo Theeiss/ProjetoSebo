@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        protected override void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -59,8 +59,8 @@
             this.pnlLinhaDescricao = new System.Windows.Forms.Panel();
             this.txtProduto = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
-            this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
             this.btnGravar = new System.Windows.Forms.Button();
+            this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.pnlCentral.SuspendLayout();
@@ -277,9 +277,9 @@
             this.tblListaCompras.GridColor = System.Drawing.Color.SteelBlue;
             this.tblListaCompras.Location = new System.Drawing.Point(9, 283);
             this.tblListaCompras.Name = "tblListaCompras";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.tblListaCompras.RowsDefaultCellStyle = dataGridViewCellStyle2;
@@ -407,20 +407,6 @@
             this.lblTipo.TabIndex = 15;
             this.lblTipo.Text = "Tipo:";
             // 
-            // cbxTipo
-            // 
-            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
-            this.cbxTipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbxTipo.DropDownWidth = 250;
-            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Location = new System.Drawing.Point(0, 70);
-            this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(239, 30);
-            this.cbxTipo.TabIndex = 14;
-            // 
             // btnGravar
             // 
             this.btnGravar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -440,6 +426,20 @@
             this.btnGravar.TabIndex = 13;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
+            // 
+            // cbxTipo
+            // 
+            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
+            this.cbxTipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxTipo.DropDownWidth = 250;
+            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Location = new System.Drawing.Point(0, 70);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(239, 30);
+            this.cbxTipo.TabIndex = 14;
             // 
             // TelaVendas
             // 

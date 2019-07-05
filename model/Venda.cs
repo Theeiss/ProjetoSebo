@@ -1,24 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoSebo.model
 {
     public class Venda
     {
         public int Id { get; set; }
-        public List<Produto> Produtos { get; private set; }
+        public List<ItemVenda> Itens { get; private set; }
         public DateTime DataHoraVenda { get; set; }
         public Cliente Cliente { get; set; }
 
-        public void AdicionarProduto(Produto produto)
+        public void AdicionarItemVenda(ItemVenda item)
         {
-            if (produto == null)
+            if (item == null)
                 return;
 
-            this.Produtos.Add(produto);
+            this.Itens.Add(item);
         }
     }
 }

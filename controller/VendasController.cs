@@ -9,6 +9,11 @@ namespace ProjetoSebo.controller
     {
         public ItemVendaController ControllerItemVenda { get; set; }
 
+        public VendasController()
+        {
+            ControllerItemVenda = new ItemVendaController();
+        }
+
         public ResultadoOperacao Gravar(Venda venda)
         {
             ResultadoOperacao resultado = ConsistirDados(venda);
