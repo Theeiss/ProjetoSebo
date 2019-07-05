@@ -111,7 +111,7 @@
     <Compile Include="views\components\ComboTipoProduto.Designer.cs">
       <DependentUpon>ComboTipoProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\components\NossoTextBox.cs">
+    <Compile Include="views\components\TextBoxValor.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="views\GlobalResource.Designer.cs">

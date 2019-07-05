@@ -135,8 +135,11 @@ namespace ProjetoSebo.views
 
         private void BtnPreferencias_Click(object sender, EventArgs e)
         {
-            TelaPreferencias telaPreferencias = new TelaPreferencias();
-            AbrirTelaInterna(telaPreferencias);
+            //TelaPreferencias telaPreferencias = new TelaPreferencias();
+            //AbrirTelaInterna(telaPreferencias);
+
+            TelaTeste telaTeste = new TelaTeste();
+            AbrirTelaInterna(telaTeste);
         }
 
         private void BtnCompras_Click(object sender, EventArgs e)
