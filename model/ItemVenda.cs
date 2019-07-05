@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjetoSebo.model
+﻿namespace ProjetoSebo.model
 {
-    public class ItemVenda
+    public class ItemVenda : BaseParaModel
     {
         public int Id { get; set; }
         public Produto Produto { get; set; }

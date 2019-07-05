@@ -1,14 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoSebo", "ProjetoSebo.csproj", "{096CC707-30D5-490F-A860-2B2DBBBF89F8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sql_scripts", "sql_scripts", "{C1C3032F-6CDC-4A85-B8D0-57543104F5F8}"
-	ProjectSection(SolutionItems) = preProject
-		sql_sebo.sql = sql_sebo.sql
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,14 +1,22 @@
-﻿using ProjetoSebo.dao;
+﻿using ProjetoSebo.error;
 using ProjetoSebo.model;
-using System;
+using ProjetoSebo.validator;
 using System.Linq;
 
 namespace ProjetoSebo.controller
 {
     public class UsuarioController : BaseParaController
     {
-        private const int QTD_MINIMA_LOGIN = 5;
-        private const int QTD_MINIMA_SENHA = 8;
+        public const int CAMPO_LOGIN = 1;
+        public const int CAMPO_SENHA = 2;
+        public const int CAMPO_CONFIRMACAO_SENHA = 3;
+
+        public UsuarioValidator Validator { get; set; }
+
+        public UsuarioController()
+        {
+            Validator = new UsuarioValidator();
+        }
 
         public ResultadoOperacao Gravar(Usuario usuario)
         {
@@ -22,62 +30,28 @@ namespace ProjetoSebo.controller
             return new ResultadoSucesso("Usuário cadastrado com sucesso.");
         }
 
-        public ResultadoOperacao ConsistirAcesso(string login, string senha)
+        public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
         {
-            if (Context.Usuarios.Where(u => u.Login == login && u.Senha == senha).Count() == 0)
-                return new ResultadoAviso("Usuário e/ou senha não encontrados.");
+            Usuario usuario = dados as Usuario;
 
-            return new ResultadoSucesso();
-        }
-
-        public ResultadoOperacao ConsistirConfirmacaoSenha(string senha, string confirmacao)
-        {
-            if (senha != confirmacao)
-                return new ResultadoAviso("As senhas digitadas são diferentes.");
-
-            return new ResultadoSucesso();
-        }
-
-        public ResultadoOperacao ConsistirDados(Usuario usuario)
-        {
-            ResultadoOperacao resultado = ConsistirLogin(usuario.Login);
+            ResultadoOperacao resultado = this.Validator.ConsistirLogin(usuario.Login);
             if (resultado.VerificarFalhaOperacao())
+            {
+                resultado.Campo = CAMPO_LOGIN;
                 return resultado;
+            }
 
-            resultado = ConsistirSenha(usuario.Senha);
+            resultado = this.Validator.ConsistirSenha(usuario.Senha);
             if (resultado.VerificarFalhaOperacao())
+            {
+                resultado.Campo = CAMPO_SENHA;
                 return resultado;
+            }
 
             if (Context.Usuarios.Where(u => u.Login == usuario.Login).Count() > 0)
                 return new ResultadoAviso("Este login já foi utilizado por outro usuário.");
 
             return new ResultadoSucesso();
-        }
-
-        public ResultadoOperacao ConsistirLogin(string login)
-        {
-            login = login.Trim();
-
-            if (login.Length < QTD_MINIMA_LOGIN)
-                return new ResultadoAviso(String.Format("O login deve possuir no mínimo {0} caracteres.", QTD_MINIMA_LOGIN));
-
-            return new ResultadoSucesso();
-        }
-
-        public ResultadoOperacao ConsistirSenha(string senha)
-        {
-            senha = senha.Trim();
-
-            if (senha.Length < QTD_MINIMA_SENHA)
-                return new ResultadoAviso(String.Format("A senha deve possuir no mínimo {0} caracteres.", QTD_MINIMA_SENHA));
-
-            if (senha.Where(c => char.IsLetter(c)).Count() == 0)
-                return new ResultadoAviso("A senha deve possuir pelo menos uma letra.");
-
-            if (senha.Where(c => char.IsNumber(c)).Count() == 0)
-                return new ResultadoAviso("A senha deve possuir pelo menos um número.");
-
-            return new ResultadoSucesso();
-        }
+        }        
     }
 }

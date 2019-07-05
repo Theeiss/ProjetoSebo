@@ -1,5 +1,6 @@
 ﻿using ProjetoSebo.controller;
 using ProjetoSebo.dao;
+using ProjetoSebo.error;
 using ProjetoSebo.model;
 using System;
 using System.Collections.Generic;

@@ -1,30 +1,18 @@
 ﻿using ProjetoSebo.controller;
 using ProjetoSebo.dao;
+using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.views;
+using ProjetoSebo.views.components;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ProjetoSebo.telas
 {
-    public partial class TelaLogin : Form
+    public partial class TelaLogin : BaseParaTela<LoginController>
     {
-        public UsuarioController UsuarioController { private get; set; }
-        public TelaLogin(SeboContext context)
+        public TelaLogin(SeboContext context) :
+            base(context, new LoginController())
         {
-            this.UsuarioController = new UsuarioController()
-            {
-                Context = context
-            };
-
-            InitializeComponent();
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -34,44 +22,32 @@ namespace ProjetoSebo.telas
 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
-            //ResultadoOperacao resultado = ValidarCampos();
-            //if(resultado.VerificarFalhaOperacao())
-            //{
-            //    resultado.Exibir();
-            //    return;
-            //}
+            Login login = new Login()
+            {
+                Usuario = this.txtLogin.Text,
+                Senha = this.txtSenha.Text
+            };
 
-            //string login = this.txtLogin.Text;
-            //string senha = this.txtSenha.Text;
-
-            //resultado = this.UsuarioController.ValidarLogin(login, senha);
-            //if(resultado.VerificarFalhaOperacao())
-            //{
-            //    resultado.Exibir();
-            //    return;
-            //}
+            ResultadoOperacao resultado = this.Controller.ConsistirAcesso(login);
+            if(resultado.VerificarFalhaOperacao())
+            {
+                resultado.Exibir();
+                return;
+            }
 
             this.Hide();
             Limpar();
-            new TelaPrincipal(this.UsuarioController.Context).ShowDialog();
+            new TelaPrincipal(this.Controller.Context).ShowDialog();
             this.Show();
         }
 
-        public ResultadoOperacao ValidarCampos()
+        public override void TratarConsistencia(ResultadoOperacao retorno)
         {
-            if (this.txtLogin.TextLength == 0)
+            switch(retorno.Campo)
             {
-                this.txtLogin.Focus();
-                return new ResultadoAviso("O login deve ser informado.");
+                case LoginController.CAMPO_LOGIN: this.txtLogin.Focus(); break;
+                case LoginController.CAMPO_SENHA: this.txtSenha.Focus(); break;
             }
-
-            if (this.txtSenha.TextLength == 0)
-            {
-                this.txtSenha.Focus();
-                return new ResultadoAviso("A senha deve ser informada.");
-            }
-
-            return new ResultadoSucesso();
         }
 
         public void Limpar()

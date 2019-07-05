@@ -1,5 +1,6 @@
-﻿using ProjetoSebo.dao;
+﻿using ProjetoSebo.error;
 using ProjetoSebo.model;
+using ProjetoSebo.validator;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,13 @@ namespace ProjetoSebo.controller
 {
     public class TipoProdutoController : BaseParaController
     {
+        public TipoProdutoValidator Validator { get; set; }
+
+        public TipoProdutoController()
+        {
+            this.Validator = new TipoProdutoValidator();
+        }
+
         public ResultadoOperacao Gravar(TipoProduto tipoProduto)
         {
             ResultadoOperacao resultado = ConsistirDados(tipoProduto);
@@ -22,8 +30,10 @@ namespace ProjetoSebo.controller
             return new ResultadoSucesso();
         }
 
-        public ResultadoOperacao ConsistirDados(TipoProduto tipoProduto)
+        public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
         {
+            //TipoProduto tipoProduto = dados as TipoProduto;
+
             return new ResultadoSucesso();
         }
 

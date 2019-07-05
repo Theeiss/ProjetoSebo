@@ -1,5 +1,6 @@
 ﻿using ProjetoSebo.controller;
 using ProjetoSebo.dao;
+using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.views.components;
 using System;
@@ -15,21 +16,13 @@ namespace ProjetoSebo.views
 
         private void BtnGravar_Click(object sender, EventArgs e)
         {
-            ResultadoOperacao resultado = ValidarCampos();
-            if (resultado.VerificarFalhaOperacao())
-            {
-                resultado.Exibir();
-                return;
-            }
-
             Usuario usuario = new Usuario()
             {
                 Login = this.txtLogin.Text,
                 Senha = this.txtSenha.Text
             };
 
-            resultado = Controller.Gravar(usuario);
-
+            ResultadoOperacao resultado = Controller.Gravar(usuario);
             if (resultado.VerificarSucessoOperacao())
             {
                 Limpar();
@@ -38,37 +31,6 @@ namespace ProjetoSebo.views
             resultado.Exibir();
         }
 
-        private ResultadoOperacao ValidarCampos()
-        {
-            ResultadoOperacao resultado = Controller.ConsistirLogin(this.txtLogin.Text);
-            if (resultado.VerificarFalhaOperacao())
-            {
-                this.txtLogin.Focus();
-                return resultado;
-            }
-
-            resultado = Controller.ConsistirSenha(this.txtSenha.Text);
-            if (resultado.VerificarFalhaOperacao())
-            {
-                this.txtSenha.Focus();
-                return resultado;
-            }
-
-            if (this.txtConfirmarSenha.TextLength == 0)
-            {
-                this.txtConfirmarSenha.Focus();
-                return new ResultadoAviso("É necessário confirmar a senha.");
-            }
-
-            resultado = Controller.ConsistirConfirmacaoSenha(this.txtSenha.Text, this.txtConfirmarSenha.Text);
-            if (resultado.VerificarFalhaOperacao())
-            {
-                this.txtConfirmarSenha.Focus();
-                return new ResultadoAviso("As senhas digitadas são diferentes.");
-            }
-
-            return new ResultadoSucesso();
-        }
         private void Limpar()
         {
             this.txtLogin.Clear();
@@ -76,6 +38,16 @@ namespace ProjetoSebo.views
             this.txtConfirmarSenha.Clear();
 
             this.txtLogin.Focus();
+        }
+
+        public override void TratarConsistencia(ResultadoOperacao retorno)
+        {
+            switch(retorno.Campo)
+            {
+                case UsuarioController.CAMPO_LOGIN: this.txtLogin.Focus(); break;
+                case UsuarioController.CAMPO_SENHA: this.txtSenha.Focus(); break;
+                case UsuarioController.CAMPO_CONFIRMACAO_SENHA: this.txtConfirmarSenha.Focus(); break;
+            }
         }
 
         public void BtnVoltar_Click(object sender, EventArgs e)

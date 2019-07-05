@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ProjetoSebo.model
 {
-    public class Venda
+    public class Venda : BaseParaModel
     {
         public int Id { get; set; }
         public List<ItemVenda> Itens { get; private set; }

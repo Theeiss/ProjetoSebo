@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoSebo.model
 {
-    public class Cliente
+    public class Cliente : BaseParaModel
     {
         public enum TipoSexo
         {

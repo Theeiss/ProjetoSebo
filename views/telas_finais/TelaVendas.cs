@@ -1,5 +1,6 @@
 ﻿using ProjetoSebo.controller;
 using ProjetoSebo.dao;
+using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.views.components;
 using System;
@@ -9,12 +10,12 @@ using System.Windows.Forms;
 
 namespace ProjetoSebo.views.telas_finais
 {
-    public partial class TelaVendas : BaseParaTela<VendasController>
+    public partial class TelaVendas : BaseParaTela<VendaController>
     {
         public List<ItemVenda> Itens { get; set; }
 
         public TelaVendas(SeboContext context) :
-            base(context, new VendasController())
+            base(context, new VendaController())
         {
             Itens = new List<ItemVenda>();
 
@@ -23,13 +24,6 @@ namespace ProjetoSebo.views.telas_finais
 
         private void BtnAdicionar_Click(object sender, System.EventArgs e)
         {
-            ResultadoOperacao resultado = ValidarCampos();
-            if (resultado.VerificarFalhaOperacao())
-            {
-                resultado.Exibir();
-                return;
-            }
-
             //Criando um produto temporário para teste.
             Produto produtoTmp = new Produto()
             {
@@ -50,59 +44,27 @@ namespace ProjetoSebo.views.telas_finais
                 Desconto = Convert.ToDouble(this.txtDesconto.Text)
             };
 
+            ResultadoOperacao resultado = Controller.ConsistirNovoItem(itemVendaTmp);
+            if (resultado.VerificarFalhaOperacao())
+            {
+                resultado.Exibir();
+                return;
+            }
+
             this.Itens.Add(itemVendaTmp);
 
             this.tblListaCompras.DataSource = this.Itens;
             this.tblListaCompras.Refresh();
         }
 
-        private ResultadoOperacao ValidarCampos()
+        public override void TratarConsistencia(ResultadoOperacao retorno)
         {
-            //Validar produto selecionado.
-
-            if (txtPreco.TextLength == 0)
+            switch(retorno.Campo)
             {
-                this.txtPreco.Focus();
-                return new ResultadoAviso("O preço não foi informado.");
+                case VendaController.CAMPO_ITEM_PRECO: this.txtPreco.Focus(); break;
+                case VendaController.CAMPO_ITEM_QUANTIDADE: this.txtQuantidade.Focus(); break;
+                case VendaController.CAMPO_ITEM_DESCONTO: this.txtDesconto.Focus(); break;
             }
-
-            double preco = Convert.ToDouble(txtPreco.Text);
-            ResultadoOperacao resultado = this.Controller.ControllerItemVenda.ConsistirPreco(preco);
-            if (resultado.VerificarFalhaOperacao())
-            {
-                this.txtPreco.Focus();
-                return resultado;
-            }
-
-            if(txtQuantidade.TextLength == 0)
-            {
-                this.txtQuantidade.Focus();
-                return new ResultadoAviso("A quantidade deste item não foi informada.");
-            }
-
-            int quantidade = Convert.ToInt32(this.txtQuantidade.Text);
-            resultado = this.Controller.ControllerItemVenda.ConsistirQuantidade(quantidade);
-            if(resultado.VerificarFalhaOperacao())
-            {
-                this.txtQuantidade.Focus();
-                return resultado;
-            }
-
-            if(txtDesconto.TextLength == 0)
-            {
-                this.txtDesconto.Focus();
-                return new ResultadoAviso("O desconto deste item não foi informado.");
-            }
-
-            double desconto = Convert.ToDouble(this.txtDesconto.Text);
-            resultado = Controller.ControllerItemVenda.ConsistirDesconto(desconto);
-            if (resultado.VerificarFalhaOperacao())
-            {
-                this.txtDesconto.Focus();
-                return resultado;
-            }
-
-            return new ResultadoSucesso();
         }
 
         private void TelaVendas_Load(object sender, EventArgs e)

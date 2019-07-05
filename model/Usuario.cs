@@ -1,7 +1,6 @@
-﻿
-namespace ProjetoSebo.model
+﻿namespace ProjetoSebo.model
 {
-    public class Usuario
+    public class Usuario : BaseParaModel
     {
         public int Id { get; set; }
         public string Login { get; set; }

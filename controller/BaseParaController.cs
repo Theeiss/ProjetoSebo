@@ -1,9 +1,27 @@
 ﻿using ProjetoSebo.dao;
+using ProjetoSebo.error;
+using ProjetoSebo.model;
+using ProjetoSebo.views.components;
 
 namespace ProjetoSebo.controller
 {
-    public class BaseParaController
+    public abstract class BaseParaController
     {
         public SeboContext Context { get; set; }
+        public IBaseParaTela Tela { get; set; }
+
+        protected ResultadoOperacao ConsistirDados(BaseParaModel dados)
+        {
+            ResultadoOperacao retorno = OnConsistirDados(dados);
+
+            if (retorno.VerificarFalhaOperacao())
+            {
+                Tela.TratarConsistencia(retorno);
+            }
+
+            return retorno;
+        }
+
+        public abstract ResultadoOperacao OnConsistirDados(BaseParaModel dados);
     }
 }

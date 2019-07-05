@@ -1,10 +1,20 @@
-﻿using ProjetoSebo.dao;
+﻿using ProjetoSebo.error;
 using ProjetoSebo.model;
+using ProjetoSebo.validator;
 
 namespace ProjetoSebo.controller
 {
     public class ProdutoController : BaseParaController
     {
+        public const int CAMPO_DESCRICAO = 1;
+
+        public ProdutoValidator Validator { get; set; }
+
+        public ProdutoController()
+        {
+            this.Validator = new ProdutoValidator();
+        }
+
         public ResultadoOperacao Gravar(Produto produto)
         {
             ResultadoOperacao resultado = ConsistirDados(produto);
@@ -17,23 +27,18 @@ namespace ProjetoSebo.controller
             return new ResultadoSucesso("Produto cadastrado com sucesso.");
         }
 
-        public ResultadoOperacao ConsistirDados(Produto produto)
+        public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
         {
-            ResultadoOperacao resultado = ConsistirDescricao(produto.Descricao);
+            Produto produto = dados as Produto;
+
+            ResultadoOperacao resultado = this.Validator.ConsistirDescricao(produto.Descricao);
             if (resultado.VerificarFalhaOperacao())
+            {
+                resultado.Campo = CAMPO_DESCRICAO;
                 return resultado;
+            }
 
             return new ResultadoSucesso();
         }
-
-        public ResultadoOperacao ConsistirDescricao(string descricao)
-        {
-            if (descricao.Length == 0)
-                return new ResultadoAviso("Descrição deve ser informada");
-
-            return new ResultadoSucesso();
-        }
-
-
     }
 }

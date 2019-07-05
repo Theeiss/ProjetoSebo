@@ -2,7 +2,7 @@
 
 namespace ProjetoSebo.model
 {
-    public class TipoProduto : IComparable
+    public class TipoProduto : BaseParaModel, IComparable
     {
         public int Id { get; set; }
         public string Descricao { get; set; }

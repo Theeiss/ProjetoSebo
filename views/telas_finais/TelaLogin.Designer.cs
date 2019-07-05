@@ -1,8 +1,10 @@
-﻿using ProjetoSebo.views;
+﻿using ProjetoSebo.controller;
+using ProjetoSebo.views;
+using ProjetoSebo.views.components;
 
 namespace ProjetoSebo.telas
 {
-    partial class TelaLogin
+    partial class TelaLogin : BaseParaTela<LoginController>
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +30,7 @@ namespace ProjetoSebo.telas
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        protected override void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLogin));
             this.pnlMain = new System.Windows.Forms.Panel();

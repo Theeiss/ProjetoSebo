@@ -75,19 +75,21 @@
   <ItemGroup>
     <Compile Include="controller\BaseParaController.cs" />
     <Compile Include="controller\ClienteController.cs" />
-    <Compile Include="controller\ItemVendaController.cs" />
     <Compile Include="controller\LocalController.cs" />
+    <Compile Include="controller\LoginController.cs" />
     <Compile Include="controller\ProdutoController.cs" />
-    <Compile Include="controller\ResultadoOperacao.cs" />
+    <Compile Include="error\ResultadoOperacao.cs" />
     <Compile Include="controller\TipoProdutoController.cs" />
     <Compile Include="controller\UsuarioController.cs" />
     <Compile Include="context\SeboContext.cs" />
     <Compile Include="context\SeboInitializer.cs" />
-    <Compile Include="controller\VendasController.cs" />
+    <Compile Include="controller\VendaController.cs" />
+    <Compile Include="model\BaseParaModel.cs" />
     <Compile Include="model\Cliente.cs" />
     <Compile Include="model\ItemVenda.cs" />
     <Compile Include="model\Local.cs" />
     <Compile Include="model\LocalProduto.cs" />
+    <Compile Include="model\Login.cs" />
     <Compile Include="model\Produto.cs" />
     <Compile Include="model\TipoProduto.cs" />
     <Compile Include="model\Usuario.cs" />
@@ -99,6 +101,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="validator\ClienteValidator.cs" />
+    <Compile Include="validator\ItemVendaValidator.cs" />
+    <Compile Include="validator\LocalValidator.cs" />
+    <Compile Include="validator\ProdutoValidator.cs" />
+    <Compile Include="validator\TipoProdutoValidator.cs" />
+    <Compile Include="validator\UsuarioValidator.cs" />
+    <Compile Include="validator\VendaValidator.cs" />
     <Compile Include="views\components\BaseParaTelas.cs">
       <SubType>Form</SubType>
     </Compile>

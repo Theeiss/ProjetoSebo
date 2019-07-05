@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
-namespace ProjetoSebo.controller
+namespace ProjetoSebo.error
 {
     public abstract class ResultadoOperacao
     {
+        public ResultadoOperacao(string mensagem, int campo)
+        {
+            this.Mensagem = mensagem;
+            this.Campo = campo;
+        }
+
         public ResultadoOperacao(string mensagem)
         {
             this.Mensagem = mensagem;
         }
 
         public string Mensagem { get; set; }
+        public int Campo { get; set; }
 
         public bool VerificarSucessoOperacao()
         {
@@ -43,6 +45,10 @@ namespace ProjetoSebo.controller
         {
         }
 
+        public ResultadoAviso(string mensagem, int campo) : base(mensagem, campo)
+        {
+        }
+
         public override MessageBoxIcon GetMessageBoxIcon()
         {
             return MessageBoxIcon.Warning;
@@ -52,6 +58,10 @@ namespace ProjetoSebo.controller
     public class ResultadoErro : ResultadoOperacao
     {
         public ResultadoErro(string mensagem) : base(mensagem)
+        {
+        }
+
+        public ResultadoErro(string mensagem, int campo) : base(mensagem, campo)
         {
         }
 
@@ -68,6 +78,10 @@ namespace ProjetoSebo.controller
         }
 
         public ResultadoSucesso(string mensagem) : base(mensagem)
+        {
+        }
+
+        public ResultadoSucesso(string mensagem, int campo) : base(mensagem, campo)
         {
         }
 

@@ -1,5 +1,6 @@
 ﻿using ProjetoSebo.controller;
 using ProjetoSebo.dao;
+using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.views.components;
 using System;
@@ -16,39 +17,28 @@ namespace ProjetoSebo.views.telas_finais
 
         private void BtnGravar_Click(object sender, System.EventArgs e)
         {
-            ResultadoOperacao resultado = ValidarCampos();
-            if (resultado.VerificarFalhaOperacao())
-            {
-                resultado.Exibir();
-                return;
-            }
-
             Produto produto = new Produto()
             {
                 Descricao = this.txtDescricao.Text,
                 CodigoBarras = this.txtCodBarras.Text,
                 //Preco = Convert.ToDouble(this.txtPreco.Text),
-                Quantidade = Convert.ToInt32(this.txtQuantidade),
+                Quantidade = Convert.ToInt32(this.txtQuantidade.Text),
                 PalavrasChave = this.txtPalavrasChave.Text
             };
 
-            resultado = Controller.Gravar(produto);
+            ResultadoOperacao resultado = Controller.Gravar(produto);
             if (resultado.VerificarSucessoOperacao())
                 Limpar();
 
             resultado.Exibir();
         }
 
-        private ResultadoOperacao ValidarCampos()
+        public override void TratarConsistencia(ResultadoOperacao retorno)
         {
-            ResultadoOperacao resultado = Controller.ConsistirDescricao(this.txtDescricao.Text);
-            if(resultado.VerificarFalhaOperacao())
+            switch(retorno.Campo)
             {
-                this.txtDescricao.Focus();
-                return resultado;
+                case ProdutoController.CAMPO_DESCRICAO: this.txtDescricao.Focus(); break;
             }
-
-            return new ResultadoSucesso();
         }
 
         private void Limpar()

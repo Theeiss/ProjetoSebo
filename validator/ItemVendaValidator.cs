@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProjetoSebo.error;
 
-namespace ProjetoSebo.controller
+namespace ProjetoSebo.validator
 {
-    public class ItemVendaController
+    public class ItemVendaValidator
     {
         public ResultadoOperacao ConsistirPreco(double preco)
         {
@@ -31,6 +27,5 @@ namespace ProjetoSebo.controller
 
             return new ResultadoSucesso();
         }
-
     }
 }
