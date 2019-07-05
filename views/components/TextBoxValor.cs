@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace ProjetoSebo.views.components
 {
-    public class TextBoxValor : TextBox
+    public partial class TextBoxValor : TextBox
     {
         public double Valor { get; set; }
 

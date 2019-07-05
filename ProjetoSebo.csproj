@@ -114,9 +114,6 @@
     <Compile Include="views\components\TextBoxValor.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="views\components\TextBoxValor.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="views\components\TextBoxValor.Designer.cs">
       <DependentUpon>TextBoxValor.cs</DependentUpon>
     </Compile>
