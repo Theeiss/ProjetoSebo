@@ -40,6 +40,8 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(133, 20);
             this.txtValor.TabIndex = 0;
+            this.txtValor.Tipo = ProjetoSebo.views.components.TextBoxValor.TipoDado.real;
+            this.txtValor.Valor = 0D;
             // 
             // lblValor
             // 
