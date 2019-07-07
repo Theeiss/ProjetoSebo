@@ -28,20 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtValor = new ProjetoSebo.views.components.TextBoxValor();
             this.lblValor = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
             this.btnTestar = new System.Windows.Forms.Button();
+            this.txtData = new ProjetoSebo.views.components.TextBoxData();
             this.SuspendLayout();
-            // 
-            // txtValor
-            // 
-            this.txtValor.Location = new System.Drawing.Point(125, 61);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(133, 20);
-            this.txtValor.TabIndex = 0;
-            this.txtValor.Tipo = ProjetoSebo.views.components.TextBoxValor.TipoDado.real;
-            this.txtValor.Valor = 0D;
             // 
             // lblValor
             // 
@@ -71,15 +62,25 @@
             this.btnTestar.UseVisualStyleBackColor = true;
             this.btnTestar.Click += new System.EventHandler(this.BtnTestar_Click);
             // 
+            // txtData
+            // 
+            this.txtData.DataHora = new System.DateTime(((long)(0)));
+            this.txtData.Location = new System.Drawing.Point(125, 60);
+            this.txtData.Mask = "00/00/0000";
+            this.txtData.Name = "txtData";
+            this.txtData.Size = new System.Drawing.Size(142, 20);
+            this.txtData.TabIndex = 4;
+            this.txtData.ValidatingType = typeof(System.DateTime);
+            // 
             // TelaTeste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtData);
             this.Controls.Add(this.btnTestar);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.lblValor);
-            this.Controls.Add(this.txtValor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaTeste";
             this.Text = "TelaTeste";
@@ -89,10 +90,9 @@
         }
 
         #endregion
-
-        private components.TextBoxValor txtValor;
         private System.Windows.Forms.Label lblValor;
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Button btnTestar;
+        private components.TextBoxData txtData;
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoSebo.views.components
@@ -11,6 +7,11 @@ namespace ProjetoSebo.views.components
     {
 
         public DateTime DataHora { get; set; }
+
+        public TextBoxData()
+        {
+            this.Mask = "00/00/0000";
+        }
 
         protected override void OnLeave(EventArgs e)
         {
@@ -25,11 +26,11 @@ namespace ProjetoSebo.views.components
             {
                 this.DataHora = Convert.ToDateTime(this.Text);
             }
-            catch (Exception e)
+            catch (Exception)
             {
-
+                this.DataHora = DateTime.MinValue;
+                this.Clear();
             }
         }
-
     }
 }
