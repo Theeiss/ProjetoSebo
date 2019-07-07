@@ -80,9 +80,9 @@
             this.lblNomeSistema.ForeColor = System.Drawing.Color.White;
             this.lblNomeSistema.Location = new System.Drawing.Point(49, 16);
             this.lblNomeSistema.Name = "lblNomeSistema";
-            this.lblNomeSistema.Size = new System.Drawing.Size(139, 19);
+            this.lblNomeSistema.Size = new System.Drawing.Size(92, 19);
             this.lblNomeSistema.TabIndex = 3;
-            this.lblNomeSistema.Text = "Hudson Auto Elétrica";
+            this.lblNomeSistema.Text = "Sistema Sebo";
             // 
             // imgLogoSistema
             // 
