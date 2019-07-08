@@ -69,7 +69,7 @@
             this.pnlBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlBarraTitulo.Name = "pnlBarraTitulo";
-            this.pnlBarraTitulo.Size = new System.Drawing.Size(900, 50);
+            this.pnlBarraTitulo.Size = new System.Drawing.Size(900, 40);
             this.pnlBarraTitulo.TabIndex = 1;
             this.pnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlBarraTitulo_MouseDown);
             // 
@@ -78,7 +78,7 @@
             this.lblNomeSistema.AutoSize = true;
             this.lblNomeSistema.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeSistema.ForeColor = System.Drawing.Color.White;
-            this.lblNomeSistema.Location = new System.Drawing.Point(49, 16);
+            this.lblNomeSistema.Location = new System.Drawing.Point(51, 10);
             this.lblNomeSistema.Name = "lblNomeSistema";
             this.lblNomeSistema.Size = new System.Drawing.Size(92, 19);
             this.lblNomeSistema.TabIndex = 3;
@@ -87,9 +87,9 @@
             // imgLogoSistema
             // 
             this.imgLogoSistema.Image = global::ProjetoSebo.Properties.Resources.line;
-            this.imgLogoSistema.Location = new System.Drawing.Point(3, 4);
+            this.imgLogoSistema.Location = new System.Drawing.Point(10, 2);
             this.imgLogoSistema.Name = "imgLogoSistema";
-            this.imgLogoSistema.Size = new System.Drawing.Size(40, 40);
+            this.imgLogoSistema.Size = new System.Drawing.Size(35, 35);
             this.imgLogoSistema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgLogoSistema.TabIndex = 2;
             this.imgLogoSistema.TabStop = false;
@@ -162,9 +162,9 @@
             this.pnlMenuLateral.Controls.Add(this.btnSair);
             this.pnlMenuLateral.Controls.Add(this.btnMenu);
             this.pnlMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenuLateral.Location = new System.Drawing.Point(0, 50);
+            this.pnlMenuLateral.Location = new System.Drawing.Point(0, 40);
             this.pnlMenuLateral.Name = "pnlMenuLateral";
-            this.pnlMenuLateral.Size = new System.Drawing.Size(250, 650);
+            this.pnlMenuLateral.Size = new System.Drawing.Size(250, 660);
             this.pnlMenuLateral.TabIndex = 3;
             // 
             // pnlBotoes
@@ -338,7 +338,7 @@
             this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.Image = global::ProjetoSebo.Properties.Resources.logoff;
-            this.btnSair.Location = new System.Drawing.Point(7, 598);
+            this.btnSair.Location = new System.Drawing.Point(7, 608);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(45, 45);
             this.btnSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -363,9 +363,9 @@
             // 
             this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPrincipal.Location = new System.Drawing.Point(250, 50);
+            this.pnlPrincipal.Location = new System.Drawing.Point(250, 40);
             this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(650, 650);
+            this.pnlPrincipal.Size = new System.Drawing.Size(650, 660);
             this.pnlPrincipal.TabIndex = 4;
             // 
             // TelaPrincipal

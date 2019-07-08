@@ -90,5 +90,22 @@ namespace ProjetoSebo.validator
 
             return new ResultadoSucesso();
         }
+
+        public ResultadoOperacao ConsistirEmail(string email)
+        {
+            //Este campo não é obrigatório.
+
+            if(!email.Contains("@"))
+            {
+                return new ResultadoAviso("E-mail informado é inválido.");
+            }
+
+            return new ResultadoSucesso();
+        }
+
+        public ResultadoOperacao ConsistirTelefone(string telefone)
+        {
+            return new ResultadoSucesso();
+        }
     }
 }

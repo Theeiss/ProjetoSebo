@@ -295,6 +295,7 @@
     <None Include="images\fechar.png" />
     <None Include="images\documento.png" />
     <None Include="images\excluir.png" />
+    <None Include="images\email.png" />
     <Content Include="images\livro.png" />
     <None Include="images\local.png" />
     <Content Include="images\logo.png" />
@@ -310,6 +311,7 @@
     <None Include="images\salvar.png" />
     <None Include="images\tipo.png" />
     <None Include="images\sexo.png" />
+    <None Include="images\telefone.png" />
     <Content Include="images\usuarios.png" />
     <None Include="images\usuario_login.png" />
     <Content Include="images\venda.png" />

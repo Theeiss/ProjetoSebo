@@ -173,6 +173,16 @@ namespace ProjetoSebo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap email {
+            get {
+                object obj = ResourceManager.GetObject("email", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap enviar {
             get {
                 object obj = ResourceManager.GetObject("enviar", resourceCulture);
@@ -346,6 +356,16 @@ namespace ProjetoSebo.Properties {
         internal static System.Drawing.Bitmap sexo {
             get {
                 object obj = ResourceManager.GetObject("sexo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telefone {
+            get {
+                object obj = ResourceManager.GetObject("telefone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
