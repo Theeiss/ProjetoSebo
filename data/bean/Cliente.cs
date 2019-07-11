@@ -10,5 +10,7 @@ namespace ProjetoSebo.bean
         public string Cpf { get; set; }
         public DateTime DataNascimento { get; set; }
         public TipoSexo Sexo { get; set; }
+        public string Telefone { get; set; }
+        public string Email { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace ProjetoSebo.views.telas_finais
 
         private void BtnTestar_Click(object sender, EventArgs e)
         {
-            this.lblResultado.Text = txtValor.Valor + "";
+            this.lblResultado.Text = this.txtData.DataHora.ToString();
         }
     }
 }

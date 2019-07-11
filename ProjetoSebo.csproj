@@ -131,6 +131,9 @@
     <Compile Include="views\components\ComboTipoProduto.Designer.cs">
       <DependentUpon>ComboTipoProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\components\TextBoxData.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="views\components\TextBoxValor.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -183,6 +186,12 @@
     </Compile>
     <Compile Include="views\telas_finais\TelaTeste.Designer.cs">
       <DependentUpon>TelaTeste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaTipoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_finais\TelaTipoProduto.Designer.cs">
+      <DependentUpon>TelaTipoProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="views\telas_finais\TelaVendas.cs">
       <SubType>Form</SubType>
@@ -253,6 +262,9 @@
     <EmbeddedResource Include="views\telas_finais\TelaTeste.resx">
       <DependentUpon>TelaTeste.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\telas_finais\TelaTipoProduto.resx">
+      <DependentUpon>TelaTipoProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\telas_finais\TelaVendas.resx">
       <DependentUpon>TelaVendas.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +293,7 @@
     <None Include="images\adicionar.png" />
     <None Include="images\clientes.png" />
     <None Include="images\clientes_menu.png" />
+    <None Include="images\alterar.png" />
     <Content Include="images\compra.png" />
     <None Include="images\descricao.png" />
     <None Include="images\desconto.png" />
@@ -292,6 +305,8 @@
     <None Include="images\foto_usuario.png" />
     <None Include="images\fechar.png" />
     <None Include="images\documento.png" />
+    <None Include="images\excluir.png" />
+    <None Include="images\email.png" />
     <Content Include="images\livro.png" />
     <None Include="images\local.png" />
     <Content Include="images\logo.png" />
@@ -307,6 +322,7 @@
     <None Include="images\salvar.png" />
     <None Include="images\tipo.png" />
     <None Include="images\sexo.png" />
+    <None Include="images\telefone.png" />
     <Content Include="images\usuarios.png" />
     <None Include="images\usuario_login.png" />
     <Content Include="images\venda.png" />

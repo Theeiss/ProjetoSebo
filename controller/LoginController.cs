@@ -15,12 +15,12 @@ namespace ProjetoSebo.controller
 
         public ResultadoOperacao ConsistirAcesso(Login login)
         {
-            ResultadoOperacao resultado = ConsistirDados(login);
-            if (resultado.VerificarFalhaOperacao())
-                return resultado;
+            //ResultadoOperacao resultado = ConsistirDados(login);
+            //if (resultado.VerificarFalhaOperacao())
+            //    return resultado;
 
-            if (Context.Usuarios.Where(u => u.Login == login.Usuario && u.Senha == login.Senha).Count() == 0)
-                return new ResultadoAviso("Usuário e/ou senha não encontrados.", CAMPO_LOGIN);
+            //if (Context.Usuarios.Where(u => u.Login == login.Usuario && u.Senha == login.Senha).Count() == 0)
+            //    return new ResultadoAviso("Usuário e/ou senha não encontrados.", CAMPO_LOGIN);
 
             return new ResultadoSucesso();
         }

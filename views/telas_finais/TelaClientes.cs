@@ -21,8 +21,10 @@ namespace ProjetoSebo.views.telas_finais
             {
                 Nome = this.txtNome.Text,
                 Cpf = this.txtCpf.Text,
-                DataNascimento = Convert.ToDateTime(this.txtDataNascimento.Text),
-                Sexo = ObterSexoInformado()
+                DataNascimento = this.txtDataNascimento.DataHora,
+                Sexo = ObterSexoInformado(),
+                Telefone = this.txtTelefone.Text,
+                Email = this.txtEmail.Text
             };
 
             ResultadoOperacao resultado = this.Controller.Gravar(cliente);
@@ -50,6 +52,8 @@ namespace ProjetoSebo.views.telas_finais
             this.txtDataNascimento.Clear();
             this.rdbMasculino.Checked = false;
             this.rdbFeminino.Checked = false;
+            this.txtTelefone.Clear();
+            this.txtEmail.Clear();
         }
 
         public override void TratarConsistencia(ResultadoOperacao retorno)
@@ -60,6 +64,8 @@ namespace ProjetoSebo.views.telas_finais
                 case ClienteController.CAMPO_DATA_NASCIMENTO: this.txtDataNascimento.Focus(); break;
                 case ClienteController.CAMPO_CPF: this.txtCpf.Focus(); break;
                 case ClienteController.CAMPO_SEXO: break;
+                case ClienteController.CAMPO_TELEFONE: this.txtTelefone.Focus(); break;
+                case ClienteController.CAMPO_EMAIL: this.txtEmail.Focus(); break;
             }
         }
         public void BtnVoltar_Click(object sender, EventArgs e)

@@ -1,11 +1,21 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace ProjetoSebo.views.components
 {
     public partial class TextBoxValor : TextBox
     {
+
+        public enum TipoDado
+        {
+            dinheiro,
+            inteiro,
+            real
+        }
+
         public double Valor { get; set; }
+        public TipoDado Tipo { get; set; }
 
         protected override void OnKeyPress(KeyPressEventArgs e)
         {
@@ -17,7 +27,11 @@ namespace ProjetoSebo.views.components
 
             if (e.KeyChar == ',')
             {
-                if (this.Text.Contains(","))
+                if (this.Tipo == TipoDado.inteiro)
+                {
+                    e.Handled = true;
+                }
+                else if (this.Text.Contains(","))
                 {
                     if(this.SelectionLength > 0 && !this.Text.Substring(this.SelectionStart, this.SelectionLength).Contains(","))
                     {
@@ -29,12 +43,27 @@ namespace ProjetoSebo.views.components
             base.OnKeyPress(e);
         }
 
+        protected override void OnEnter(EventArgs e)
+        {
+            if(this.TextLength > 0)
+            {
+                this.Text = String.Format("{0}", this.Valor);
+            }
+
+            base.OnEnter(e);
+        }
+
         protected override void OnLeave(EventArgs e)
         {
-            if (this.Text[0] == ',')
-                this.Text = "0" + this.Text;
-
             CalcularValor();
+
+            if (this.TextLength > 0)
+            {
+                if (this.Tipo == TipoDado.dinheiro)
+                    this.Text = String.Format("{0:C2}", this.Valor);
+                else
+                    this.Text = this.Valor.ToString();
+            }
 
             base.OnLeave(e);
         }
@@ -42,9 +71,19 @@ namespace ProjetoSebo.views.components
         private void CalcularValor()
         {
             if(this.TextLength == 0)
+            {
                 this.Valor = 0;
+                return;
+            }
 
-            this.Valor = Convert.ToDouble(this.Text);
+            if(this.Tipo == TipoDado.dinheiro)
+            {
+                this.Valor = Math.Round(double.Parse(this.Text, NumberStyles.Currency, new CultureInfo("pt-BR")), 2); ;
+            }
+            else
+            {
+                this.Valor = Convert.ToDouble(this.Text);
+            }
         }
     }
 }
