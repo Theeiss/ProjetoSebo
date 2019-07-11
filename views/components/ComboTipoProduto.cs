@@ -1,7 +1,7 @@
-﻿using ProjetoSebo.controller;
+﻿using ProjetoSebo.bean;
+using ProjetoSebo.controller;
 using ProjetoSebo.dao;
 using ProjetoSebo.error;
-using ProjetoSebo.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,7 +54,7 @@ namespace ProjetoSebo.views.components
             if (Text.Length == 0)
                 return;
 
-            TipoProduto tipoProduto = new TipoProduto()
+            bean.TipoProduto tipoProduto = new bean.TipoProduto()
             {
                 Descricao = this.Text
             };

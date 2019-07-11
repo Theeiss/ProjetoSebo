@@ -1,6 +1,6 @@
-﻿namespace ProjetoSebo.model
+﻿namespace ProjetoSebo.bean
 {
-    public class Produto : BaseParaModel
+    public class Produto : BaseParaBean
     {
         public int Id { get; set; }
         public string Descricao { get; set; }

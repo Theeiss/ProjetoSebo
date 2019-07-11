@@ -14,7 +14,7 @@ namespace ProjetoSebo.validator
             return new ResultadoSucesso();
         }
 
-        public ResultadoOperacao ConsistirCliente(Cliente cliente)
+        public ResultadoOperacao ConsistirCliente(ClienteModel cliente)
         {
             return new ResultadoSucesso();
         }

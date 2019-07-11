@@ -1,4 +1,5 @@
-﻿using ProjetoSebo.error;
+﻿using ProjetoSebo.bean;
+using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.validator;
 using System.Collections.Generic;
@@ -23,14 +24,14 @@ namespace ProjetoSebo.controller
 
             if (Context.Locais.Where(t => t.Descricao == local.Descricao).Count() == 0)
             {
-                Context.Locais.Add(local);
+                Context.Locais.Add(new LocalModel(local));
                 Context.SaveChanges();
             }
 
             return new ResultadoSucesso();
         }
 
-        public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
+        public override ResultadoOperacao OnConsistirDados(BaseParaBean dados)
         {
             //Local local = dados as Local;
 
@@ -39,7 +40,14 @@ namespace ProjetoSebo.controller
 
         public List<Local> BuscarTodos()
         {
-            return new List<Local>(Context.Locais);
+            List<Local> lista = new List<Local>();
+
+            foreach(LocalModel model in Context.Locais)
+            {
+                lista.Add(model.GerarEntidade());
+            }
+
+            return lista;
         }
     }
 }

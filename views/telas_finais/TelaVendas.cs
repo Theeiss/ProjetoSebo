@@ -1,12 +1,11 @@
-﻿using ProjetoSebo.controller;
+﻿using ProjetoSebo.bean;
+using ProjetoSebo.controller;
 using ProjetoSebo.dao;
 using ProjetoSebo.error;
-using ProjetoSebo.model;
 using ProjetoSebo.views.components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Forms;
 
 namespace ProjetoSebo.views.telas_finais
 {

@@ -12,13 +12,13 @@ namespace ProjetoSebo.dao
         {
         }
 
-        public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Produto> Produtos { get; set; }
-        public DbSet<TipoProduto> TiposProduto { get; set; }
-        public DbSet<Local> Locais { get; set; }
-        public DbSet<LocalProduto> LocaisProduto { get; set; }
-        public DbSet<Venda> Vendas { get; set; }
-        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<UsuarioModel> Usuarios { get; set; }
+        public DbSet<ProdutoModel> Produtos { get; set; }
+        public DbSet<TipoProdutoModel> TiposProduto { get; set; }
+        public DbSet<LocalModel> Locais { get; set; }
+        public DbSet<LocalProdutoModel> LocaisProduto { get; set; }
+        public DbSet<VendaModel> Vendas { get; set; }
+        public DbSet<ClienteModel> Clientes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

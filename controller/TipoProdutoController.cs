@@ -1,4 +1,5 @@
-﻿using ProjetoSebo.error;
+﻿using ProjetoSebo.bean;
+using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.validator;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace ProjetoSebo.controller
             this.Validator = new TipoProdutoValidator();
         }
 
-        public ResultadoOperacao Gravar(TipoProduto tipoProduto)
+        public ResultadoOperacao Gravar(bean.TipoProduto tipoProduto)
         {
             ResultadoOperacao resultado = ConsistirDados(tipoProduto);
             if (resultado.VerificarFalhaOperacao())
@@ -23,14 +24,14 @@ namespace ProjetoSebo.controller
 
             if (Context.TiposProduto.Where(t => t.Descricao == tipoProduto.Descricao).Count() == 0)
             {
-                Context.TiposProduto.Add(tipoProduto);
+                Context.TiposProduto.Add(new TipoProdutoModel(tipoProduto));
                 Context.SaveChanges();
             }
 
             return new ResultadoSucesso();
         }
 
-        public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
+        public override ResultadoOperacao OnConsistirDados(BaseParaBean dados)
         {
             //TipoProduto tipoProduto = dados as TipoProduto;
 
@@ -39,7 +40,14 @@ namespace ProjetoSebo.controller
 
         public List<TipoProduto> BuscarTodos()
         {
-            return new List<TipoProduto>(Context.TiposProduto);
+            List<TipoProduto> lista = new List<TipoProduto>();
+
+            foreach (TipoProdutoModel model in Context.TiposProduto)
+            {
+                lista.Add(model.GerarEntidade());
+            }
+
+            return lista;
         }
     }
 }

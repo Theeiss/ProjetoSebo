@@ -1,4 +1,5 @@
-﻿using ProjetoSebo.dao;
+﻿using ProjetoSebo.bean;
+using ProjetoSebo.dao;
 using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.views.components;
@@ -10,7 +11,7 @@ namespace ProjetoSebo.controller
         public SeboContext Context { get; set; }
         public IBaseParaTela Tela { get; set; }
 
-        protected ResultadoOperacao ConsistirDados(BaseParaModel dados)
+        protected ResultadoOperacao ConsistirDados(BaseParaBean dados)
         {
             ResultadoOperacao retorno = OnConsistirDados(dados);
 
@@ -22,6 +23,6 @@ namespace ProjetoSebo.controller
             return retorno;
         }
 
-        public abstract ResultadoOperacao OnConsistirDados(BaseParaModel dados);
+        public abstract ResultadoOperacao OnConsistirDados(BaseParaBean dados);
     }
 }

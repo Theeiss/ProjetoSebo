@@ -1,6 +1,6 @@
-﻿namespace ProjetoSebo.model
+﻿namespace ProjetoSebo.bean
 {
-    public class LocalProduto : BaseParaModel
+    public class Local : BaseParaBean
     {
         public int Id { get; set; }
         public string Descricao { get; set; }

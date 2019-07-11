@@ -1,4 +1,5 @@
-﻿using ProjetoSebo.controller;
+﻿using ProjetoSebo.bean;
+using ProjetoSebo.controller;
 using ProjetoSebo.dao;
 using ProjetoSebo.error;
 using ProjetoSebo.model;

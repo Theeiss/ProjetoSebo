@@ -1,9 +1,5 @@
 ﻿using ProjetoSebo.model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoSebo.dao
 {
@@ -11,19 +7,19 @@ namespace ProjetoSebo.dao
     {
         protected override void Seed(SeboContext context)
         {
-            var usuarios = new List<Usuario>
+            var usuarios = new List<UsuarioModel>
             {
-            new Usuario{Login="moacir",Senha="urso"},
-            new Usuario{Login="theiss",Senha="gtheiss"},
+            new UsuarioModel{Login="moacir",Senha="urso"},
+            new UsuarioModel{Login="theiss",Senha="gtheiss"},
             };
 
             usuarios.ForEach(usuario => context.Usuarios.Add(usuario));
 
-            var tiposProduto = new List<TipoProduto>
+            var tiposProduto = new List<TipoProdutoModel>
             {
-                new TipoProduto{Descricao="Livro"},
-                new TipoProduto{Descricao="DVD"},
-                new TipoProduto{Descricao="CD"},
+                new TipoProdutoModel{Descricao="Livro"},
+                new TipoProdutoModel{Descricao="DVD"},
+                new TipoProdutoModel{Descricao="CD"},
             };
 
             tiposProduto.ForEach(tipo => context.TiposProduto.Add(tipo));

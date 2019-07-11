@@ -1,4 +1,5 @@
-﻿using ProjetoSebo.error;
+﻿using ProjetoSebo.data.shared;
+using ProjetoSebo.error;
 using ProjetoSebo.model;
 using System;
 
@@ -27,9 +28,9 @@ namespace ProjetoSebo.validator
             return new ResultadoSucesso();
         }
 
-        public ResultadoOperacao ConsistirSexo(Cliente.TipoSexo sexo)
+        public ResultadoOperacao ConsistirSexo(TipoSexo sexo)
         {
-            if (sexo == Cliente.TipoSexo.Nenhum)
+            if (sexo == TipoSexo.Nenhum)
                 return new ResultadoAviso("Sexo deve ser informado.");
 
             return new ResultadoSucesso();

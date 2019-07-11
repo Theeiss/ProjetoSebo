@@ -1,4 +1,5 @@
-﻿using ProjetoSebo.controller;
+﻿using ProjetoSebo.bean;
+using ProjetoSebo.controller;
 using ProjetoSebo.dao;
 using ProjetoSebo.error;
 using ProjetoSebo.model;
@@ -21,8 +22,10 @@ namespace ProjetoSebo.views.telas_finais
             {
                 Descricao = this.txtDescricao.Text,
                 CodigoBarras = this.txtCodBarras.Text,
+                Tipo = new TipoProduto(),
                 //Preco = Convert.ToDouble(this.txtPreco.Text),
                 Quantidade = Convert.ToInt32(this.txtQuantidade.Text),
+                Local = new LocalProduto(),
                 PalavrasChave = this.txtPalavrasChave.Text
             };
 

@@ -1,16 +1,10 @@
-﻿using System;
+﻿using ProjetoSebo.data.shared;
+using System;
 
-namespace ProjetoSebo.model
+namespace ProjetoSebo.bean
 {
-    public class Cliente : BaseParaModel
+    public class Cliente : BaseParaBean
     {
-        public enum TipoSexo
-        {
-            Nenhum = 0,
-            Masculino,
-            Feminino
-        }
-
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }

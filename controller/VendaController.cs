@@ -1,7 +1,7 @@
-﻿using ProjetoSebo.error;
+﻿using ProjetoSebo.bean;
+using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.validator;
-using System;
 using System.Collections.Generic;
 
 namespace ProjetoSebo.controller
@@ -27,13 +27,13 @@ namespace ProjetoSebo.controller
             if (resultado.VerificarFalhaOperacao())
                 return resultado;
 
-            Context.Vendas.Add(venda);
+            Context.Vendas.Add(new VendaModel(venda));
             Context.SaveChanges();
 
             return new ResultadoSucesso("Produto cadastrado com sucesso.");
         }
 
-        public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
+        public override ResultadoOperacao OnConsistirDados(BaseParaBean dados)
         {
             Venda venda = dados as Venda;
 

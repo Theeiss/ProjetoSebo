@@ -1,7 +1,8 @@
-﻿using ProjetoSebo.controller;
+﻿using ProjetoSebo.bean;
+using ProjetoSebo.controller;
 using ProjetoSebo.dao;
+using ProjetoSebo.data.shared;
 using ProjetoSebo.error;
-using ProjetoSebo.model;
 using ProjetoSebo.views.components;
 using System;
 
@@ -33,14 +34,14 @@ namespace ProjetoSebo.views.telas_finais
             resultado.Exibir();
         }
 
-        private Cliente.TipoSexo ObterSexoInformado()
+        private TipoSexo ObterSexoInformado()
         {
             if (this.rdbMasculino.Checked)
-                return Cliente.TipoSexo.Masculino;
+                return TipoSexo.Masculino;
             else if (this.rdbFeminino.Checked)
-                return Cliente.TipoSexo.Feminino;
+                return TipoSexo.Feminino;
 
-            return Cliente.TipoSexo.Nenhum;
+            return TipoSexo.Nenhum;
         }
         private void Limpar()
         {
