@@ -29,13 +29,8 @@
         protected override void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pnlSuperior = new System.Windows.Forms.Panel();
-            this.btnVoltar = new System.Windows.Forms.PictureBox();
-            this.lblIdentificacaoTela = new System.Windows.Forms.Label();
-            this.pnlDireita = new System.Windows.Forms.Panel();
-            this.pnlInferior = new System.Windows.Forms.Panel();
-            this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlCentral = new System.Windows.Forms.Panel();
+            this.txtPreco = new ProjetoSebo.views.components.TextBoxValor();
             this.lblPalavrasChave = new System.Windows.Forms.Label();
             this.lblLocal = new System.Windows.Forms.Label();
             this.lblQuantidade = new System.Windows.Forms.Label();
@@ -63,6 +58,12 @@
             this.txtCodBarras = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
+            this.pnlEsquerda = new System.Windows.Forms.Panel();
+            this.pnlInferior = new System.Windows.Forms.Panel();
+            this.pnlDireita = new System.Windows.Forms.Panel();
+            this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.btnVoltar = new System.Windows.Forms.PictureBox();
+            this.lblIdentificacaoTela = new System.Windows.Forms.Label();
             this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
@@ -74,67 +75,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgTipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCodBarras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDescricao)).BeginInit();
+            this.pnlSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlSuperior
-            // 
-            this.pnlSuperior.Controls.Add(this.btnVoltar);
-            this.pnlSuperior.Controls.Add(this.lblIdentificacaoTela);
-            this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
-            this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(900, 80);
-            this.pnlSuperior.TabIndex = 0;
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoltar.Image = global::ProjetoSebo.Properties.Resources.voltar;
-            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(32, 32);
-            this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnVoltar.TabIndex = 1;
-            this.btnVoltar.TabStop = false;
-            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
-            // 
-            // lblIdentificacaoTela
-            // 
-            this.lblIdentificacaoTela.AutoSize = true;
-            this.lblIdentificacaoTela.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentificacaoTela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblIdentificacaoTela.Location = new System.Drawing.Point(102, 46);
-            this.lblIdentificacaoTela.Name = "lblIdentificacaoTela";
-            this.lblIdentificacaoTela.Size = new System.Drawing.Size(118, 31);
-            this.lblIdentificacaoTela.TabIndex = 4;
-            this.lblIdentificacaoTela.Text = "Produtos";
-            // 
-            // pnlDireita
-            // 
-            this.pnlDireita.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlDireita.Location = new System.Drawing.Point(800, 80);
-            this.pnlDireita.Name = "pnlDireita";
-            this.pnlDireita.Size = new System.Drawing.Size(100, 570);
-            this.pnlDireita.TabIndex = 1;
-            // 
-            // pnlInferior
-            // 
-            this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlInferior.Location = new System.Drawing.Point(0, 570);
-            this.pnlInferior.Name = "pnlInferior";
-            this.pnlInferior.Size = new System.Drawing.Size(800, 80);
-            this.pnlInferior.TabIndex = 1;
-            // 
-            // pnlEsquerda
-            // 
-            this.pnlEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlEsquerda.Location = new System.Drawing.Point(0, 80);
-            this.pnlEsquerda.Name = "pnlEsquerda";
-            this.pnlEsquerda.Size = new System.Drawing.Size(100, 490);
-            this.pnlEsquerda.TabIndex = 1;
             // 
             // pnlCentral
             // 
+            this.pnlCentral.Controls.Add(this.txtPreco);
             this.pnlCentral.Controls.Add(this.cbxTipo);
             this.pnlCentral.Controls.Add(this.lblPalavrasChave);
             this.pnlCentral.Controls.Add(this.lblLocal);
@@ -168,6 +115,18 @@
             this.pnlCentral.Name = "pnlCentral";
             this.pnlCentral.Size = new System.Drawing.Size(700, 490);
             this.pnlCentral.TabIndex = 2;
+            // 
+            // txtPreco
+            // 
+            this.txtPreco.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPreco.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreco.Location = new System.Drawing.Point(2, 260);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(301, 22);
+            this.txtPreco.TabIndex = 8;
+            this.txtPreco.Tipo = ProjetoSebo.views.components.TextBoxValor.TipoDado.dinheiro;
+            this.txtPreco.Valor = 0D;
             // 
             // lblPalavrasChave
             // 
@@ -466,18 +425,62 @@
             this.btnGravar.UseVisualStyleBackColor = false;
             this.btnGravar.Click += new System.EventHandler(this.BtnGravar_Click);
             // 
-            // cbxTipo
+            // pnlEsquerda
             // 
-            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
-            this.cbxTipo.DropDownWidth = 250;
-            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Location = new System.Drawing.Point(3, 186);
-            this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(296, 29);
-            this.cbxTipo.TabIndex = 50;
+            this.pnlEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlEsquerda.Location = new System.Drawing.Point(0, 80);
+            this.pnlEsquerda.Name = "pnlEsquerda";
+            this.pnlEsquerda.Size = new System.Drawing.Size(100, 490);
+            this.pnlEsquerda.TabIndex = 1;
+            // 
+            // pnlInferior
+            // 
+            this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlInferior.Location = new System.Drawing.Point(0, 570);
+            this.pnlInferior.Name = "pnlInferior";
+            this.pnlInferior.Size = new System.Drawing.Size(800, 80);
+            this.pnlInferior.TabIndex = 1;
+            // 
+            // pnlDireita
+            // 
+            this.pnlDireita.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlDireita.Location = new System.Drawing.Point(800, 80);
+            this.pnlDireita.Name = "pnlDireita";
+            this.pnlDireita.Size = new System.Drawing.Size(100, 570);
+            this.pnlDireita.TabIndex = 1;
+            // 
+            // pnlSuperior
+            // 
+            this.pnlSuperior.Controls.Add(this.btnVoltar);
+            this.pnlSuperior.Controls.Add(this.lblIdentificacaoTela);
+            this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
+            this.pnlSuperior.Name = "pnlSuperior";
+            this.pnlSuperior.Size = new System.Drawing.Size(900, 80);
+            this.pnlSuperior.TabIndex = 0;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoltar.Image = global::ProjetoSebo.Properties.Resources.voltar;
+            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(32, 32);
+            this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnVoltar.TabIndex = 1;
+            this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
+            // 
+            // lblIdentificacaoTela
+            // 
+            this.lblIdentificacaoTela.AutoSize = true;
+            this.lblIdentificacaoTela.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdentificacaoTela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblIdentificacaoTela.Location = new System.Drawing.Point(102, 46);
+            this.lblIdentificacaoTela.Name = "lblIdentificacaoTela";
+            this.lblIdentificacaoTela.Size = new System.Drawing.Size(118, 31);
+            this.lblIdentificacaoTela.TabIndex = 4;
+            this.lblIdentificacaoTela.Text = "Produtos";
             // 
             // TelaProdutos
             // 
@@ -492,9 +495,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaProdutos";
             this.Text = "TelaProdutos";
-            this.pnlSuperior.ResumeLayout(false);
-            this.pnlSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.pnlCentral.ResumeLayout(false);
             this.pnlCentral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPreco)).EndInit();
@@ -504,6 +504,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgTipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCodBarras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDescricao)).EndInit();
+            this.pnlSuperior.ResumeLayout(false);
+            this.pnlSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -544,6 +547,7 @@
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblPreco;
         private System.Windows.Forms.Label lblCodigoBarras;
+        private components.TextBoxValor txtPreco;
         private components.ComboTipoProduto cbxTipo;
     }
 }

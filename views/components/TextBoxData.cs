@@ -6,7 +6,7 @@ namespace ProjetoSebo.views.components
     public class TextBoxData : MaskedTextBox
     {
 
-        public DateTime DataHora { get; set; }
+        public DateTime Data { get; set; }
 
         public TextBoxData()
         {
@@ -20,15 +20,20 @@ namespace ProjetoSebo.views.components
             base.OnLeave(e);
         }
 
+        protected override void OnTextChanged(EventArgs e)
+        {
+            if (this.TextLength == 0)
+                this.Data = DateTime.MinValue;
+        }
+
         private void CalcularDataHora()
         {
             try
             {
-                this.DataHora = Convert.ToDateTime(this.Text);
+                this.Data = Convert.ToDateTime(this.Text);
             }
             catch (Exception)
             {
-                this.DataHora = DateTime.MinValue;
                 this.Clear();
             }
         }

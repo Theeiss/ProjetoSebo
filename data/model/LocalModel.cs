@@ -10,12 +10,13 @@ namespace ProjetoSebo.model
             this.Descricao = local.Descricao;
         }
 
-        public Local GerarEntidade()
+        public Local ConverterParaBean()
         {
-            Local local = new Local();
-
-            local.Id = this.Id;
-            local.Descricao = this.Descricao;
+            Local local = new Local
+            {
+                Id = this.Id,
+                Descricao = this.Descricao
+            };
 
             return local;
         }

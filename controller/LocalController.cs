@@ -44,7 +44,7 @@ namespace ProjetoSebo.controller
 
             foreach(LocalModel model in Context.Locais)
             {
-                lista.Add(model.GerarEntidade());
+                lista.Add(model.ConverterParaBean());
             }
 
             return lista;

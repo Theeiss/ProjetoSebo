@@ -284,7 +284,7 @@
             // 
             this.txtDataNascimento.BackColor = System.Drawing.SystemColors.Control;
             this.txtDataNascimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDataNascimento.DataHora = new System.DateTime(((long)(0)));
+            this.txtDataNascimento.Data = new System.DateTime(((long)(0)));
             this.txtDataNascimento.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDataNascimento.Location = new System.Drawing.Point(461, 134);
             this.txtDataNascimento.Mask = "00/00/0000";

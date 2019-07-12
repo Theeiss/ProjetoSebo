@@ -21,7 +21,7 @@ namespace ProjetoSebo.views.telas_finais
             {
                 Nome = this.txtNome.Text,
                 Cpf = this.txtCpf.Text,
-                DataNascimento = this.txtDataNascimento.DataHora,
+                DataNascimento = this.txtDataNascimento.Data,
                 Sexo = ObterSexoInformado(),
                 Telefone = this.txtTelefone.Text,
                 Email = this.txtEmail.Text
