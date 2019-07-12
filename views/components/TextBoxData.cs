@@ -20,6 +20,12 @@ namespace ProjetoSebo.views.components
             base.OnLeave(e);
         }
 
+        protected override void OnTextChanged(EventArgs e)
+        {
+            if (this.TextLength == 0)
+                this.Data = DateTime.MinValue;
+        }
+
         private void CalcularDataHora()
         {
             try
@@ -28,7 +34,6 @@ namespace ProjetoSebo.views.components
             }
             catch (Exception)
             {
-                this.Data = DateTime.MinValue;
                 this.Clear();
             }
         }
