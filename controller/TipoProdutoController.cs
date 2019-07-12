@@ -16,7 +16,7 @@ namespace ProjetoSebo.controller
             this.Validator = new TipoProdutoValidator();
         }
 
-        public ResultadoOperacao Gravar(bean.TipoProduto tipoProduto)
+        public ResultadoOperacao Gravar(TipoProduto tipoProduto)
         {
             ResultadoOperacao resultado = ConsistirDados(tipoProduto);
             if (resultado.VerificarFalhaOperacao())
@@ -44,7 +44,7 @@ namespace ProjetoSebo.controller
 
             foreach (TipoProdutoModel model in Context.TiposProduto)
             {
-                lista.Add(model.GerarEntidade());
+                lista.Add(model.ConverterParaBean());
             }
 
             return lista;

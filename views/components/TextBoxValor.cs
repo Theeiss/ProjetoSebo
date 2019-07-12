@@ -6,7 +6,6 @@ namespace ProjetoSebo.views.components
 {
     public partial class TextBoxValor : TextBox
     {
-
         public enum TipoDado
         {
             dinheiro,
@@ -68,6 +67,12 @@ namespace ProjetoSebo.views.components
             base.OnLeave(e);
         }
 
+        protected override void OnTextChanged(EventArgs e)
+        {
+            if (this.TextLength == 0)
+                this.Valor = 0;
+        }
+
         private void CalcularValor()
         {
             if(this.TextLength == 0)
@@ -76,13 +81,20 @@ namespace ProjetoSebo.views.components
                 return;
             }
 
-            if(this.Tipo == TipoDado.dinheiro)
+            try
             {
-                this.Valor = Math.Round(double.Parse(this.Text, NumberStyles.Currency, new CultureInfo("pt-BR")), 2); ;
+                if(this.Tipo == TipoDado.dinheiro)
+                {
+                    this.Valor = Math.Round(double.Parse(this.Text, NumberStyles.Currency, new CultureInfo("pt-BR")), 2);
+                }
+                else
+                {
+                    this.Valor = Convert.ToDouble(this.Text);
+                }
             }
-            else
+            catch(Exception)
             {
-                this.Valor = Convert.ToDouble(this.Text);
+                this.Clear();
             }
         }
     }

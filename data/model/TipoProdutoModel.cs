@@ -5,23 +5,23 @@ namespace ProjetoSebo.model
 {
     public class TipoProdutoModel : BaseParaModel, IComparable
     {
+        public TipoProdutoModel()
+        {
+        }
+
         public TipoProdutoModel(TipoProduto tipoProduto)
         {
             this.Id = tipoProduto.Id;
             this.Descricao = tipoProduto.Descricao;
         }
 
-        public TipoProdutoModel()
+        public TipoProduto ConverterParaBean()
         {
-
-        }
-
-        public TipoProduto GerarEntidade()
-        {
-            TipoProduto tipoProduto = new TipoProduto();
-
-            tipoProduto.Id = this.Id;
-            tipoProduto.Descricao = this.Descricao;
+            TipoProduto tipoProduto = new TipoProduto
+            {
+                Id = this.Id,
+                Descricao = this.Descricao
+            };
 
             return tipoProduto;
         }

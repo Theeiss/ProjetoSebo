@@ -23,7 +23,7 @@ namespace ProjetoSebo.views.telas_finais
                 Descricao = this.txtDescricao.Text,
                 CodigoBarras = this.txtCodBarras.Text,
                 Tipo = new TipoProduto(),
-                //Preco = Convert.ToDouble(this.txtPreco.Text),
+                Preco = this.txtPreco.Valor,
                 Quantidade = Convert.ToInt32(this.txtQuantidade.Text),
                 Local = new LocalProduto(),
                 PalavrasChave = this.txtPalavrasChave.Text
@@ -48,7 +48,7 @@ namespace ProjetoSebo.views.telas_finais
         {
             this.txtDescricao.Clear();
             this.txtCodBarras.Clear();
-            //this.txtPreco.Clear();
+            this.txtPreco.Clear();
             this.txtQuantidade.Clear();
             this.txtPalavrasChave.Clear();
 

@@ -31,7 +31,11 @@
             this.lblValor = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
             this.btnTestar = new System.Windows.Forms.Button();
+            this.btnTestar2 = new System.Windows.Forms.Button();
+            this.lblResultado2 = new System.Windows.Forms.Label();
+            this.txtValor = new ProjetoSebo.views.components.TextBoxValor();
             this.txtData = new ProjetoSebo.views.components.TextBoxData();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblValor
@@ -62,9 +66,37 @@
             this.btnTestar.UseVisualStyleBackColor = true;
             this.btnTestar.Click += new System.EventHandler(this.BtnTestar_Click);
             // 
+            // btnTestar2
+            // 
+            this.btnTestar2.Location = new System.Drawing.Point(291, 130);
+            this.btnTestar2.Name = "btnTestar2";
+            this.btnTestar2.Size = new System.Drawing.Size(75, 23);
+            this.btnTestar2.TabIndex = 6;
+            this.btnTestar2.Text = "Testar";
+            this.btnTestar2.UseVisualStyleBackColor = true;
+            this.btnTestar2.Click += new System.EventHandler(this.BtnTestar2_Click);
+            // 
+            // lblResultado2
+            // 
+            this.lblResultado2.AutoSize = true;
+            this.lblResultado2.Location = new System.Drawing.Point(399, 135);
+            this.lblResultado2.Name = "lblResultado2";
+            this.lblResultado2.Size = new System.Drawing.Size(55, 13);
+            this.lblResultado2.TabIndex = 7;
+            this.lblResultado2.Text = "Resultado";
+            // 
+            // txtValor
+            // 
+            this.txtValor.Location = new System.Drawing.Point(125, 130);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(135, 20);
+            this.txtValor.TabIndex = 5;
+            this.txtValor.Tipo = ProjetoSebo.views.components.TextBoxValor.TipoDado.dinheiro;
+            this.txtValor.Valor = 0D;
+            // 
             // txtData
             // 
-            this.txtData.DataHora = new System.DateTime(((long)(0)));
+            this.txtData.Data = new System.DateTime(((long)(0)));
             this.txtData.Location = new System.Drawing.Point(125, 60);
             this.txtData.Mask = "00/00/0000";
             this.txtData.Name = "txtData";
@@ -72,11 +104,25 @@
             this.txtData.TabIndex = 4;
             this.txtData.ValidatingType = typeof(System.DateTime);
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(125, 165);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.TabIndex = 8;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
+            // 
             // TelaTeste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.lblResultado2);
+            this.Controls.Add(this.btnTestar2);
+            this.Controls.Add(this.txtValor);
             this.Controls.Add(this.txtData);
             this.Controls.Add(this.btnTestar);
             this.Controls.Add(this.lblResultado);
@@ -94,5 +140,9 @@
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Button btnTestar;
         private components.TextBoxData txtData;
+        private components.TextBoxValor txtValor;
+        private System.Windows.Forms.Button btnTestar2;
+        private System.Windows.Forms.Label lblResultado2;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

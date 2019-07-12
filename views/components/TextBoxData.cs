@@ -6,7 +6,7 @@ namespace ProjetoSebo.views.components
     public class TextBoxData : MaskedTextBox
     {
 
-        public DateTime DataHora { get; set; }
+        public DateTime Data { get; set; }
 
         public TextBoxData()
         {
@@ -24,11 +24,11 @@ namespace ProjetoSebo.views.components
         {
             try
             {
-                this.DataHora = Convert.ToDateTime(this.Text);
+                this.Data = Convert.ToDateTime(this.Text);
             }
             catch (Exception)
             {
-                this.DataHora = DateTime.MinValue;
+                this.Data = DateTime.MinValue;
                 this.Clear();
             }
         }
