@@ -1,10 +1,25 @@
 ﻿using MySql.Data.EntityFramework;
 using ProjetoSebo.model;
 using System.Data.Entity;
+using System.Data.Entity.Core.Metadata.Edm;
+using System.Data.Entity.Infrastructure;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace ProjetoSebo.dao
 {
+    public class RemoveModelSufixTableNameConvention : IStoreModelConvention<EntitySet>, IConvention
+    {
+        public RemoveModelSufixTableNameConvention()
+        {
+        }
+
+        //
+        public virtual void Apply(EntitySet item, DbModel model)
+        {
+            item.Name = item.Name.Replace("Model", "");
+        }
+    }
+
     [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class SeboContext : DbContext
     {
@@ -23,6 +38,7 @@ namespace ProjetoSebo.dao
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            //modelBuilder.Conventions.Add<RemoveModelSufixTableNameConvention>();
         }
     }
 }

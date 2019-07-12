@@ -43,7 +43,6 @@
             this.lblPreco = new System.Windows.Forms.Label();
             this.lblCodigoBarras = new System.Windows.Forms.Label();
             this.lblDescricao = new System.Windows.Forms.Label();
-            this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
             this.pnlLinhaPreco = new System.Windows.Forms.Panel();
             this.imgPreco = new System.Windows.Forms.PictureBox();
             this.cbxLocal = new System.Windows.Forms.ComboBox();
@@ -64,6 +63,7 @@
             this.txtCodBarras = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
+            this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.pnlCentral.SuspendLayout();
@@ -135,6 +135,7 @@
             // 
             // pnlCentral
             // 
+            this.pnlCentral.Controls.Add(this.cbxTipo);
             this.pnlCentral.Controls.Add(this.lblPalavrasChave);
             this.pnlCentral.Controls.Add(this.lblLocal);
             this.pnlCentral.Controls.Add(this.lblQuantidade);
@@ -142,7 +143,6 @@
             this.pnlCentral.Controls.Add(this.lblPreco);
             this.pnlCentral.Controls.Add(this.lblCodigoBarras);
             this.pnlCentral.Controls.Add(this.lblDescricao);
-            this.pnlCentral.Controls.Add(this.cbxTipo);
             this.pnlCentral.Controls.Add(this.pnlLinhaPreco);
             this.pnlCentral.Controls.Add(this.imgPreco);
             this.pnlCentral.Controls.Add(this.cbxLocal);
@@ -245,20 +245,6 @@
             this.lblDescricao.Size = new System.Drawing.Size(72, 19);
             this.lblDescricao.TabIndex = 43;
             this.lblDescricao.Text = "Descrição:";
-            // 
-            // cbxTipo
-            // 
-            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
-            this.cbxTipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbxTipo.DropDownWidth = 250;
-            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Location = new System.Drawing.Point(3, 186);
-            this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(300, 30);
-            this.cbxTipo.TabIndex = 7;
             // 
             // pnlLinhaPreco
             // 
@@ -480,6 +466,19 @@
             this.btnGravar.UseVisualStyleBackColor = false;
             this.btnGravar.Click += new System.EventHandler(this.BtnGravar_Click);
             // 
+            // cbxTipo
+            // 
+            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
+            this.cbxTipo.DropDownWidth = 250;
+            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Location = new System.Drawing.Point(3, 186);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(296, 29);
+            this.cbxTipo.TabIndex = 50;
+            // 
             // TelaProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -538,7 +537,6 @@
         private System.Windows.Forms.ComboBox cbxLocal;
         private System.Windows.Forms.Panel pnlLinhaPreco;
         private System.Windows.Forms.PictureBox imgPreco;
-        private components.ComboTipoProduto cbxTipo;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Label lblPalavrasChave;
         private System.Windows.Forms.Label lblLocal;
@@ -546,5 +544,6 @@
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblPreco;
         private System.Windows.Forms.Label lblCodigoBarras;
+        private components.ComboTipoProduto cbxTipo;
     }
 }
