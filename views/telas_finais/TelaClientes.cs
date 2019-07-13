@@ -24,7 +24,8 @@ namespace ProjetoSebo.views.telas_finais
                 DataNascimento = this.txtDataNascimento.Data,
                 Sexo = ObterSexoInformado(),
                 Telefone = this.txtTelefone.Text,
-                Email = this.txtEmail.Text
+                Email = this.txtEmail.Text,
+                Observacao = this.txtObservacao.Text
             };
 
             ResultadoOperacao resultado = this.Controller.Gravar(cliente);
@@ -54,6 +55,7 @@ namespace ProjetoSebo.views.telas_finais
             this.rdbFeminino.Checked = false;
             this.txtTelefone.Clear();
             this.txtEmail.Clear();
+            this.txtObservacao.Clear();
         }
 
         public override void TratarConsistencia(ResultadoOperacao retorno)
@@ -66,6 +68,7 @@ namespace ProjetoSebo.views.telas_finais
                 case ClienteController.CAMPO_SEXO: break;
                 case ClienteController.CAMPO_TELEFONE: this.txtTelefone.Focus(); break;
                 case ClienteController.CAMPO_EMAIL: this.txtEmail.Focus(); break;
+                case ClienteController.CAMPO_OBSERVACAO: this.txtObservacao.Focus(); break;
             }
         }
         public void BtnVoltar_Click(object sender, EventArgs e)

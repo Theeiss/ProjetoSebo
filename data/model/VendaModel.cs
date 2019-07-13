@@ -6,6 +6,15 @@ namespace ProjetoSebo.model
 {
     public class VendaModel : BaseParaModel
     {
+        public int Id { get; set; }
+        public List<ItemVendaModel> Itens { get; private set; }
+        public DateTime DataHoraVenda { get; set; }
+        public ClienteModel Cliente { get; set; }
+
+        public VendaModel()
+        {
+        }
+
         public VendaModel(Venda venda)
         {
             this.Id = venda.Id;
@@ -14,16 +23,6 @@ namespace ProjetoSebo.model
 
             venda.Itens.ForEach(item => AdicionarItemVenda(new ItemVendaModel(item)));
         }
-
-        public VendaModel()
-        {
-
-        }
-
-        public int Id { get; set; }
-        public List<ItemVendaModel> Itens { get; private set; }
-        public DateTime DataHoraVenda { get; set; }
-        public ClienteModel Cliente { get; set; }
 
         public void AdicionarItemVenda(ItemVendaModel item)
         {

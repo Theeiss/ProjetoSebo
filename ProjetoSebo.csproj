@@ -329,6 +329,7 @@
     <Content Include="images\menu.png" />
     <None Include="images\preco.png" />
     <None Include="images\palavras-chave.png" />
+    <None Include="images\observacoes.png" />
     <Content Include="images\preferencias.png" />
     <Content Include="images\produtos.png" />
     <None Include="images\quantidade.png" />

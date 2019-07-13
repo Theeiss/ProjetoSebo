@@ -12,5 +12,6 @@ namespace ProjetoSebo.bean
         public TipoSexo Sexo { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
+        public string Observacao { get; set; }
     }
 }

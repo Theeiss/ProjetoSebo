@@ -13,6 +13,7 @@ namespace ProjetoSebo.controller
         public const int CAMPO_SEXO = 4;
         public const int CAMPO_TELEFONE = 5;
         public const int CAMPO_EMAIL = 6;
+        public const int CAMPO_OBSERVACAO = 7;
 
         public ClienteValidator Validator { get; }
 
