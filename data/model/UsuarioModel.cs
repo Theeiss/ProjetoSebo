@@ -7,6 +7,7 @@ namespace ProjetoSebo.model
         public int Id { get; set; }
         public string Login { get; set; }
         public string Senha { get; set; }
+        public string Foto { get; set; }
 
         public UsuarioModel()
         {
@@ -17,6 +18,7 @@ namespace ProjetoSebo.model
             this.Id = usuario.Id;
             this.Login = usuario.Login;
             this.Senha = usuario.Senha;
+            this.Foto = usuario.Foto;
         }
     }
 }
