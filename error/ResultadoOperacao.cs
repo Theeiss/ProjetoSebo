@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using ProjetoSebo.views;
+using System.Windows.Forms;
 
 namespace ProjetoSebo.error
 {
@@ -33,7 +34,7 @@ namespace ProjetoSebo.error
             if (this.Mensagem.Length == 0)
                 return;
 
-            MessageBox.Show(this.Mensagem, "Sistema Sebo", MessageBoxButtons.OK, GetMessageBoxIcon());
+            MessageBox.Show(this.Mensagem, GlobalResource.NOME_SOFTWARE, MessageBoxButtons.OK, GetMessageBoxIcon());
         }
 
         public abstract MessageBoxIcon GetMessageBoxIcon();

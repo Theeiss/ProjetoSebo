@@ -22,7 +22,7 @@ namespace ProjetoSebo.views.telas_finais
             {
                 Descricao = this.txtDescricao.Text,
                 CodigoBarras = this.txtCodBarras.Text,
-                Tipo = new TipoProduto(),
+                Tipo = this.cbxTipo.TipoProdutoSelecionado,
                 Preco = this.txtPreco.Valor,
                 Quantidade = Convert.ToInt32(this.txtQuantidade.Text),
                 Local = new LocalProduto(),

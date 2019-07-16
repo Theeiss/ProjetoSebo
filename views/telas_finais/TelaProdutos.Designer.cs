@@ -133,10 +133,10 @@
             this.cbxTipo.DropDownWidth = 250;
             this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxTipo.Location = new System.Drawing.Point(2, 186);
+            this.cbxTipo.Location = new System.Drawing.Point(1, 186);
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(300, 29);
-            this.cbxTipo.TabIndex = 9;
+            this.cbxTipo.TabIndex = 7;
             // 
             // lblPalavrasChave
             // 

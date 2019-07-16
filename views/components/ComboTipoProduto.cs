@@ -5,25 +5,27 @@ using ProjetoSebo.error;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace ProjetoSebo.views.components
 {
     public partial class ComboTipoProduto : ComboBox
     {
-        private TipoProdutoController TpProdCtrl { get; set; }
+        private TipoProdutoController Controller { get; set; }
         private List<TipoProduto> TiposProduto { get; set; }
+        public TipoProduto TipoProdutoSelecionado { get; set; }
         public ComboTipoProduto()
         {
-            TpProdCtrl = new TipoProdutoController();
+            this.Controller = new TipoProdutoController();
+            this.TipoProdutoSelecionado = new TipoProduto();
 
             InitializeComponent();
         }
 
         public ComboTipoProduto(IContainer container)
         {
-            TpProdCtrl = new TipoProdutoController();
+            this.Controller = new TipoProdutoController();
+            this.TipoProdutoSelecionado = new TipoProduto();
 
             container.Add(this);
 
@@ -32,13 +34,16 @@ namespace ProjetoSebo.views.components
 
         private void Carregar()
         {
-            this.TiposProduto = this.TpProdCtrl.BuscarTodos();
+            this.TiposProduto = this.Controller.BuscarTodos();
 
             this.TiposProduto.Sort();
 
             this.Items.Clear();
             this.TiposProduto.ForEach(tipo => this.Items.Add(tipo.Descricao));
+
+            this.TipoProdutoSelecionado = new TipoProduto();
         }
+
         protected override void OnDropDown(EventArgs e)
         {
             Carregar();
@@ -48,7 +53,7 @@ namespace ProjetoSebo.views.components
 
         protected override void OnLostFocus(EventArgs e)
         {
-            if (Text.Length == 0)
+            if (this.Text.Length == 0)
                 return;
 
             TipoProduto tipoProduto = new TipoProduto()
@@ -56,21 +61,40 @@ namespace ProjetoSebo.views.components
                 Descricao = this.Text
             };
 
-            ResultadoOperacao resultado = TpProdCtrl.Gravar(tipoProduto);
+            ResultadoOperacao resultado = Controller.Gravar(tipoProduto);
             if (resultado.VerificarFalhaOperacao())
             {
                 resultado.Exibir();
                 return;
             }
 
+            this.TipoProdutoSelecionado = tipoProduto;
+
             base.OnLostFocus(e);
         }
 
         public void SetContext(SeboContext context)
         {
-            TpProdCtrl.Context = context;
+            Controller.Context = context;
 
             Carregar();
+        }
+
+        protected override void OnSelectedItemChanged(EventArgs e)
+        {
+            this.TipoProdutoSelecionado = new TipoProduto();
+
+            if (this.Text.Length == 0)
+                return;
+
+            TipoProduto tipoProduto = new TipoProduto()
+            {
+                Descricao = this.Text
+            };
+
+            this.TipoProdutoSelecionado = Controller.BuscarPelaDescricao(this.Text);
+
+            base.OnLostFocus(e);
         }
     }
 }

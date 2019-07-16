@@ -30,7 +30,6 @@ namespace ProjetoSebo.dao
         public DbSet<UsuarioModel> Usuarios { get; set; }
         public DbSet<ProdutoModel> Produtos { get; set; }
         public DbSet<TipoProdutoModel> TiposProduto { get; set; }
-        public DbSet<LocalModel> Locais { get; set; }
         public DbSet<LocalProdutoModel> LocaisProduto { get; set; }
         public DbSet<VendaModel> Vendas { get; set; }
         public DbSet<ClienteModel> Clientes { get; set; }
