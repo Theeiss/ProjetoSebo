@@ -91,7 +91,6 @@
     <Compile Include="data\bean\BaseParaBean.cs" />
     <Compile Include="data\bean\Cliente.cs" />
     <Compile Include="data\bean\ItemVenda.cs" />
-    <Compile Include="data\bean\Local.cs" />
     <Compile Include="data\bean\LocalProduto.cs" />
     <Compile Include="data\bean\Login.cs" />
     <Compile Include="data\bean\Produto.cs" />
@@ -100,7 +99,7 @@
     <Compile Include="data\bean\Venda.cs" />
     <Compile Include="controller\BaseParaController.cs" />
     <Compile Include="controller\ClienteController.cs" />
-    <Compile Include="controller\LocalController.cs" />
+    <Compile Include="controller\LocalProdutoController.cs" />
     <Compile Include="controller\LoginController.cs" />
     <Compile Include="controller\ProdutoController.cs" />
     <Compile Include="data\shared\TipoSexo.cs" />
@@ -113,7 +112,6 @@
     <Compile Include="data\model\BaseParaModel.cs" />
     <Compile Include="data\model\ClienteModel.cs" />
     <Compile Include="data\model\ItemVendaModel.cs" />
-    <Compile Include="data\model\LocalModel.cs" />
     <Compile Include="data\model\LocalProdutoModel.cs" />
     <Compile Include="data\model\LoginModel.cs" />
     <Compile Include="data\model\ProdutoModel.cs" />
@@ -127,6 +125,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="System\Windows\Forms\ComboLocaisProduto.cs" />
     <Compile Include="validator\ClienteValidator.cs" />
     <Compile Include="validator\ItemVendaValidator.cs" />
     <Compile Include="validator\LocalValidator.cs" />
@@ -137,7 +136,7 @@
     <Compile Include="views\components\BaseParaTelas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\components\ComboLocais.cs">
+    <Compile Include="views\components\ComboLocaisProduto.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="views\components\ComboTipoProduto.cs">

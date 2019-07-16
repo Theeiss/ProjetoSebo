@@ -69,5 +69,14 @@ namespace ProjetoSebo.views {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sistema Sebo.
+        /// </summary>
+        internal static string NOME_SOFTWARE {
+            get {
+                return ResourceManager.GetString("NOME_SOFTWARE", resourceCulture);
+            }
+        }
     }
 }

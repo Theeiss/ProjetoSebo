@@ -16,5 +16,16 @@ namespace ProjetoSebo.model
             this.Id = localProduto.Id;
             this.Descricao = localProduto.Descricao;
         }
+
+        public LocalProduto ConverterParaBean()
+        {
+            LocalProduto localProduto = new LocalProduto
+            {
+                Id = this.Id,
+                Descricao = this.Descricao
+            };
+
+            return localProduto;
+        }
     }
 }

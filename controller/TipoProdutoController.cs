@@ -2,6 +2,7 @@
 using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.validator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -24,8 +25,11 @@ namespace ProjetoSebo.controller
 
             if (Context.TiposProduto.Where(t => t.Descricao == tipoProduto.Descricao).Count() == 0)
             {
-                Context.TiposProduto.Add(new TipoProdutoModel(tipoProduto));
-                Context.SaveChanges();
+                if( ExibirQuestionamento(string.Format("O tipo de produto {0} não existe no sistema. Deseja adicioná-lo?", tipoProduto.Descricao), TipoQuestionamento.ExcetoTelaCadastro) )
+                {
+                    Context.TiposProduto.Add(new TipoProdutoModel(tipoProduto));
+                    Context.SaveChanges();
+                }                
             }
 
             return new ResultadoSucesso();
@@ -48,6 +52,16 @@ namespace ProjetoSebo.controller
             }
 
             return lista;
+        }
+
+        public TipoProduto BuscarPelaDescricao(string descricao)
+        {
+            IQueryable<TipoProdutoModel> retorno = Context.TiposProduto.Where(t => t.Descricao == descricao);
+
+            if(retorno.Count() > 0)
+                return retorno.First().ConverterParaBean();
+            
+            return new TipoProduto();
         }
     }
 }
