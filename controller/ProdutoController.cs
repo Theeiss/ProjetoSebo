@@ -2,6 +2,8 @@
 using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.validator;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjetoSebo.controller
 {
@@ -40,6 +42,23 @@ namespace ProjetoSebo.controller
             }
 
             return new ResultadoSucesso();
+        }
+
+        public List<Produto> Pesquisar(string pesquisa)
+        {
+            List<Produto> lista = new List<Produto>();
+
+            IQueryable<ProdutoModel> resultadoBusca = Context.Produtos.Where(produto => produto.Descricao.Contains(pesquisa));
+
+            if(resultadoBusca.Count() > 0)
+            {
+                foreach (ProdutoModel produto in resultadoBusca)
+                {
+                    lista.Add(produto.ConverterParaBean());
+                }
+            }
+
+            return lista;
         }
     }
 }

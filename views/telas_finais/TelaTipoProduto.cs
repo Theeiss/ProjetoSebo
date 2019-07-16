@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProjetoSebo.views.telas_finais
 {
-    public partial class TelaTipoProduto : Form
+    public partial class TelaTipoProduto: Form
     {
         public TelaTipoProduto()
         {

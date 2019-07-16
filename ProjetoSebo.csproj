@@ -149,6 +149,12 @@
     <Compile Include="views\components\TextBoxData.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="views\components\TextBoxProduto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\components\TextBoxProduto.Designer.cs">
+      <DependentUpon>TextBoxProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\components\TextBoxValor.cs">
       <SubType>Component</SubType>
     </Compile>

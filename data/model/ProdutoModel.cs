@@ -29,6 +29,23 @@ namespace ProjetoSebo.model
             this.PalavrasChave = produto.PalavrasChave;
         }
 
+        public Produto ConverterParaBean()
+        {
+            Produto produto = new Produto()
+            {
+                Id = this.Id,
+                Descricao = this.Descricao,
+                CodigoBarras = this.CodigoBarras,
+                Preco = this.Preco,
+                //Tipo = this.Tipo,
+                Quantidade = this.Quantidade,
+                //Local = this.Local,
+                PalavrasChave = this.PalavrasChave
+            };
+
+            return produto;
+        }
+
         public override string ToString()
         {
             return Descricao;

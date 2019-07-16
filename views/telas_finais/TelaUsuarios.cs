@@ -64,11 +64,12 @@ namespace ProjetoSebo.views
         {
             OpenFileDialog telaAbrir = new OpenFileDialog();
             telaAbrir.ShowDialog();
-            if (!string.IsNullOrEmpty(telaAbrir.FileName))
-            {
-                this._foto = telaAbrir.FileName;
-                this.imgFotoUsuario.Load(this._foto);
-            }
+
+            if (string.IsNullOrEmpty(telaAbrir.FileName))
+                return;
+
+            this._foto = telaAbrir.FileName;
+            this.imgFotoUsuario.Load(this._foto);
         }
     }
 }
