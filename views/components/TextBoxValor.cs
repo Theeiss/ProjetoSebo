@@ -32,7 +32,7 @@ namespace ProjetoSebo.views.components
                 }
                 else if (this.Text.Contains(","))
                 {
-                    if(this.SelectionLength > 0 && !this.Text.Substring(this.SelectionStart, this.SelectionLength).Contains(","))
+                    if(this.SelectionLength <= 0 || !this.Text.Substring(this.SelectionStart, this.SelectionLength).Contains(","))
                     {
                         e.Handled = true;
                     }

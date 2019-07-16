@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.pnlCentral = new System.Windows.Forms.Panel();
             this.txtPreco = new ProjetoSebo.views.components.TextBoxValor();
+            this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
             this.lblPalavrasChave = new System.Windows.Forms.Label();
             this.lblLocal = new System.Windows.Forms.Label();
             this.lblQuantidade = new System.Windows.Forms.Label();
@@ -64,9 +65,6 @@
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.lblIdentificacaoTela = new System.Windows.Forms.Label();
-            this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
-            this.pnlSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.pnlCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPreco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPalavraChave)).BeginInit();
@@ -127,6 +125,18 @@
             this.txtPreco.TabIndex = 8;
             this.txtPreco.Tipo = ProjetoSebo.views.components.TextBoxValor.TipoDado.dinheiro;
             this.txtPreco.Valor = 0D;
+            // 
+            // cbxTipo
+            // 
+            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
+            this.cbxTipo.DropDownWidth = 250;
+            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipo.Location = new System.Drawing.Point(1, 186);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(300, 29);
+            this.cbxTipo.TabIndex = 7;
             // 
             // lblPalavrasChave
             // 
