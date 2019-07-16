@@ -4,6 +4,13 @@ namespace ProjetoSebo.model
 {
     public class LocalModel : BaseParaModel
     {
+        public int Id { get; set; }
+        public string Descricao { get; set; }
+
+        public LocalModel()
+        {
+        }
+
         public LocalModel(Local local)
         {
             this.Id = local.Id;
@@ -19,9 +26,6 @@ namespace ProjetoSebo.model
             };
 
             return local;
-        }
-
-        public int Id { get; set; }
-        public string Descricao { get; set; }
+        }        
     }
 }

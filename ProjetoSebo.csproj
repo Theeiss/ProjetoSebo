@@ -309,6 +309,7 @@
     <None Include="images\clientes.png" />
     <None Include="images\clientes_menu.png" />
     <None Include="images\alterar.png" />
+    <None Include="images\camera.png" />
     <Content Include="images\compra.png" />
     <None Include="images\descricao.png" />
     <None Include="images\desconto.png" />
@@ -322,6 +323,8 @@
     <None Include="images\documento.png" />
     <None Include="images\excluir.png" />
     <None Include="images\email.png" />
+    <None Include="images\imagem.png" />
+    <None Include="images\feito.png" />
     <Content Include="images\livro.png" />
     <None Include="images\local.png" />
     <Content Include="images\logo.png" />
@@ -329,6 +332,7 @@
     <Content Include="images\menu.png" />
     <None Include="images\preco.png" />
     <None Include="images\palavras-chave.png" />
+    <None Include="images\observacoes.png" />
     <Content Include="images\preferencias.png" />
     <Content Include="images\produtos.png" />
     <None Include="images\quantidade.png" />

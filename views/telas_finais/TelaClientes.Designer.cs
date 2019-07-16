@@ -31,44 +31,49 @@
             this.pnlInferior = new System.Windows.Forms.Panel();
             this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlCentral = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtObservacao = new System.Windows.Forms.TextBox();
+            this.lblObservacoes = new System.Windows.Forms.Label();
+            this.imgObservacoes = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.imgEmail = new System.Windows.Forms.PictureBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.pnlLinhaTelefone = new System.Windows.Forms.Panel();
+            this.lblTelefone = new System.Windows.Forms.Label();
+            this.imgTelefone = new System.Windows.Forms.PictureBox();
+            this.txtDataNascimento = new ProjetoSebo.views.components.TextBoxData();
             this.rdbFeminino = new System.Windows.Forms.RadioButton();
             this.rdbMasculino = new System.Windows.Forms.RadioButton();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.pnlLinhaSexo = new System.Windows.Forms.Panel();
             this.lblSexo = new System.Windows.Forms.Label();
+            this.imgSexo = new System.Windows.Forms.PictureBox();
             this.pnlLinhaDataNascimento = new System.Windows.Forms.Panel();
             this.lblDataNascimento = new System.Windows.Forms.Label();
+            this.imgDataNascimento = new System.Windows.Forms.PictureBox();
+            this.btnGravar = new System.Windows.Forms.Button();
             this.pnlLinhaCpf = new System.Windows.Forms.Panel();
             this.lblCpf = new System.Windows.Forms.Label();
+            this.imgCpf = new System.Windows.Forms.PictureBox();
             this.pnlLinhaNome = new System.Windows.Forms.Panel();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
+            this.imgNome = new System.Windows.Forms.PictureBox();
             this.pnlDireita = new System.Windows.Forms.Panel();
             this.pnlSuperior = new System.Windows.Forms.Panel();
-            this.lblIdentificacaoTela = new System.Windows.Forms.Label();
-            this.txtDataNascimento = new ProjetoSebo.views.components.TextBoxData();
-            this.pnlLinhaTelefone = new System.Windows.Forms.Panel();
-            this.lblTelefone = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.imgEmail = new System.Windows.Forms.PictureBox();
-            this.imgTelefone = new System.Windows.Forms.PictureBox();
-            this.imgSexo = new System.Windows.Forms.PictureBox();
-            this.imgDataNascimento = new System.Windows.Forms.PictureBox();
-            this.btnGravar = new System.Windows.Forms.Button();
-            this.imgCpf = new System.Windows.Forms.PictureBox();
-            this.imgNome = new System.Windows.Forms.PictureBox();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.lblIdentificacaoTela = new System.Windows.Forms.Label();
             this.pnlCentral.SuspendLayout();
-            this.pnlSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgObservacoes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgTelefone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSexo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDataNascimento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCpf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgNome)).BeginInit();
+            this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,6 +95,10 @@
             // 
             // pnlCentral
             // 
+            this.pnlCentral.Controls.Add(this.panel2);
+            this.pnlCentral.Controls.Add(this.txtObservacao);
+            this.pnlCentral.Controls.Add(this.lblObservacoes);
+            this.pnlCentral.Controls.Add(this.imgObservacoes);
             this.pnlCentral.Controls.Add(this.panel1);
             this.pnlCentral.Controls.Add(this.txtEmail);
             this.pnlCentral.Controls.Add(this.lblEmail);
@@ -122,12 +131,153 @@
             this.pnlCentral.Size = new System.Drawing.Size(800, 570);
             this.pnlCentral.TabIndex = 1;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.panel2.Location = new System.Drawing.Point(100, 426);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(700, 2);
+            this.panel2.TabIndex = 40;
+            // 
+            // txtObservacao
+            // 
+            this.txtObservacao.BackColor = System.Drawing.SystemColors.Control;
+            this.txtObservacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtObservacao.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacao.Location = new System.Drawing.Point(102, 357);
+            this.txtObservacao.Multiline = true;
+            this.txtObservacao.Name = "txtObservacao";
+            this.txtObservacao.Size = new System.Drawing.Size(695, 63);
+            this.txtObservacao.TabIndex = 64;
+            // 
+            // lblObservacoes
+            // 
+            this.lblObservacoes.AutoSize = true;
+            this.lblObservacoes.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObservacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblObservacoes.Location = new System.Drawing.Point(133, 333);
+            this.lblObservacoes.Name = "lblObservacoes";
+            this.lblObservacoes.Size = new System.Drawing.Size(91, 19);
+            this.lblObservacoes.TabIndex = 63;
+            this.lblObservacoes.Text = "Observações:";
+            // 
+            // imgObservacoes
+            // 
+            this.imgObservacoes.Image = global::ProjetoSebo.Properties.Resources.observacoes;
+            this.imgObservacoes.Location = new System.Drawing.Point(100, 325);
+            this.imgObservacoes.Name = "imgObservacoes";
+            this.imgObservacoes.Size = new System.Drawing.Size(30, 30);
+            this.imgObservacoes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgObservacoes.TabIndex = 62;
+            this.imgObservacoes.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.panel1.Location = new System.Drawing.Point(99, 302);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(700, 2);
+            this.panel1.TabIndex = 39;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Control;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail.Location = new System.Drawing.Point(102, 274);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(697, 22);
+            this.txtEmail.TabIndex = 61;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblEmail.Location = new System.Drawing.Point(133, 250);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(50, 19);
+            this.lblEmail.TabIndex = 60;
+            this.lblEmail.Text = "E-mail:";
+            // 
+            // imgEmail
+            // 
+            this.imgEmail.Image = global::ProjetoSebo.Properties.Resources.email;
+            this.imgEmail.Location = new System.Drawing.Point(100, 242);
+            this.imgEmail.Name = "imgEmail";
+            this.imgEmail.Size = new System.Drawing.Size(30, 30);
+            this.imgEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgEmail.TabIndex = 59;
+            this.imgEmail.TabStop = false;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTelefone.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelefone.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.ForeColor = System.Drawing.Color.Black;
+            this.txtTelefone.Location = new System.Drawing.Point(461, 192);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(198, 22);
+            this.txtTelefone.TabIndex = 58;
+            // 
+            // pnlLinhaTelefone
+            // 
+            this.pnlLinhaTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.pnlLinhaTelefone.Location = new System.Drawing.Point(459, 220);
+            this.pnlLinhaTelefone.Name = "pnlLinhaTelefone";
+            this.pnlLinhaTelefone.Size = new System.Drawing.Size(200, 2);
+            this.pnlLinhaTelefone.TabIndex = 55;
+            // 
+            // lblTelefone
+            // 
+            this.lblTelefone.AutoSize = true;
+            this.lblTelefone.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblTelefone.Location = new System.Drawing.Point(492, 168);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(64, 19);
+            this.lblTelefone.TabIndex = 57;
+            this.lblTelefone.Text = "Telefone:";
+            // 
+            // imgTelefone
+            // 
+            this.imgTelefone.Image = global::ProjetoSebo.Properties.Resources.telefone;
+            this.imgTelefone.Location = new System.Drawing.Point(459, 160);
+            this.imgTelefone.Name = "imgTelefone";
+            this.imgTelefone.Size = new System.Drawing.Size(30, 30);
+            this.imgTelefone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgTelefone.TabIndex = 56;
+            this.imgTelefone.TabStop = false;
+            // 
+            // txtDataNascimento
+            // 
+            this.txtDataNascimento.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDataNascimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDataNascimento.Data = new System.DateTime(((long)(0)));
+            this.txtDataNascimento.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataNascimento.Location = new System.Drawing.Point(461, 111);
+            this.txtDataNascimento.Mask = "00/00/0000";
+            this.txtDataNascimento.Name = "txtDataNascimento";
+            this.txtDataNascimento.Size = new System.Drawing.Size(198, 22);
+            this.txtDataNascimento.TabIndex = 54;
+            this.txtDataNascimento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // rdbFeminino
             // 
             this.rdbFeminino.AutoSize = true;
             this.rdbFeminino.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbFeminino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.rdbFeminino.Location = new System.Drawing.Point(217, 214);
+            this.rdbFeminino.Location = new System.Drawing.Point(217, 191);
             this.rdbFeminino.Name = "rdbFeminino";
             this.rdbFeminino.Size = new System.Drawing.Size(83, 23);
             this.rdbFeminino.TabIndex = 53;
@@ -140,7 +290,7 @@
             this.rdbMasculino.AutoSize = true;
             this.rdbMasculino.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbMasculino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.rdbMasculino.Location = new System.Drawing.Point(103, 216);
+            this.rdbMasculino.Location = new System.Drawing.Point(103, 193);
             this.rdbMasculino.Name = "rdbMasculino";
             this.rdbMasculino.Size = new System.Drawing.Size(90, 23);
             this.rdbMasculino.TabIndex = 52;
@@ -153,7 +303,7 @@
             this.txtCpf.BackColor = System.Drawing.SystemColors.Control;
             this.txtCpf.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCpf.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(102, 134);
+            this.txtCpf.Location = new System.Drawing.Point(102, 111);
             this.txtCpf.Mask = "999.999.999-99";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(198, 22);
@@ -163,7 +313,7 @@
             // pnlLinhaSexo
             // 
             this.pnlLinhaSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.pnlLinhaSexo.Location = new System.Drawing.Point(100, 243);
+            this.pnlLinhaSexo.Location = new System.Drawing.Point(100, 220);
             this.pnlLinhaSexo.Name = "pnlLinhaSexo";
             this.pnlLinhaSexo.Size = new System.Drawing.Size(200, 2);
             this.pnlLinhaSexo.TabIndex = 41;
@@ -173,16 +323,26 @@
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblSexo.Location = new System.Drawing.Point(133, 191);
+            this.lblSexo.Location = new System.Drawing.Point(133, 168);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(42, 19);
             this.lblSexo.TabIndex = 47;
             this.lblSexo.Text = "Sexo:";
             // 
+            // imgSexo
+            // 
+            this.imgSexo.Image = global::ProjetoSebo.Properties.Resources.sexo;
+            this.imgSexo.Location = new System.Drawing.Point(100, 160);
+            this.imgSexo.Name = "imgSexo";
+            this.imgSexo.Size = new System.Drawing.Size(30, 30);
+            this.imgSexo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgSexo.TabIndex = 46;
+            this.imgSexo.TabStop = false;
+            // 
             // pnlLinhaDataNascimento
             // 
             this.pnlLinhaDataNascimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.pnlLinhaDataNascimento.Location = new System.Drawing.Point(459, 162);
+            this.pnlLinhaDataNascimento.Location = new System.Drawing.Point(459, 139);
             this.pnlLinhaDataNascimento.Name = "pnlLinhaDataNascimento";
             this.pnlLinhaDataNascimento.Size = new System.Drawing.Size(200, 2);
             this.pnlLinhaDataNascimento.TabIndex = 40;
@@ -192,194 +352,16 @@
             this.lblDataNascimento.AutoSize = true;
             this.lblDataNascimento.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataNascimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblDataNascimento.Location = new System.Drawing.Point(492, 110);
+            this.lblDataNascimento.Location = new System.Drawing.Point(492, 87);
             this.lblDataNascimento.Name = "lblDataNascimento";
             this.lblDataNascimento.Size = new System.Drawing.Size(119, 19);
             this.lblDataNascimento.TabIndex = 44;
             this.lblDataNascimento.Text = "Data Nascimento:";
             // 
-            // pnlLinhaCpf
-            // 
-            this.pnlLinhaCpf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.pnlLinhaCpf.Location = new System.Drawing.Point(100, 162);
-            this.pnlLinhaCpf.Name = "pnlLinhaCpf";
-            this.pnlLinhaCpf.Size = new System.Drawing.Size(200, 2);
-            this.pnlLinhaCpf.TabIndex = 39;
-            // 
-            // lblCpf
-            // 
-            this.lblCpf.AutoSize = true;
-            this.lblCpf.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblCpf.Location = new System.Drawing.Point(133, 110);
-            this.lblCpf.Name = "lblCpf";
-            this.lblCpf.Size = new System.Drawing.Size(36, 19);
-            this.lblCpf.TabIndex = 40;
-            this.lblCpf.Text = "CPF:";
-            // 
-            // pnlLinhaNome
-            // 
-            this.pnlLinhaNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlLinhaNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.pnlLinhaNome.Location = new System.Drawing.Point(100, 82);
-            this.pnlLinhaNome.Name = "pnlLinhaNome";
-            this.pnlLinhaNome.Size = new System.Drawing.Size(700, 2);
-            this.pnlLinhaNome.TabIndex = 38;
-            // 
-            // txtNome
-            // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.BackColor = System.Drawing.SystemColors.Control;
-            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNome.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.ForeColor = System.Drawing.Color.Black;
-            this.txtNome.Location = new System.Drawing.Point(102, 55);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(697, 22);
-            this.txtNome.TabIndex = 37;
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblNome.Location = new System.Drawing.Point(133, 32);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(50, 19);
-            this.lblNome.TabIndex = 36;
-            this.lblNome.Text = "Nome:";
-            // 
-            // pnlDireita
-            // 
-            this.pnlDireita.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlDireita.Location = new System.Drawing.Point(800, 80);
-            this.pnlDireita.Name = "pnlDireita";
-            this.pnlDireita.Size = new System.Drawing.Size(100, 570);
-            this.pnlDireita.TabIndex = 1;
-            // 
-            // pnlSuperior
-            // 
-            this.pnlSuperior.Controls.Add(this.btnVoltar);
-            this.pnlSuperior.Controls.Add(this.lblIdentificacaoTela);
-            this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
-            this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(900, 80);
-            this.pnlSuperior.TabIndex = 0;
-            // 
-            // lblIdentificacaoTela
-            // 
-            this.lblIdentificacaoTela.AutoSize = true;
-            this.lblIdentificacaoTela.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentificacaoTela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblIdentificacaoTela.Location = new System.Drawing.Point(102, 46);
-            this.lblIdentificacaoTela.Name = "lblIdentificacaoTela";
-            this.lblIdentificacaoTela.Size = new System.Drawing.Size(105, 31);
-            this.lblIdentificacaoTela.TabIndex = 22;
-            this.lblIdentificacaoTela.Text = "Clientes";
-            // 
-            // txtDataNascimento
-            // 
-            this.txtDataNascimento.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDataNascimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDataNascimento.Data = new System.DateTime(((long)(0)));
-            this.txtDataNascimento.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataNascimento.Location = new System.Drawing.Point(461, 134);
-            this.txtDataNascimento.Mask = "00/00/0000";
-            this.txtDataNascimento.Name = "txtDataNascimento";
-            this.txtDataNascimento.Size = new System.Drawing.Size(198, 22);
-            this.txtDataNascimento.TabIndex = 54;
-            this.txtDataNascimento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pnlLinhaTelefone
-            // 
-            this.pnlLinhaTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.pnlLinhaTelefone.Location = new System.Drawing.Point(100, 327);
-            this.pnlLinhaTelefone.Name = "pnlLinhaTelefone";
-            this.pnlLinhaTelefone.Size = new System.Drawing.Size(200, 2);
-            this.pnlLinhaTelefone.TabIndex = 55;
-            // 
-            // lblTelefone
-            // 
-            this.lblTelefone.AutoSize = true;
-            this.lblTelefone.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblTelefone.Location = new System.Drawing.Point(133, 275);
-            this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(64, 19);
-            this.lblTelefone.TabIndex = 57;
-            this.lblTelefone.Text = "Telefone:";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblEmail.Location = new System.Drawing.Point(133, 362);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(50, 19);
-            this.lblEmail.TabIndex = 60;
-            this.lblEmail.Text = "E-mail:";
-            // 
-            // textBox1
-            // 
-            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Control;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.Location = new System.Drawing.Point(102, 386);
-            this.txtEmail.Name = "textBox1";
-            this.txtEmail.Size = new System.Drawing.Size(697, 22);
-            this.txtEmail.TabIndex = 61;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.panel1.Location = new System.Drawing.Point(99, 414);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(700, 2);
-            this.panel1.TabIndex = 39;
-            // 
-            // imgEmail
-            // 
-            this.imgEmail.Image = global::ProjetoSebo.Properties.Resources.email;
-            this.imgEmail.Location = new System.Drawing.Point(100, 354);
-            this.imgEmail.Name = "imgEmail";
-            this.imgEmail.Size = new System.Drawing.Size(30, 30);
-            this.imgEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgEmail.TabIndex = 59;
-            this.imgEmail.TabStop = false;
-            // 
-            // imgTelefone
-            // 
-            this.imgTelefone.Image = global::ProjetoSebo.Properties.Resources.telefone;
-            this.imgTelefone.Location = new System.Drawing.Point(100, 267);
-            this.imgTelefone.Name = "imgTelefone";
-            this.imgTelefone.Size = new System.Drawing.Size(30, 30);
-            this.imgTelefone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgTelefone.TabIndex = 56;
-            this.imgTelefone.TabStop = false;
-            // 
-            // imgSexo
-            // 
-            this.imgSexo.Image = global::ProjetoSebo.Properties.Resources.sexo;
-            this.imgSexo.Location = new System.Drawing.Point(100, 183);
-            this.imgSexo.Name = "imgSexo";
-            this.imgSexo.Size = new System.Drawing.Size(30, 30);
-            this.imgSexo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgSexo.TabIndex = 46;
-            this.imgSexo.TabStop = false;
-            // 
             // imgDataNascimento
             // 
             this.imgDataNascimento.Image = global::ProjetoSebo.Properties.Resources.data_nascimento;
-            this.imgDataNascimento.Location = new System.Drawing.Point(459, 102);
+            this.imgDataNascimento.Location = new System.Drawing.Point(459, 79);
             this.imgDataNascimento.Name = "imgDataNascimento";
             this.imgDataNascimento.Size = new System.Drawing.Size(30, 30);
             this.imgDataNascimento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -407,25 +389,96 @@
             this.btnGravar.UseVisualStyleBackColor = false;
             this.btnGravar.Click += new System.EventHandler(this.BtnGravar_Click);
             // 
+            // pnlLinhaCpf
+            // 
+            this.pnlLinhaCpf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.pnlLinhaCpf.Location = new System.Drawing.Point(100, 139);
+            this.pnlLinhaCpf.Name = "pnlLinhaCpf";
+            this.pnlLinhaCpf.Size = new System.Drawing.Size(200, 2);
+            this.pnlLinhaCpf.TabIndex = 39;
+            // 
+            // lblCpf
+            // 
+            this.lblCpf.AutoSize = true;
+            this.lblCpf.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblCpf.Location = new System.Drawing.Point(133, 87);
+            this.lblCpf.Name = "lblCpf";
+            this.lblCpf.Size = new System.Drawing.Size(36, 19);
+            this.lblCpf.TabIndex = 40;
+            this.lblCpf.Text = "CPF:";
+            // 
             // imgCpf
             // 
             this.imgCpf.Image = global::ProjetoSebo.Properties.Resources.documento;
-            this.imgCpf.Location = new System.Drawing.Point(100, 102);
+            this.imgCpf.Location = new System.Drawing.Point(100, 79);
             this.imgCpf.Name = "imgCpf";
             this.imgCpf.Size = new System.Drawing.Size(30, 30);
             this.imgCpf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgCpf.TabIndex = 39;
             this.imgCpf.TabStop = false;
             // 
+            // pnlLinhaNome
+            // 
+            this.pnlLinhaNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlLinhaNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.pnlLinhaNome.Location = new System.Drawing.Point(100, 59);
+            this.pnlLinhaNome.Name = "pnlLinhaNome";
+            this.pnlLinhaNome.Size = new System.Drawing.Size(700, 2);
+            this.pnlLinhaNome.TabIndex = 38;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNome.BackColor = System.Drawing.SystemColors.Control;
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.ForeColor = System.Drawing.Color.Black;
+            this.txtNome.Location = new System.Drawing.Point(102, 32);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(697, 22);
+            this.txtNome.TabIndex = 37;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblNome.Location = new System.Drawing.Point(133, 9);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(50, 19);
+            this.lblNome.TabIndex = 36;
+            this.lblNome.Text = "Nome:";
+            // 
             // imgNome
             // 
             this.imgNome.Image = global::ProjetoSebo.Properties.Resources.descricao;
-            this.imgNome.Location = new System.Drawing.Point(100, 24);
+            this.imgNome.Location = new System.Drawing.Point(100, 1);
             this.imgNome.Name = "imgNome";
             this.imgNome.Size = new System.Drawing.Size(30, 30);
             this.imgNome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgNome.TabIndex = 35;
             this.imgNome.TabStop = false;
+            // 
+            // pnlDireita
+            // 
+            this.pnlDireita.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlDireita.Location = new System.Drawing.Point(800, 80);
+            this.pnlDireita.Name = "pnlDireita";
+            this.pnlDireita.Size = new System.Drawing.Size(100, 570);
+            this.pnlDireita.TabIndex = 1;
+            // 
+            // pnlSuperior
+            // 
+            this.pnlSuperior.Controls.Add(this.btnVoltar);
+            this.pnlSuperior.Controls.Add(this.lblIdentificacaoTela);
+            this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
+            this.pnlSuperior.Name = "pnlSuperior";
+            this.pnlSuperior.Size = new System.Drawing.Size(900, 80);
+            this.pnlSuperior.TabIndex = 0;
             // 
             // btnVoltar
             // 
@@ -438,18 +491,16 @@
             this.btnVoltar.TabIndex = 1;
             this.btnVoltar.TabStop = false;
             // 
-            // txtTelefone
+            // lblIdentificacaoTela
             // 
-            this.txtTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefone.BackColor = System.Drawing.SystemColors.Control;
-            this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTelefone.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.ForeColor = System.Drawing.Color.Black;
-            this.txtTelefone.Location = new System.Drawing.Point(102, 299);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(198, 22);
-            this.txtTelefone.TabIndex = 58;
+            this.lblIdentificacaoTela.AutoSize = true;
+            this.lblIdentificacaoTela.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdentificacaoTela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblIdentificacaoTela.Location = new System.Drawing.Point(102, 46);
+            this.lblIdentificacaoTela.Name = "lblIdentificacaoTela";
+            this.lblIdentificacaoTela.Size = new System.Drawing.Size(105, 31);
+            this.lblIdentificacaoTela.TabIndex = 22;
+            this.lblIdentificacaoTela.Text = "Clientes";
             // 
             // TelaClientes
             // 
@@ -466,14 +517,15 @@
             this.Text = "TelaClientes";
             this.pnlCentral.ResumeLayout(false);
             this.pnlCentral.PerformLayout();
-            this.pnlSuperior.ResumeLayout(false);
-            this.pnlSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgObservacoes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgTelefone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSexo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDataNascimento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCpf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgNome)).EndInit();
+            this.pnlSuperior.ResumeLayout(false);
+            this.pnlSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.ResumeLayout(false);
 
@@ -514,5 +566,9 @@
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.PictureBox imgTelefone;
         private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.Label lblObservacoes;
+        private System.Windows.Forms.PictureBox imgObservacoes;
+        private System.Windows.Forms.TextBox txtObservacao;
+        private System.Windows.Forms.Panel panel2;
     }
 }
