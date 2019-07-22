@@ -153,5 +153,20 @@ namespace ProjetoSebo.views
             TelaDoacoes telaDoacoes = new TelaDoacoes();
             AbrirTelaInterna(telaDoacoes);
         }
+
+        private void BtnConsultar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnIncluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRelatorio_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -73,6 +73,16 @@ namespace ProjetoSebo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adicionar_titulo {
+            get {
+                object obj = ResourceManager.GetObject("adicionar-titulo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap alterar {
             get {
                 object obj = ResourceManager.GetObject("alterar", resourceCulture);
@@ -136,6 +146,16 @@ namespace ProjetoSebo.Properties {
         internal static System.Drawing.Bitmap compra {
             get {
                 object obj = ResourceManager.GetObject("compra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap consultar {
+            get {
+                object obj = ResourceManager.GetObject("consultar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -376,6 +396,16 @@ namespace ProjetoSebo.Properties {
         internal static System.Drawing.Bitmap quantidade {
             get {
                 object obj = ResourceManager.GetObject("quantidade", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap relatorio_titulo {
+            get {
+                object obj = ResourceManager.GetObject("relatorio_titulo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -324,10 +324,12 @@
     <None Include="images\clientes_menu.png" />
     <None Include="images\alterar.png" />
     <None Include="images\camera.png" />
+    <None Include="images\adicionar-titulo.png" />
     <Content Include="images\compra.png" />
     <None Include="images\descricao.png" />
     <None Include="images\desconto.png" />
     <None Include="images\data_nascimento.png" />
+    <None Include="images\consultar.png" />
     <Content Include="images\doacoes.png" />
     <None Include="Resources\senha_login.png" />
     <None Include="images\enviar.png" />
@@ -357,6 +359,7 @@
     <None Include="images\sexo.png" />
     <None Include="images\telefone.png" />
     <None Include="images\teste_menu.png" />
+    <None Include="images\relatorio_titulo.png" />
     <Content Include="images\usuarios.png" />
     <None Include="images\usuario_login.png" />
     <Content Include="images\venda.png" />
