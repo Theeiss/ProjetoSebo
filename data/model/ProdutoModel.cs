@@ -23,9 +23,11 @@ namespace ProjetoSebo.model
             this.Descricao = produto.Descricao;
             this.CodigoBarras = produto.CodigoBarras;
             this.Preco = produto.Preco;
-            this.Tipo = new TipoProdutoModel(produto.Tipo);
+            if(produto.Tipo != null)
+                this.Tipo = new TipoProdutoModel(produto.Tipo);
             this.Quantidade = produto.Quantidade;
-            this.Local = new LocalProdutoModel(produto.Local);
+            if(produto.Local != null)
+                this.Local = new LocalProdutoModel(produto.Local);
             this.PalavrasChave = produto.PalavrasChave;
         }
 
@@ -37,9 +39,9 @@ namespace ProjetoSebo.model
                 Descricao = this.Descricao,
                 CodigoBarras = this.CodigoBarras,
                 Preco = this.Preco,
-                //Tipo = this.Tipo,
+                Tipo = this.Tipo.ConverterParaBean(),
                 Quantidade = this.Quantidade,
-                //Local = this.Local,
+                Local = this.Local.ConverterParaBean(),
                 PalavrasChave = this.PalavrasChave
             };
 

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+
+            this.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
         }
 
         #endregion

@@ -29,8 +29,11 @@
         protected override void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            ProjetoSebo.controller.ProdutoController produtoController1 = new ProjetoSebo.controller.ProdutoController();
+            ProjetoSebo.validator.ProdutoValidator produtoValidator1 = new ProjetoSebo.validator.ProdutoValidator();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            ProjetoSebo.bean.TipoProduto tipoProduto1 = new ProjetoSebo.bean.TipoProduto();
             this.pnlDireita = new System.Windows.Forms.Panel();
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
@@ -38,6 +41,7 @@
             this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlInferior = new System.Windows.Forms.Panel();
             this.pnlCentral = new System.Windows.Forms.Panel();
+            this.txtProduto = new ProjetoSebo.views.components.TextBoxProduto(this.components);
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.imgProduto = new System.Windows.Forms.PictureBox();
             this.lblProduto = new System.Windows.Forms.Label();
@@ -57,10 +61,9 @@
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.imgPreco = new System.Windows.Forms.PictureBox();
             this.pnlLinhaDescricao = new System.Windows.Forms.Panel();
-            this.txtProduto = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
-            this.btnGravar = new System.Windows.Forms.Button();
             this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
+            this.btnGravar = new System.Windows.Forms.Button();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.pnlCentral.SuspendLayout();
@@ -130,6 +133,7 @@
             // 
             // pnlCentral
             // 
+            this.pnlCentral.Controls.Add(this.txtProduto);
             this.pnlCentral.Controls.Add(this.lblQuantidade);
             this.pnlCentral.Controls.Add(this.imgProduto);
             this.pnlCentral.Controls.Add(this.lblProduto);
@@ -149,7 +153,6 @@
             this.pnlCentral.Controls.Add(this.txtPreco);
             this.pnlCentral.Controls.Add(this.imgPreco);
             this.pnlCentral.Controls.Add(this.pnlLinhaDescricao);
-            this.pnlCentral.Controls.Add(this.txtProduto);
             this.pnlCentral.Controls.Add(this.lblTipo);
             this.pnlCentral.Controls.Add(this.cbxTipo);
             this.pnlCentral.Controls.Add(this.btnGravar);
@@ -158,6 +161,25 @@
             this.pnlCentral.Name = "pnlCentral";
             this.pnlCentral.Size = new System.Drawing.Size(700, 490);
             this.pnlCentral.TabIndex = 1;
+            // 
+            // txtProduto
+            // 
+            this.txtProduto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtProduto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtProduto.BackColor = System.Drawing.SystemColors.Control;
+            this.txtProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProduto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtProduto.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProduto.Location = new System.Drawing.Point(267, 70);
+            this.txtProduto.Name = "txtProduto";
+            this.txtProduto.Produto = null;
+            produtoController1.Context = null;
+            produtoController1.Tela = null;
+            produtoController1.Validator = produtoValidator1;
+            this.txtProduto.ProdutoController = produtoController1;
+            this.txtProduto.Size = new System.Drawing.Size(430, 22);
+            this.txtProduto.TabIndex = 57;
+            this.txtProduto.Tipo = null;
             // 
             // lblQuantidade
             // 
@@ -383,19 +405,6 @@
             this.pnlLinhaDescricao.Size = new System.Drawing.Size(430, 1);
             this.pnlLinhaDescricao.TabIndex = 38;
             // 
-            // txtProduto
-            // 
-            this.txtProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtProduto.BackColor = System.Drawing.SystemColors.Control;
-            this.txtProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtProduto.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProduto.ForeColor = System.Drawing.Color.Black;
-            this.txtProduto.Location = new System.Drawing.Point(267, 70);
-            this.txtProduto.Name = "txtProduto";
-            this.txtProduto.Size = new System.Drawing.Size(427, 22);
-            this.txtProduto.TabIndex = 16;
-            // 
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
@@ -406,6 +415,24 @@
             this.lblTipo.Size = new System.Drawing.Size(38, 19);
             this.lblTipo.TabIndex = 15;
             this.lblTipo.Text = "Tipo:";
+            // 
+            // cbxTipo
+            // 
+            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
+            this.cbxTipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxTipo.DropDownWidth = 250;
+            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Location = new System.Drawing.Point(0, 70);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(239, 30);
+            this.cbxTipo.TabIndex = 14;
+            tipoProduto1.Descricao = null;
+            tipoProduto1.Id = 0;
+            this.cbxTipo.TipoProdutoSelecionado = tipoProduto1;
+            this.cbxTipo.Leave += new System.EventHandler(this.CbxTipo_Leave);
             // 
             // btnGravar
             // 
@@ -426,20 +453,6 @@
             this.btnGravar.TabIndex = 13;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
-            // 
-            // cbxTipo
-            // 
-            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
-            this.cbxTipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbxTipo.DropDownWidth = 250;
-            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Location = new System.Drawing.Point(0, 70);
-            this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(239, 30);
-            this.cbxTipo.TabIndex = 14;
             // 
             // TelaVendas
             // 
@@ -479,7 +492,6 @@
         private System.Windows.Forms.Panel pnlCentral;
         private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.Button btnGravar;
-        private System.Windows.Forms.TextBox txtProduto;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblIdentificacaoTela;
         private System.Windows.Forms.Panel pnlLinhaDescricao;
@@ -502,5 +514,6 @@
         private System.Windows.Forms.PictureBox imgProduto;
         private System.Windows.Forms.Label lblProduto;
         private components.ComboTipoProduto cbxTipo;
+        private components.TextBoxProduto txtProduto;
     }
 }

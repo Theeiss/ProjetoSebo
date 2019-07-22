@@ -3,7 +3,7 @@ using ProjetoSebo.controller;
 using ProjetoSebo.dao;
 using ProjetoSebo.error;
 using ProjetoSebo.views.components;
-using System;
+using System; 
 using System.Collections.Generic;
 using System.Linq;
 
@@ -19,6 +19,7 @@ namespace ProjetoSebo.views.telas_finais
             Itens = new List<ItemVenda>();
 
             this.cbxTipo.SetContext(context);
+            this.txtProduto.SetContext(context);
         }
 
         private void BtnAdicionar_Click(object sender, System.EventArgs e)
@@ -86,6 +87,11 @@ namespace ProjetoSebo.views.telas_finais
         public void BtnVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void CbxTipo_Leave(object sender, EventArgs e)
+        {
+            this.txtProduto.Tipo = this.cbxTipo.TipoProdutoSelecionado;
         }
     }
 }

@@ -138,7 +138,7 @@ namespace ProjetoSebo.views
             //TelaPreferencias telaPreferencias = new TelaPreferencias();
             //AbrirTelaInterna(telaPreferencias);
 
-            TelaTeste telaTeste = new TelaTeste();
+            TelaTeste telaTeste = new TelaTeste(_context);
             AbrirTelaInterna(telaTeste);
         }
 

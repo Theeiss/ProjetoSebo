@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            ProjetoSebo.controller.ProdutoController produtoController1 = new ProjetoSebo.controller.ProdutoController();
+            ProjetoSebo.validator.ProdutoValidator produtoValidator1 = new ProjetoSebo.validator.ProdutoValidator();
             this.lblValor = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
             this.btnTestar = new System.Windows.Forms.Button();
@@ -36,6 +39,10 @@
             this.txtValor = new ProjetoSebo.views.components.TextBoxValor();
             this.txtData = new ProjetoSebo.views.components.TextBoxData();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.lblProduto = new System.Windows.Forms.Label();
+            this.txtProduto = new ProjetoSebo.views.components.TextBoxProduto(this.components);
+            this.btnBuscarProduto = new System.Windows.Forms.Button();
+            this.lblResultadoProduto = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblValor
@@ -114,11 +121,59 @@
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
+            // lblProduto
+            // 
+            this.lblProduto.AutoSize = true;
+            this.lblProduto.Location = new System.Drawing.Point(78, 266);
+            this.lblProduto.Name = "lblProduto";
+            this.lblProduto.Size = new System.Drawing.Size(44, 13);
+            this.lblProduto.TabIndex = 9;
+            this.lblProduto.Text = "Produto";
+            // 
+            // txtProduto
+            // 
+            this.txtProduto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtProduto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtProduto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtProduto.Location = new System.Drawing.Point(128, 259);
+            this.txtProduto.Name = "txtProduto";
+            this.txtProduto.Produto = null;
+            produtoController1.Context = null;
+            produtoController1.Tela = null;
+            produtoController1.Validator = produtoValidator1;
+            this.txtProduto.ProdutoController = produtoController1;
+            this.txtProduto.Size = new System.Drawing.Size(209, 20);
+            this.txtProduto.TabIndex = 10;
+            this.txtProduto.Tipo = null;
+            // 
+            // btnBuscarProduto
+            // 
+            this.btnBuscarProduto.Location = new System.Drawing.Point(354, 257);
+            this.btnBuscarProduto.Name = "btnBuscarProduto";
+            this.btnBuscarProduto.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarProduto.TabIndex = 11;
+            this.btnBuscarProduto.Text = "Buscar";
+            this.btnBuscarProduto.UseVisualStyleBackColor = true;
+            this.btnBuscarProduto.Click += new System.EventHandler(this.BtnBuscarProduto_Click);
+            // 
+            // lblResultadoProduto
+            // 
+            this.lblResultadoProduto.AutoSize = true;
+            this.lblResultadoProduto.Location = new System.Drawing.Point(469, 262);
+            this.lblResultadoProduto.Name = "lblResultadoProduto";
+            this.lblResultadoProduto.Size = new System.Drawing.Size(55, 13);
+            this.lblResultadoProduto.TabIndex = 12;
+            this.lblResultadoProduto.Text = "Resultado";
+            // 
             // TelaTeste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblResultadoProduto);
+            this.Controls.Add(this.btnBuscarProduto);
+            this.Controls.Add(this.txtProduto);
+            this.Controls.Add(this.lblProduto);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.lblResultado2);
             this.Controls.Add(this.btnTestar2);
@@ -144,5 +199,9 @@
         private System.Windows.Forms.Button btnTestar2;
         private System.Windows.Forms.Label lblResultado2;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Label lblProduto;
+        private components.TextBoxProduto txtProduto;
+        private System.Windows.Forms.Button btnBuscarProduto;
+        private System.Windows.Forms.Label lblResultadoProduto;
     }
 }

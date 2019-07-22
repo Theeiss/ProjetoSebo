@@ -433,6 +433,16 @@ namespace ProjetoSebo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap teste_menu {
+            get {
+                object obj = ResourceManager.GetObject("teste_menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tipo {
             get {
                 object obj = ResourceManager.GetObject("tipo", resourceCulture);

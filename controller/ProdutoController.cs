@@ -44,21 +44,48 @@ namespace ProjetoSebo.controller
             return new ResultadoSucesso();
         }
 
-        public List<Produto> Pesquisar(string pesquisa)
+        public List<Produto> Buscar()
         {
-            List<Produto> lista = new List<Produto>();
+            List<Produto> produtos = new List<Produto>();
 
-            IQueryable<ProdutoModel> resultadoBusca = Context.Produtos.Where(produto => produto.Descricao.Contains(pesquisa));
-
-            if(resultadoBusca.Count() > 0)
+            foreach (ProdutoModel produtoTmp in Context.Produtos)
             {
-                foreach (ProdutoModel produto in resultadoBusca)
-                {
-                    lista.Add(produto.ConverterParaBean());
-                }
+                produtos.Add(produtoTmp.ConverterParaBean());
             }
 
-            return lista;
+            return produtos;
+        }
+
+        public List<Produto> Buscar(Produto produtoFiltro)
+        {
+            ProdutoModel filtro = new ProdutoModel(produtoFiltro);
+            List<Produto> produtos = new List<Produto>();
+            IQueryable<ProdutoModel> resultado = Context.Produtos;
+
+            if (filtro.Id != 0)
+                resultado = resultado.Where(produto => produto.Id == filtro.Id);
+
+            if (!string.IsNullOrEmpty(filtro.Descricao))
+                resultado = resultado.Where(produto => produto.Descricao == filtro.Descricao);
+
+            if (!string.IsNullOrEmpty(filtro.CodigoBarras))
+                resultado = resultado.Where(produto => produto.CodigoBarras == filtro.CodigoBarras);
+
+            if (filtro.Tipo != null)
+                resultado = resultado.Where(produto => produto.Tipo == filtro.Tipo);
+
+            if (filtro.Local != null)
+                resultado = resultado.Where(produto => produto.Local == filtro.Local);
+
+            if (!string.IsNullOrEmpty(filtro.PalavrasChave))
+                resultado = resultado.Where(produto => produto.PalavrasChave.Contains(produto.PalavrasChave)); //Tem que trocar para ser uma lista de string.
+
+            foreach (ProdutoModel produto in resultado)
+            {
+                produtos.Add(produto.ConverterParaBean());
+            }
+
+            return produtos;
         }
     }
 }

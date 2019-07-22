@@ -29,6 +29,7 @@
         protected override void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            ProjetoSebo.bean.TipoProduto tipoProduto1 = new ProjetoSebo.bean.TipoProduto();
             this.pnlCentral = new System.Windows.Forms.Panel();
             this.txtPreco = new ProjetoSebo.views.components.TextBoxValor();
             this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
@@ -57,7 +58,6 @@
             this.imgDescricao = new System.Windows.Forms.PictureBox();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.txtCodBarras = new System.Windows.Forms.TextBox();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
             this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlInferior = new System.Windows.Forms.Panel();
@@ -65,6 +65,7 @@
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.lblIdentificacaoTela = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.pnlCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPreco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPalavraChave)).BeginInit();
@@ -137,6 +138,9 @@
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(300, 29);
             this.cbxTipo.TabIndex = 7;
+            tipoProduto1.Descricao = null;
+            tipoProduto1.Id = 0;
+            this.cbxTipo.TipoProdutoSelecionado = tipoProduto1;
             // 
             // lblPalavrasChave
             // 
@@ -401,19 +405,6 @@
             this.txtCodBarras.Size = new System.Drawing.Size(694, 22);
             this.txtCodBarras.TabIndex = 6;
             // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescricao.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescricao.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.ForeColor = System.Drawing.Color.Black;
-            this.txtDescricao.Location = new System.Drawing.Point(3, 50);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(694, 22);
-            this.txtDescricao.TabIndex = 5;
-            // 
             // btnGravar
             // 
             this.btnGravar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -492,6 +483,19 @@
             this.lblIdentificacaoTela.TabIndex = 4;
             this.lblIdentificacaoTela.Text = "Produtos";
             // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescricao.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescricao.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.ForeColor = System.Drawing.Color.Black;
+            this.txtDescricao.Location = new System.Drawing.Point(3, 50);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(694, 22);
+            this.txtDescricao.TabIndex = 5;
+            // 
             // TelaProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,7 +541,6 @@
         private System.Windows.Forms.PictureBox imgDescricao;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.TextBox txtCodBarras;
-        private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.PictureBox imgPalavraChave;
         private System.Windows.Forms.TextBox txtPalavrasChave;
@@ -559,5 +562,6 @@
         private System.Windows.Forms.Label lblCodigoBarras;
         private components.TextBoxValor txtPreco;
         private components.ComboTipoProduto cbxTipo;
+        private System.Windows.Forms.TextBox txtDescricao;
     }
 }
