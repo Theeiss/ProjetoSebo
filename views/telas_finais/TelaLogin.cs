@@ -1,7 +1,7 @@
-﻿using ProjetoSebo.bean;
-using ProjetoSebo.controller;
+﻿using ProjetoSebo.controller;
 using ProjetoSebo.dao;
 using ProjetoSebo.error;
+using ProjetoSebo.model;
 using ProjetoSebo.views;
 using ProjetoSebo.views.components;
 using System;

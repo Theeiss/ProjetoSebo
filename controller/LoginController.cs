@@ -1,5 +1,4 @@
-﻿using ProjetoSebo.bean;
-using ProjetoSebo.error;
+﻿using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.validator;
 using System.Linq;
@@ -25,7 +24,7 @@ namespace ProjetoSebo.controller
             return new ResultadoSucesso();
         }
 
-        public override ResultadoOperacao OnConsistirDados(BaseParaBean dados)
+        public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
         {
             //Login login = dados as Login;
 

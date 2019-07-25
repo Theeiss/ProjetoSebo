@@ -1,5 +1,4 @@
-﻿using ProjetoSebo.bean;
-using ProjetoSebo.error;
+﻿using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.validator;
 using System.Collections.Generic;
@@ -28,7 +27,7 @@ namespace ProjetoSebo.controller
             {
                 if( ExibirQuestionamento(string.Format("O tipo de produto {0} não existe no sistema. Deseja adicioná-lo?", tipoProduto.Descricao), TipoQuestionamento.ExcetoTelaCadastro) )
                 {
-                    Context.TiposProduto.Add(new TipoProdutoModel(tipoProduto));
+                    Context.TiposProduto.Add(tipoProduto);
                     Context.SaveChanges();
                 }                
             }
@@ -40,7 +39,7 @@ namespace ProjetoSebo.controller
             return new ResultadoSucesso();
         }
 
-        public override ResultadoOperacao OnConsistirDados(BaseParaBean dados)
+        public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
         {
             //TipoProduto tipoProduto = dados as TipoProduto;
 
@@ -49,24 +48,12 @@ namespace ProjetoSebo.controller
 
         public List<TipoProduto> BuscarTodos()
         {
-            List<TipoProduto> lista = new List<TipoProduto>();
-
-            foreach (TipoProdutoModel model in Context.TiposProduto)
-            {
-                lista.Add(model.ConverterParaBean());
-            }
-
-            return lista;
+            return Context.TiposProduto;
         }
 
         public TipoProduto BuscarPelaDescricao(string descricao)
         {
-            IQueryable<TipoProdutoModel> retorno = Context.TiposProduto.Where(t => t.Descricao == descricao);
-
-            if(retorno.Count() > 0)
-                return retorno.First().ConverterParaBean();
-            
-            return new TipoProduto();
+            return Context.TiposProduto.Where(t => t.Descricao == descricao).First();
         }
     }
 }
