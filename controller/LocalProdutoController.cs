@@ -1,8 +1,6 @@
-﻿using ProjetoSebo.bean;
+﻿using ProjetoSebo.model;
 using ProjetoSebo.error;
-using ProjetoSebo.model;
 using ProjetoSebo.validator;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -27,7 +25,7 @@ namespace ProjetoSebo.controller
             {
                 if (ExibirQuestionamento(string.Format("O local {0} não existe no sistema. Deseja adicioná-lo?", local.Descricao), TipoQuestionamento.ExcetoTelaCadastro))
                 {
-                    Context.LocaisProduto.Add(new LocalProdutoModel(local));
+                    Context.LocaisProduto.Add(local);
                     Context.SaveChanges();
                 }
             }
@@ -35,7 +33,7 @@ namespace ProjetoSebo.controller
             return new ResultadoSucesso();
         }
 
-        public override ResultadoOperacao OnConsistirDados(BaseParaBean dados)
+        public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
         {
             //Local local = dados as Local;
 
@@ -46,9 +44,9 @@ namespace ProjetoSebo.controller
         {
             List<LocalProduto> lista = new List<LocalProduto>();
 
-            foreach(LocalProdutoModel model in Context.LocaisProduto)
+            foreach(LocalProduto model in Context.LocaisProduto)
             {
-                lista.Add(model.ConverterParaBean());
+                lista.Add(model);
             }
 
             return lista;
@@ -56,10 +54,10 @@ namespace ProjetoSebo.controller
 
         public LocalProduto BuscarPelaDescricao(string descricao)
         {
-            IQueryable<LocalProdutoModel> retorno = Context.LocaisProduto.Where(t => t.Descricao == descricao);
+            IQueryable<LocalProduto> resultado = Context.LocaisProduto.Where(t => t.Descricao == descricao);
 
-            if (retorno.Count() > 0)
-                return retorno.First().ConverterParaBean();
+            if (resultado.Count() > 0)
+                return resultado.First();
 
             return new LocalProduto();
         }

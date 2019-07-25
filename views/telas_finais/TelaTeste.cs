@@ -1,4 +1,4 @@
-﻿using ProjetoSebo.bean;
+﻿using ProjetoSebo.model;
 using ProjetoSebo.dao;
 using System;
 using System.Windows.Forms;

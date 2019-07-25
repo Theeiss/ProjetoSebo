@@ -88,15 +88,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="data\bean\BaseParaBean.cs" />
-    <Compile Include="data\bean\Cliente.cs" />
-    <Compile Include="data\bean\ItemVenda.cs" />
-    <Compile Include="data\bean\LocalProduto.cs" />
-    <Compile Include="data\bean\Login.cs" />
-    <Compile Include="data\bean\Produto.cs" />
-    <Compile Include="data\bean\TipoProduto.cs" />
-    <Compile Include="data\bean\Usuario.cs" />
-    <Compile Include="data\bean\Venda.cs" />
+    <Compile Include="data\model\BaseParaModel.cs" />
+    <Compile Include="data\model\Cliente.cs" />
+    <Compile Include="data\model\ItemVenda.cs" />
+    <Compile Include="data\model\LocalProduto.cs" />
+    <Compile Include="data\model\Login.cs" />
+    <Compile Include="data\model\Produto.cs" />
+    <Compile Include="data\model\TipoProduto.cs" />
+    <Compile Include="data\model\Usuario.cs" />
+    <Compile Include="data\model\Venda.cs" />
     <Compile Include="controller\BaseParaController.cs" />
     <Compile Include="controller\ClienteController.cs" />
     <Compile Include="controller\LocalProdutoController.cs" />

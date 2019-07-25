@@ -48,12 +48,17 @@ namespace ProjetoSebo.controller
 
         public List<TipoProduto> BuscarTodos()
         {
-            return Context.TiposProduto;
+            return Context.TiposProduto.ToList();
         }
 
         public TipoProduto BuscarPelaDescricao(string descricao)
         {
-            return Context.TiposProduto.Where(t => t.Descricao == descricao).First();
+            IQueryable<TipoProduto> resultado = Context.TiposProduto.Where(t => t.Descricao == descricao);
+
+            if (resultado.Count() > 0)
+                return resultado.First();
+
+            return new TipoProduto();
         }
     }
 }

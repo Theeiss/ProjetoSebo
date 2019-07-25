@@ -29,7 +29,7 @@
         protected override void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            ProjetoSebo.bean.TipoProduto tipoProduto1 = new ProjetoSebo.bean.TipoProduto();
+            ProjetoSebo.model.TipoProduto tipoProduto1 = new ProjetoSebo.model.TipoProduto();
             this.pnlCentral = new System.Windows.Forms.Panel();
             this.txtPreco = new ProjetoSebo.views.components.TextBoxValor();
             this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);

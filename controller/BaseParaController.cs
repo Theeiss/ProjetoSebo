@@ -19,7 +19,7 @@ namespace ProjetoSebo.controller
             ExcetoTelaCadastro,
         }
 
-        protected ResultadoOperacao ConsistirDados(BaseParaBean dados)
+        protected ResultadoOperacao ConsistirDados(BaseParaModel dados)
         {
             ResultadoOperacao retorno = OnConsistirDados(dados);
 
@@ -31,7 +31,7 @@ namespace ProjetoSebo.controller
             return retorno;
         }
 
-        public abstract ResultadoOperacao OnConsistirDados(BaseParaBean dados);
+        public abstract ResultadoOperacao OnConsistirDados(BaseParaModel dados);
 
         public bool ExibirQuestionamento(string mensagem, TipoQuestionamento tipoQuestionamento)
         {
