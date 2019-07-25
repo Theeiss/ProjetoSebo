@@ -125,7 +125,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="System\Windows\Forms\ComboLocaisProduto.cs" />
     <Compile Include="validator\ClienteValidator.cs" />
     <Compile Include="validator\ItemVendaValidator.cs" />
     <Compile Include="validator\LocalValidator.cs" />

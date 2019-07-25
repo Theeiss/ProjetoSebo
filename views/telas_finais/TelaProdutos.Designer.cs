@@ -42,7 +42,6 @@
             this.lblDescricao = new System.Windows.Forms.Label();
             this.pnlLinhaPreco = new System.Windows.Forms.Panel();
             this.imgPreco = new System.Windows.Forms.PictureBox();
-            this.cbxLocal = new System.Windows.Forms.ComboBox();
             this.pnlLinhaPalavrasChave = new System.Windows.Forms.Panel();
             this.pnlLinhaLocal = new System.Windows.Forms.Panel();
             this.pnlLinhaDescricao = new System.Windows.Forms.Panel();
@@ -58,6 +57,7 @@
             this.imgDescricao = new System.Windows.Forms.PictureBox();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.txtCodBarras = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
             this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlInferior = new System.Windows.Forms.Panel();
@@ -65,7 +65,6 @@
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.lblIdentificacaoTela = new System.Windows.Forms.Label();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.pnlCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPreco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPalavraChave)).BeginInit();
@@ -91,7 +90,6 @@
             this.pnlCentral.Controls.Add(this.lblDescricao);
             this.pnlCentral.Controls.Add(this.pnlLinhaPreco);
             this.pnlCentral.Controls.Add(this.imgPreco);
-            this.pnlCentral.Controls.Add(this.cbxLocal);
             this.pnlCentral.Controls.Add(this.pnlLinhaPalavrasChave);
             this.pnlCentral.Controls.Add(this.pnlLinhaLocal);
             this.pnlCentral.Controls.Add(this.pnlLinhaDescricao);
@@ -236,21 +234,6 @@
             this.imgPreco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPreco.TabIndex = 41;
             this.imgPreco.TabStop = false;
-            // 
-            // cbxLocal
-            // 
-            this.cbxLocal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxLocal.BackColor = System.Drawing.SystemColors.Control;
-            this.cbxLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxLocal.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxLocal.ForeColor = System.Drawing.Color.Black;
-            this.cbxLocal.FormattingEnabled = true;
-            this.cbxLocal.Location = new System.Drawing.Point(1, 327);
-            this.cbxLocal.Name = "cbxLocal";
-            this.cbxLocal.Size = new System.Drawing.Size(694, 29);
-            this.cbxLocal.TabIndex = 10;
-            this.cbxLocal.Tag = "";
             // 
             // pnlLinhaPalavrasChave
             // 
@@ -405,6 +388,19 @@
             this.txtCodBarras.Size = new System.Drawing.Size(694, 22);
             this.txtCodBarras.TabIndex = 6;
             // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescricao.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescricao.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.ForeColor = System.Drawing.Color.Black;
+            this.txtDescricao.Location = new System.Drawing.Point(3, 50);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(694, 22);
+            this.txtDescricao.TabIndex = 5;
+            // 
             // btnGravar
             // 
             this.btnGravar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -483,19 +479,6 @@
             this.lblIdentificacaoTela.TabIndex = 4;
             this.lblIdentificacaoTela.Text = "Produtos";
             // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescricao.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescricao.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.ForeColor = System.Drawing.Color.Black;
-            this.txtDescricao.Location = new System.Drawing.Point(3, 50);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(694, 22);
-            this.txtDescricao.TabIndex = 5;
-            // 
             // TelaProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,7 +533,6 @@
         private System.Windows.Forms.Panel pnlLinhaCodigoBarras;
         private System.Windows.Forms.Panel pnlLinhasTipo;
         private System.Windows.Forms.Panel pnlLinhaQuantidade;
-        private System.Windows.Forms.ComboBox cbxLocal;
         private System.Windows.Forms.Panel pnlLinhaPreco;
         private System.Windows.Forms.PictureBox imgPreco;
         private System.Windows.Forms.Label lblDescricao;

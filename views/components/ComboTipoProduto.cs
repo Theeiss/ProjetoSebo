@@ -56,16 +56,19 @@ namespace ProjetoSebo.views.components
             if (this.Text.Length == 0)
                 return;
 
-            TipoProduto tipoProduto = new TipoProduto()
-            {
-                Descricao = this.Text
-            };
+            TipoProduto tipoProduto = Controller.BuscarPelaDescricao(this.Text);
 
-            ResultadoOperacao resultado = Controller.Gravar(tipoProduto);
-            if (resultado.VerificarFalhaOperacao())
+            if(tipoProduto.Id == 0)
             {
-                resultado.Exibir();
-                return;
+                ResultadoOperacao resultado = Controller.Gravar(tipoProduto);
+                if (resultado.VerificarFalhaOperacao())
+                {
+                    resultado.Exibir();
+                    return;
+
+                }
+
+                tipoProduto = Controller.BuscarPelaDescricao(this.Text);
             }
 
             this.TipoProdutoSelecionado = tipoProduto;
@@ -86,11 +89,6 @@ namespace ProjetoSebo.views.components
 
             if (this.Text.Length == 0)
                 return;
-
-            TipoProduto tipoProduto = new TipoProduto()
-            {
-                Descricao = this.Text
-            };
 
             this.TipoProdutoSelecionado = Controller.BuscarPelaDescricao(this.Text);
 

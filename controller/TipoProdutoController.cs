@@ -22,13 +22,19 @@ namespace ProjetoSebo.controller
             if (resultado.VerificarFalhaOperacao())
                 return resultado;
 
-            if (Context.TiposProduto.Where(t => t.Descricao == tipoProduto.Descricao).Count() == 0)
+            TipoProduto retorno = BuscarPelaDescricao(tipoProduto.Descricao);
+
+            if (retorno.Id == 0)
             {
                 if( ExibirQuestionamento(string.Format("O tipo de produto {0} não existe no sistema. Deseja adicioná-lo?", tipoProduto.Descricao), TipoQuestionamento.ExcetoTelaCadastro) )
                 {
                     Context.TiposProduto.Add(new TipoProdutoModel(tipoProduto));
                     Context.SaveChanges();
                 }                
+            }
+            else
+            {
+                tipoProduto = retorno;
             }
 
             return new ResultadoSucesso();
