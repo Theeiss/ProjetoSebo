@@ -33,7 +33,7 @@
             ProjetoSebo.validator.ProdutoValidator produtoValidator1 = new ProjetoSebo.validator.ProdutoValidator();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            ProjetoSebo.bean.TipoProduto tipoProduto1 = new ProjetoSebo.bean.TipoProduto();
+            ProjetoSebo.model.TipoProduto tipoProduto1 = new ProjetoSebo.model.TipoProduto();
             this.pnlDireita = new System.Windows.Forms.Panel();
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.PictureBox();

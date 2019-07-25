@@ -88,36 +88,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="data\bean\BaseParaBean.cs" />
-    <Compile Include="data\bean\Cliente.cs" />
-    <Compile Include="data\bean\ItemVenda.cs" />
-    <Compile Include="data\bean\LocalProduto.cs" />
-    <Compile Include="data\bean\Login.cs" />
-    <Compile Include="data\bean\Produto.cs" />
-    <Compile Include="data\bean\TipoProduto.cs" />
-    <Compile Include="data\bean\Usuario.cs" />
-    <Compile Include="data\bean\Venda.cs" />
+    <Compile Include="data\model\BaseParaModel.cs" />
+    <Compile Include="data\model\Cliente.cs" />
+    <Compile Include="data\model\ItemVenda.cs" />
+    <Compile Include="data\model\LocalProduto.cs" />
+    <Compile Include="data\model\Login.cs" />
+    <Compile Include="data\model\Produto.cs" />
+    <Compile Include="data\model\TipoProduto.cs" />
+    <Compile Include="data\model\Usuario.cs" />
+    <Compile Include="data\model\Venda.cs" />
     <Compile Include="controller\BaseParaController.cs" />
     <Compile Include="controller\ClienteController.cs" />
     <Compile Include="controller\LocalProdutoController.cs" />
     <Compile Include="controller\LoginController.cs" />
     <Compile Include="controller\ProdutoController.cs" />
-    <Compile Include="data\shared\TipoSexo.cs" />
     <Compile Include="error\ResultadoOperacao.cs" />
     <Compile Include="controller\TipoProdutoController.cs" />
     <Compile Include="controller\UsuarioController.cs" />
     <Compile Include="context\SeboContext.cs" />
     <Compile Include="context\SeboInitializer.cs" />
     <Compile Include="controller\VendaController.cs" />
-    <Compile Include="data\model\BaseParaModel.cs" />
-    <Compile Include="data\model\ClienteModel.cs" />
-    <Compile Include="data\model\ItemVendaModel.cs" />
-    <Compile Include="data\model\LocalProdutoModel.cs" />
-    <Compile Include="data\model\LoginModel.cs" />
-    <Compile Include="data\model\ProdutoModel.cs" />
-    <Compile Include="data\model\TipoProdutoModel.cs" />
-    <Compile Include="data\model\UsuarioModel.cs" />
-    <Compile Include="data\model\VendaModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -125,7 +115,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="System\Windows\Forms\ComboLocaisProduto.cs" />
     <Compile Include="validator\ClienteValidator.cs" />
     <Compile Include="validator\ItemVendaValidator.cs" />
     <Compile Include="validator\LocalValidator.cs" />

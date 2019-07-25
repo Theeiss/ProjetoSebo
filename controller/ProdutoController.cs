@@ -1,5 +1,4 @@
-﻿using ProjetoSebo.bean;
-using ProjetoSebo.error;
+﻿using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.validator;
 using System.Collections.Generic;
@@ -30,13 +29,13 @@ namespace ProjetoSebo.controller
             if (resultado.VerificarFalhaOperacao())
                 return resultado;
 
-            Context.Produtos.Add(new ProdutoModel(produto));
+            Context.Produtos.Add(produto);
             Context.SaveChanges();
 
             return new ResultadoSucesso("Produto cadastrado com sucesso.");
         }
 
-        public override ResultadoOperacao OnConsistirDados(BaseParaBean dados)
+        public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
         {
             Produto produto = dados as Produto;
 
@@ -52,46 +51,33 @@ namespace ProjetoSebo.controller
 
         public List<Produto> Buscar()
         {
-            List<Produto> produtos = new List<Produto>();
-
-            foreach (ProdutoModel produtoTmp in Context.Produtos)
-            {
-                produtos.Add(produtoTmp.ConverterParaBean());
-            }
-
-            return produtos;
+            return Context.Produtos.ToList();
         }
 
         public List<Produto> Buscar(Produto produtoFiltro)
         {
-            ProdutoModel filtro = new ProdutoModel(produtoFiltro);
             List<Produto> produtos = new List<Produto>();
-            IQueryable<ProdutoModel> resultado = Context.Produtos;
+            IQueryable<Produto> resultado = Context.Produtos;
 
-            if (filtro.Id != 0)
-                resultado = resultado.Where(produto => produto.Id == filtro.Id);
+            if (produtoFiltro.Id != 0)
+                resultado = resultado.Where(produto => produto.Id == produtoFiltro.Id);
 
-            if (!string.IsNullOrEmpty(filtro.Descricao))
-                resultado = resultado.Where(produto => produto.Descricao == filtro.Descricao);
+            if (!string.IsNullOrEmpty(produtoFiltro.Descricao))
+                resultado = resultado.Where(produto => produto.Descricao == produtoFiltro.Descricao);
 
-            if (!string.IsNullOrEmpty(filtro.CodigoBarras))
-                resultado = resultado.Where(produto => produto.CodigoBarras == filtro.CodigoBarras);
+            if (!string.IsNullOrEmpty(produtoFiltro.CodigoBarras))
+                resultado = resultado.Where(produto => produto.CodigoBarras == produtoFiltro.CodigoBarras);
 
-            if (filtro.Tipo != null)
-                resultado = resultado.Where(produto => produto.Tipo == filtro.Tipo);
+            if (produtoFiltro.Tipo != null)
+                resultado = resultado.Where(produto => produto.Tipo == produtoFiltro.Tipo);
 
-            if (filtro.Local != null)
-                resultado = resultado.Where(produto => produto.Local == filtro.Local);
+            if (produtoFiltro.Local != null)
+                resultado = resultado.Where(produto => produto.Local == produtoFiltro.Local);
 
-            if (!string.IsNullOrEmpty(filtro.PalavrasChave))
+            if (!string.IsNullOrEmpty(produtoFiltro.PalavrasChave))
                 resultado = resultado.Where(produto => produto.PalavrasChave.Contains(produto.PalavrasChave)); //Tem que trocar para ser uma lista de string.
 
-            foreach (ProdutoModel produto in resultado)
-            {
-                produtos.Add(produto.ConverterParaBean());
-            }
-
-            return produtos;
+            return resultado.ToList();
         }
     }
 }

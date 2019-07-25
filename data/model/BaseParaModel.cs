@@ -1,5 +1,5 @@
 ﻿
-using ProjetoSebo.bean;
+using ProjetoSebo.model;
 
 namespace ProjetoSebo.model
 {

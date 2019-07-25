@@ -1,7 +1,7 @@
-﻿using ProjetoSebo.bean;
-using ProjetoSebo.controller;
+﻿using ProjetoSebo.controller;
 using ProjetoSebo.dao;
 using ProjetoSebo.error;
+using ProjetoSebo.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,7 +56,7 @@ namespace ProjetoSebo.views.components
             if (this.Text.Length == 0)
                 return;
 
-            TipoProduto tipoProduto = new TipoProduto()
+            TipoProduto tipoProduto = new TipoProduto
             {
                 Descricao = this.Text
             };
@@ -65,10 +65,12 @@ namespace ProjetoSebo.views.components
             if (resultado.VerificarFalhaOperacao())
             {
                 resultado.Exibir();
+                this.Text = "";
                 return;
+
             }
 
-            this.TipoProdutoSelecionado = tipoProduto;
+            this.TipoProdutoSelecionado = Controller.BuscarPelaDescricao(this.Text);
 
             base.OnLostFocus(e);
         }
@@ -86,11 +88,6 @@ namespace ProjetoSebo.views.components
 
             if (this.Text.Length == 0)
                 return;
-
-            TipoProduto tipoProduto = new TipoProduto()
-            {
-                Descricao = this.Text
-            };
 
             this.TipoProdutoSelecionado = Controller.BuscarPelaDescricao(this.Text);
 

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ProjetoSebo.bean
+namespace ProjetoSebo.model
 {
-    public class TipoProduto : BaseParaBean, IComparable
+    public class TipoProduto : BaseParaModel, IComparable
     {
         public int Id { get; set; }
         public string Descricao { get; set; }

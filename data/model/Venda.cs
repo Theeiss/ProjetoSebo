@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProjetoSebo.bean
+namespace ProjetoSebo.model
 {
-    public class Venda : BaseParaBean
+    public class Venda : BaseParaModel
     {
         public int Id { get; set; }
         public List<ItemVenda> Itens { get; private set; }

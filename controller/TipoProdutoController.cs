@@ -1,5 +1,4 @@
-﻿using ProjetoSebo.bean;
-using ProjetoSebo.error;
+﻿using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.validator;
 using System.Collections.Generic;
@@ -24,19 +23,29 @@ namespace ProjetoSebo.controller
             if (resultado.VerificarFalhaOperacao())
                 return resultado;
 
-            if (Context.TiposProduto.Where(t => t.Descricao == tipoProduto.Descricao).Count() == 0)
+            TipoProduto retorno = BuscarPelaDescricao(tipoProduto.Descricao);
+
+            if (retorno.Id == 0)
             {
                 if( ExibirQuestionamento(string.Format("O tipo de produto {0} não existe no sistema. Deseja adicioná-lo?", tipoProduto.Descricao), TipoQuestionamento.ExcetoTelaCadastro) )
                 {
-                    Context.TiposProduto.Add(new TipoProdutoModel(tipoProduto));
+                    Context.TiposProduto.Add(tipoProduto);
                     Context.SaveChanges();
-                }                
+                }
+                else
+                {
+                    return new ResultadoSilencioso();
+                }
+            }
+            else
+            {
+                tipoProduto = retorno;
             }
 
             return new ResultadoSucesso();
         }
 
-        public override ResultadoOperacao OnConsistirDados(BaseParaBean dados)
+        public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
         {
             TipoProduto tipoProduto = dados as TipoProduto;
 
@@ -52,23 +61,16 @@ namespace ProjetoSebo.controller
 
         public List<TipoProduto> BuscarTodos()
         {
-            List<TipoProduto> lista = new List<TipoProduto>();
-
-            foreach (TipoProdutoModel model in Context.TiposProduto)
-            {
-                lista.Add(model.ConverterParaBean());
-            }
-
-            return lista;
+            return Context.TiposProduto.ToList();
         }
 
         public TipoProduto BuscarPelaDescricao(string descricao)
         {
-            IQueryable<TipoProdutoModel> retorno = Context.TiposProduto.Where(t => t.Descricao == descricao);
+            IQueryable<TipoProduto> resultado = Context.TiposProduto.Where(t => t.Descricao == descricao);
 
-            if(retorno.Count() > 0)
-                return retorno.First().ConverterParaBean();
-            
+            if (resultado.Count() > 0)
+                return resultado.First();
+
             return new TipoProduto();
         }
     }
