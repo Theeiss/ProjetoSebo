@@ -55,7 +55,6 @@
             this.imgTipo = new System.Windows.Forms.PictureBox();
             this.imgCodBarras = new System.Windows.Forms.PictureBox();
             this.imgDescricao = new System.Windows.Forms.PictureBox();
-            this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.txtCodBarras = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
@@ -65,6 +64,7 @@
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.lblIdentificacaoTela = new System.Windows.Forms.Label();
+            this.txtQuantidade = new ProjetoSebo.views.components.TextBoxValor();
             this.pnlCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPreco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPalavraChave)).BeginInit();
@@ -79,6 +79,7 @@
             // 
             // pnlCentral
             // 
+            this.pnlCentral.Controls.Add(this.txtQuantidade);
             this.pnlCentral.Controls.Add(this.txtPreco);
             this.pnlCentral.Controls.Add(this.cbxTipo);
             this.pnlCentral.Controls.Add(this.lblPalavrasChave);
@@ -103,7 +104,6 @@
             this.pnlCentral.Controls.Add(this.imgTipo);
             this.pnlCentral.Controls.Add(this.imgCodBarras);
             this.pnlCentral.Controls.Add(this.imgDescricao);
-            this.pnlCentral.Controls.Add(this.txtQuantidade);
             this.pnlCentral.Controls.Add(this.txtCodBarras);
             this.pnlCentral.Controls.Add(this.txtDescricao);
             this.pnlCentral.Controls.Add(this.btnGravar);
@@ -364,17 +364,6 @@
             this.imgDescricao.TabIndex = 29;
             this.imgDescricao.TabStop = false;
             // 
-            // txtQuantidade
-            // 
-            this.txtQuantidade.BackColor = System.Drawing.SystemColors.Control;
-            this.txtQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtQuantidade.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantidade.ForeColor = System.Drawing.Color.Black;
-            this.txtQuantidade.Location = new System.Drawing.Point(401, 260);
-            this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(297, 22);
-            this.txtQuantidade.TabIndex = 9;
-            // 
             // txtCodBarras
             // 
             this.txtCodBarras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -479,6 +468,18 @@
             this.lblIdentificacaoTela.TabIndex = 4;
             this.lblIdentificacaoTela.Text = "Produtos";
             // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.BackColor = System.Drawing.SystemColors.Control;
+            this.txtQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtQuantidade.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantidade.Location = new System.Drawing.Point(397, 261);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(301, 22);
+            this.txtQuantidade.TabIndex = 0;
+            this.txtQuantidade.Tipo = ProjetoSebo.views.components.TextBoxValor.TipoDado.dinheiro;
+            this.txtQuantidade.Valor = 0D;
+            // 
             // TelaProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -522,7 +523,6 @@
         private System.Windows.Forms.PictureBox imgTipo;
         private System.Windows.Forms.PictureBox imgCodBarras;
         private System.Windows.Forms.PictureBox imgDescricao;
-        private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.TextBox txtCodBarras;
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.PictureBox imgPalavraChave;
@@ -545,5 +545,6 @@
         private components.TextBoxValor txtPreco;
         private components.ComboTipoProduto cbxTipo;
         private System.Windows.Forms.TextBox txtDescricao;
+        private components.TextBoxValor txtQuantidade;
     }
 }

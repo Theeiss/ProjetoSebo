@@ -26,12 +26,15 @@ namespace ProjetoSebo.error
 
         public bool VerificarFalhaOperacao()
         {
-            return this.GetType() == typeof(ResultadoAviso) || this.GetType() == typeof(ResultadoErro);
+            return this.GetType() == typeof(ResultadoAviso) || this.GetType() == typeof(ResultadoErro) || this.GetType() == typeof(ResultadoSilencioso);
         }
 
         public void Exibir()
         {
             if (this.Mensagem.Length == 0)
+                return;
+
+            if (this.GetType() == typeof(ResultadoSilencioso))
                 return;
 
             MessageBox.Show(this.Mensagem, GlobalResource.NOME_SOFTWARE, MessageBoxButtons.OK, GetMessageBoxIcon());
@@ -89,6 +92,18 @@ namespace ProjetoSebo.error
         public override MessageBoxIcon GetMessageBoxIcon()
         {
             return MessageBoxIcon.Information;
+        }
+    }
+
+    public class ResultadoSilencioso : ResultadoOperacao
+    {
+        public ResultadoSilencioso() : base("")
+        {
+        }
+
+        public override MessageBoxIcon GetMessageBoxIcon()
+        {
+            return MessageBoxIcon.None;
         }
     }
 }

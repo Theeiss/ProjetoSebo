@@ -29,7 +29,11 @@ namespace ProjetoSebo.controller
                 {
                     Context.TiposProduto.Add(tipoProduto);
                     Context.SaveChanges();
-                }                
+                }
+                else
+                {
+                    return new ResultadoSilencioso();
+                }
             }
             else
             {

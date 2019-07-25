@@ -23,7 +23,7 @@ namespace ProjetoSebo.views.telas_finais
                 CodigoBarras = this.txtCodBarras.Text,
                 Tipo = this.cbxTipo.TipoProdutoSelecionado,
                 Preco = this.txtPreco.Valor,
-                Quantidade = Convert.ToInt32(this.txtQuantidade.Text),
+                Quantidade = Convert.ToInt32(this.txtQuantidade.Valor),
                 PalavrasChave = this.txtPalavrasChave.Text
             };
 

@@ -65,11 +65,12 @@ namespace ProjetoSebo.views.components
             if (resultado.VerificarFalhaOperacao())
             {
                 resultado.Exibir();
+                this.Text = "";
                 return;
 
             }
 
-            this.TipoProdutoSelecionado = tipoProduto;
+            this.TipoProdutoSelecionado = Controller.BuscarPelaDescricao(this.Text);
 
             base.OnLostFocus(e);
         }
