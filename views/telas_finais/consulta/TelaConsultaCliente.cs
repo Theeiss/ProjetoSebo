@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoSebo.views.telas_finais
 {
-    public partial class TelaTipoProduto: Form
+    public partial class TelaConsultaCliente : Form
     {
-        public TelaTipoProduto()
+        public TelaConsultaCliente()
         {
             InitializeComponent();
         }

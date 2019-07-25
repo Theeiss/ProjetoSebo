@@ -34,12 +34,12 @@
             this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlDireita = new System.Windows.Forms.Panel();
             this.pnlCentral = new System.Windows.Forms.Panel();
-            this.btnGravar = new System.Windows.Forms.Button();
-            this.pnlInferior = new System.Windows.Forms.Panel();
             this.lblDescricao = new System.Windows.Forms.Label();
+            this.btnGravar = new System.Windows.Forms.Button();
             this.pnlLinhaDescricao = new System.Windows.Forms.Panel();
             this.imgDescricao = new System.Windows.Forms.PictureBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.pnlInferior = new System.Windows.Forms.Panel();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.pnlCentral.SuspendLayout();
@@ -77,6 +77,7 @@
             this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnVoltar.TabIndex = 2;
             this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // pnlEsquerda
             // 
@@ -107,6 +108,17 @@
             this.pnlCentral.Size = new System.Drawing.Size(700, 570);
             this.pnlCentral.TabIndex = 1;
             // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
+            this.lblDescricao.Location = new System.Drawing.Point(33, 32);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(72, 19);
+            this.lblDescricao.TabIndex = 47;
+            this.lblDescricao.Text = "Descrição:";
+            // 
             // btnGravar
             // 
             this.btnGravar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -126,25 +138,7 @@
             this.btnGravar.TabIndex = 12;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
-            // 
-            // pnlInferior
-            // 
-            this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlInferior.Location = new System.Drawing.Point(100, 570);
-            this.pnlInferior.Name = "pnlInferior";
-            this.pnlInferior.Size = new System.Drawing.Size(700, 80);
-            this.pnlInferior.TabIndex = 1;
-            // 
-            // lblDescricao
-            // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(109)))), ((int)(((byte)(206)))));
-            this.lblDescricao.Location = new System.Drawing.Point(33, 32);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(72, 19);
-            this.lblDescricao.TabIndex = 47;
-            this.lblDescricao.Text = "Descrição:";
+            this.btnGravar.Click += new System.EventHandler(this.BtnGravar_Click);
             // 
             // pnlLinhaDescricao
             // 
@@ -178,6 +172,14 @@
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(694, 22);
             this.txtDescricao.TabIndex = 44;
+            // 
+            // pnlInferior
+            // 
+            this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlInferior.Location = new System.Drawing.Point(100, 570);
+            this.pnlInferior.Name = "pnlInferior";
+            this.pnlInferior.Size = new System.Drawing.Size(700, 80);
+            this.pnlInferior.TabIndex = 1;
             // 
             // TelaTipoProduto
             // 

@@ -10,6 +10,8 @@ namespace ProjetoSebo.controller
 {
     public class LocalProdutoController : BaseParaController
     {
+        public const int CAMPO_DESCRICAO = 1;
+
         public LocalValidator Validator { get; set; }
 
         public LocalProdutoController()

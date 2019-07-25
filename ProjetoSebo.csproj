@@ -171,52 +171,70 @@
     <Compile Include="views\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\telas_finais\TelaClientes.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\telas_finais\TelaClientes.Designer.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaClientes.Designer.cs">
       <DependentUpon>TelaClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\telas_finais\TelaCompras.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\telas_finais\TelaCompras.Designer.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaCompras.Designer.cs">
       <DependentUpon>TelaCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\telas_finais\TelaDoacoes.cs">
+    <Compile Include="views\telas_finais\consulta\TelaConsultaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\telas_finais\TelaDoacoes.Designer.cs">
+    <Compile Include="views\telas_finais\consulta\TelaConsultaCliente.Designer.cs">
+      <DependentUpon>TelaConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\telas_finais\consulta\TelaConsultaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_finais\consulta\TelaConsultaProdutos.Designer.cs">
+      <DependentUpon>TelaConsultaProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\telas_finais\inclusao\TelaDoacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_finais\inclusao\TelaDoacoes.Designer.cs">
       <DependentUpon>TelaDoacoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\telas_finais\TelaPreferencias.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaLocal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\telas_finais\TelaPreferencias.Designer.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaLocal.Designer.cs">
+      <DependentUpon>TelaLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\telas_finais\inclusao\TelaPreferencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_finais\inclusao\TelaPreferencias.Designer.cs">
       <DependentUpon>TelaPreferencias.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\telas_finais\TelaProdutos.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\telas_finais\TelaProdutos.Designer.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaProdutos.Designer.cs">
       <DependentUpon>TelaProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\telas_finais\TelaTeste.cs">
+    <Compile Include="views\telas_finais\outras\TelaTeste.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\telas_finais\TelaTeste.Designer.cs">
+    <Compile Include="views\telas_finais\outras\TelaTeste.Designer.cs">
       <DependentUpon>TelaTeste.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\telas_finais\TelaTipoProduto.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaTipoProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\telas_finais\TelaTipoProduto.Designer.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaTipoProduto.Designer.cs">
       <DependentUpon>TelaTipoProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\telas_finais\TelaVendas.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\telas_finais\TelaVendas.Designer.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaVendas.Designer.cs">
       <DependentUpon>TelaVendas.cs</DependentUpon>
     </Compile>
     <Compile Include="views\telas_intermediarias\TelaChamadaProdutos.cs">
@@ -231,10 +249,10 @@
     <Compile Include="views\telas_intermediarias\TelaChamadaUsuarios.Designer.cs">
       <DependentUpon>TelaChamadaUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\telas_finais\TelaUsuarios.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\telas_finais\TelaUsuarios.Designer.cs">
+    <Compile Include="views\telas_finais\inclusao\TelaUsuarios.Designer.cs">
       <DependentUpon>TelaUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="views\components\TituloPanel.cs">
@@ -243,10 +261,10 @@
     <Compile Include="views\components\TituloPanel.Designer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\telas_finais\TelaLogin.cs">
+    <Compile Include="views\telas_finais\outras\TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\telas_finais\TelaLogin.Designer.cs">
+    <Compile Include="views\telas_finais\outras\TelaLogin.Designer.cs">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -264,34 +282,43 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GlobalResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\telas_finais\TelaClientes.resx">
+    <EmbeddedResource Include="views\telas_finais\inclusao\TelaClientes.resx">
       <DependentUpon>TelaClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\telas_finais\TelaCompras.resx">
+    <EmbeddedResource Include="views\telas_finais\inclusao\TelaCompras.resx">
       <DependentUpon>TelaCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\telas_finais\TelaDoacoes.resx">
+    <EmbeddedResource Include="views\telas_finais\consulta\TelaConsultaCliente.resx">
+      <DependentUpon>TelaConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\telas_finais\consulta\TelaConsultaProdutos.resx">
+      <DependentUpon>TelaConsultaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\telas_finais\inclusao\TelaDoacoes.resx">
       <DependentUpon>TelaDoacoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\telas_finais\TelaLogin.resx">
+    <EmbeddedResource Include="views\telas_finais\inclusao\TelaLocal.resx">
+      <DependentUpon>TelaLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\telas_finais\outras\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\telas_finais\TelaPreferencias.resx">
+    <EmbeddedResource Include="views\telas_finais\inclusao\TelaPreferencias.resx">
       <DependentUpon>TelaPreferencias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\telas_finais\TelaProdutos.resx">
+    <EmbeddedResource Include="views\telas_finais\inclusao\TelaProdutos.resx">
       <DependentUpon>TelaProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\telas_finais\TelaTeste.resx">
+    <EmbeddedResource Include="views\telas_finais\outras\TelaTeste.resx">
       <DependentUpon>TelaTeste.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\telas_finais\TelaTipoProduto.resx">
+    <EmbeddedResource Include="views\telas_finais\inclusao\TelaTipoProduto.resx">
       <DependentUpon>TelaTipoProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\telas_finais\TelaVendas.resx">
+    <EmbeddedResource Include="views\telas_finais\inclusao\TelaVendas.resx">
       <DependentUpon>TelaVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\telas_intermediarias\TelaChamadaProdutos.resx">
@@ -300,7 +327,7 @@
     <EmbeddedResource Include="views\telas_intermediarias\TelaChamadaUsuarios.resx">
       <DependentUpon>TelaChamadaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\telas_finais\TelaUsuarios.resx">
+    <EmbeddedResource Include="views\telas_finais\inclusao\TelaUsuarios.resx">
       <DependentUpon>TelaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="views\config\packages.config" />
@@ -382,5 +409,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

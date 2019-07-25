@@ -10,6 +10,12 @@ namespace ProjetoSebo.controller
     public class ProdutoController : BaseParaController
     {
         public const int CAMPO_DESCRICAO = 1;
+        public const int CAMPO_CODIGO_BARRAS = 2;
+        public const int CAMPO_TIPO = 3;
+        public const int CAMPO_PRECO = 4;
+        public const int CAMPO_QUANTIDADE = 5;
+        public const int CAMPO_LOCAL = 6;
+        public const int CAMPO_PALAVRAS_CHAVE = 7;
 
         public ProdutoValidator Validator { get; set; }
 

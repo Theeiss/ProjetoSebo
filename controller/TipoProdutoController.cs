@@ -9,6 +9,8 @@ namespace ProjetoSebo.controller
 {
     public class TipoProdutoController : BaseParaController
     {
+        public const int CAMPO_DESCRICAO = 1;
+
         public TipoProdutoValidator Validator { get; set; }
 
         public TipoProdutoController()
@@ -36,7 +38,14 @@ namespace ProjetoSebo.controller
 
         public override ResultadoOperacao OnConsistirDados(BaseParaBean dados)
         {
-            //TipoProduto tipoProduto = dados as TipoProduto;
+            TipoProduto tipoProduto = dados as TipoProduto;
+
+            ResultadoOperacao resultado = this.Validator.ConsistirDescricao(tipoProduto.Descricao);
+            if (resultado.VerificarFalhaOperacao())
+            {
+                resultado.Campo = CAMPO_DESCRICAO;
+                return resultado;
+            }
 
             return new ResultadoSucesso();
         }

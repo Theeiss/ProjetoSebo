@@ -41,6 +41,12 @@ namespace ProjetoSebo.views.telas_finais
             switch(retorno.Campo)
             {
                 case ProdutoController.CAMPO_DESCRICAO: this.txtDescricao.Focus(); break;
+                case ProdutoController.CAMPO_CODIGO_BARRAS: this.txtCodBarras.Focus(); break;
+                case ProdutoController.CAMPO_TIPO: this.cbxTipo.Focus(); break;
+                case ProdutoController.CAMPO_PRECO: this.txtPreco.Focus(); break;
+                case ProdutoController.CAMPO_QUANTIDADE: this.txtQuantidade.Focus(); break;
+                case ProdutoController.CAMPO_LOCAL: this.cbxLocal.Focus(); break;
+                case ProdutoController.CAMPO_PALAVRAS_CHAVE: this.txtPalavrasChave.Focus(); break;
             }
         }
 
