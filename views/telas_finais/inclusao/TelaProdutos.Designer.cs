@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             ProjetoSebo.model.TipoProduto tipoProduto1 = new ProjetoSebo.model.TipoProduto();
             this.pnlCentral = new System.Windows.Forms.Panel();
+            this.txtQuantidade = new ProjetoSebo.views.components.TextBoxValor();
+            this.txtPreco = new ProjetoSebo.views.components.TextBoxValor();
+            this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
             this.lblPalavrasChave = new System.Windows.Forms.Label();
             this.lblLocal = new System.Windows.Forms.Label();
             this.lblQuantidade = new System.Windows.Forms.Label();
@@ -62,9 +65,6 @@
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.lblIdentificacaoTela = new System.Windows.Forms.Label();
-            this.txtPreco = new ProjetoSebo.views.components.TextBoxValor();
-            this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
-            this.txtQuantidade = new ProjetoSebo.views.components.TextBoxValor();
             this.pnlCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPreco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPalavraChave)).BeginInit();
@@ -112,6 +112,45 @@
             this.pnlCentral.Name = "pnlCentral";
             this.pnlCentral.Size = new System.Drawing.Size(700, 490);
             this.pnlCentral.TabIndex = 2;
+            // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.BackColor = System.Drawing.SystemColors.Control;
+            this.txtQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtQuantidade.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantidade.Location = new System.Drawing.Point(403, 260);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(294, 22);
+            this.txtQuantidade.TabIndex = 0;
+            this.txtQuantidade.Tipo = ProjetoSebo.views.components.TextBoxValor.TipoDado.dinheiro;
+            this.txtQuantidade.Valor = 0D;
+            // 
+            // txtPreco
+            // 
+            this.txtPreco.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPreco.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreco.Location = new System.Drawing.Point(3, 260);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(297, 22);
+            this.txtPreco.TabIndex = 1;
+            this.txtPreco.Tipo = ProjetoSebo.views.components.TextBoxValor.TipoDado.dinheiro;
+            this.txtPreco.Valor = 0D;
+            // 
+            // cbxTipo
+            // 
+            this.cbxTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxTipo.BackColor = System.Drawing.SystemColors.Control;
+            this.cbxTipo.DropDownWidth = 250;
+            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipo.Location = new System.Drawing.Point(0, 186);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(300, 29);
+            this.cbxTipo.TabIndex = 2;
+            tipoProduto1.Descricao = null;
+            tipoProduto1.Id = 0;
+            this.cbxTipo.TipoProdutoSelecionado = tipoProduto1;
             // 
             // lblPalavrasChave
             // 
@@ -207,21 +246,6 @@
             this.imgPreco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPreco.TabIndex = 41;
             this.imgPreco.TabStop = false;
-            // 
-            // cbxLocal
-            // 
-            //this.cbxLocal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            //| System.Windows.Forms.AnchorStyles.Right)));
-            //this.cbxLocal.BackColor = System.Drawing.SystemColors.Control;
-            //this.cbxLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            //this.cbxLocal.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //this.cbxLocal.ForeColor = System.Drawing.Color.Black;
-            //this.cbxLocal.FormattingEnabled = true;
-            //this.cbxLocal.Location = new System.Drawing.Point(1, 327);
-            //this.cbxLocal.Name = "cbxLocal";
-            //this.cbxLocal.Size = new System.Drawing.Size(694, 29);
-            //this.cbxLocal.TabIndex = 10;
-            //this.cbxLocal.Tag = "";
             // 
             // pnlLinhaPalavrasChave
             // 
@@ -453,19 +477,6 @@
             this.lblIdentificacaoTela.Size = new System.Drawing.Size(118, 31);
             this.lblIdentificacaoTela.TabIndex = 4;
             this.lblIdentificacaoTela.Text = "Produtos";
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescricao.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescricao.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.ForeColor = System.Drawing.Color.Black;
-            this.txtDescricao.Location = new System.Drawing.Point(3, 50);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(694, 22);
-            this.txtDescricao.TabIndex = 5;
             // 
             // TelaProdutos
             // 

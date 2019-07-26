@@ -25,7 +25,7 @@ namespace ProjetoSebo.controller
 
             TipoProduto retorno = BuscarPelaDescricao(tipoProduto.Descricao);
 
-            if (retorno.Id == 0)
+            if (retorno == null)
             {
                 if( ExibirQuestionamento(string.Format("O tipo de produto {0} não existe no sistema. Deseja adicioná-lo?", tipoProduto.Descricao), TipoQuestionamento.ExcetoTelaCadastro) )
                 {
@@ -36,10 +36,6 @@ namespace ProjetoSebo.controller
                 {
                     return new ResultadoSilencioso();
                 }
-            }
-            else
-            {
-                tipoProduto = retorno;
             }
 
             return new ResultadoSucesso();
@@ -59,19 +55,33 @@ namespace ProjetoSebo.controller
             return new ResultadoSucesso();
         }
 
-        public List<TipoProduto> BuscarTodos()
+        public List<TipoProduto> Buscar()
         {
             return Context.TiposProduto.ToList();
         }
 
+        public List<TipoProduto> Buscar(TipoProduto filtro)
+        {
+            IQueryable<TipoProduto> query = from tipoProduto in Context.TiposProduto
+                                            where (filtro.Id == 0 || tipoProduto.Id == filtro.Id) &&
+                                                  (string.IsNullOrEmpty(filtro.Descricao) || tipoProduto.Descricao == filtro.Descricao)
+                                            select tipoProduto;
+
+            return query.ToList();
+        }
+
         public TipoProduto BuscarPelaDescricao(string descricao)
         {
-            IQueryable<TipoProduto> resultado = Context.TiposProduto.Where(t => t.Descricao == descricao);
+            TipoProduto filtro = new TipoProduto()
+            {
+                Descricao = descricao
+            };
+            List<TipoProduto> resultado = Buscar(filtro);
 
-            if (resultado.Count() > 0)
-                return resultado.First();
+            if (resultado.Count == 0)
+                return null;
 
-            return new TipoProduto();
+            return resultado.First();
         }
     }
 }

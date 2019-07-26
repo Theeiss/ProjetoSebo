@@ -34,7 +34,7 @@ namespace ProjetoSebo.views.components
 
         private void Carregar()
         {
-            this.TiposProduto = this.Controller.BuscarTodos();
+            this.TiposProduto = this.Controller.Buscar();
 
             this.TiposProduto.Sort();
 
