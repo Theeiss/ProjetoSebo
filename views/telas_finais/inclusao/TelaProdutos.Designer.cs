@@ -210,18 +210,18 @@
             // 
             // cbxLocal
             // 
-            this.cbxLocal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxLocal.BackColor = System.Drawing.SystemColors.Control;
-            this.cbxLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxLocal.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxLocal.ForeColor = System.Drawing.Color.Black;
-            this.cbxLocal.FormattingEnabled = true;
-            this.cbxLocal.Location = new System.Drawing.Point(1, 327);
-            this.cbxLocal.Name = "cbxLocal";
-            this.cbxLocal.Size = new System.Drawing.Size(694, 29);
-            this.cbxLocal.TabIndex = 10;
-            this.cbxLocal.Tag = "";
+            //this.cbxLocal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            //| System.Windows.Forms.AnchorStyles.Right)));
+            //this.cbxLocal.BackColor = System.Drawing.SystemColors.Control;
+            //this.cbxLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.cbxLocal.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.cbxLocal.ForeColor = System.Drawing.Color.Black;
+            //this.cbxLocal.FormattingEnabled = true;
+            //this.cbxLocal.Location = new System.Drawing.Point(1, 327);
+            //this.cbxLocal.Name = "cbxLocal";
+            //this.cbxLocal.Size = new System.Drawing.Size(694, 29);
+            //this.cbxLocal.TabIndex = 10;
+            //this.cbxLocal.Tag = "";
             // 
             // pnlLinhaPalavrasChave
             // 
