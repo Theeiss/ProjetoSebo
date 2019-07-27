@@ -106,7 +106,7 @@ namespace ProjetoSebo.views
             nova.Dock = DockStyle.Fill;
             this.pnlPrincipal.Controls.Add(nova);
             this.pnlPrincipal.Tag = nova;
-            nova.Show();
+           nova.Show();
         }
 
         private void BtnProdutos_Click(object sender, EventArgs e)
@@ -148,25 +148,28 @@ namespace ProjetoSebo.views
             AbrirTelaInterna(telaCompras);
         }
 
-        private void BtnDoações_Click(object sender, EventArgs e)
+        private void BtnDoacoes_Click(object sender, EventArgs e)
         {
             TelaDoacoes telaDoacoes = new TelaDoacoes();
             AbrirTelaInterna(telaDoacoes);
         }
 
-        private void BtnConsultar_Click(object sender, EventArgs e)
+        private void BtnConsulta_Click(object sender, EventArgs e)
         {
-            
+            TelaConsultaProdutos telaConsultaProdutos = new TelaConsultaProdutos();
+            AbrirTelaInterna(telaConsultaProdutos);
         }
 
-        private void BtnIncluir_Click(object sender, EventArgs e)
+        private void BtnInclusao_Click(object sender, EventArgs e)
         {
-
+            TelaProdutos telaProdutos = new TelaProdutos(_context);
+            AbrirTelaInterna(telaProdutos);
         }
 
         private void BtnRelatorio_Click(object sender, EventArgs e)
         {
-
+            TelaTipoProduto telaTipoProduto = new TelaTipoProduto(_context);
+            AbrirTelaInterna(telaTipoProduto);
         }
     }
 }

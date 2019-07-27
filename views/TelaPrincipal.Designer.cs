@@ -31,13 +31,16 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
             this.lblNomeSistema = new System.Windows.Forms.Label();
+            this.btnRelatorio = new System.Windows.Forms.Button();
+            this.btnConsulta = new System.Windows.Forms.Button();
+            this.imgLogoSistema = new System.Windows.Forms.PictureBox();
+            this.btnInclusao = new System.Windows.Forms.Button();
             this.btnRestaurar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
             this.pnlBotoes = new System.Windows.Forms.Panel();
-            this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnPreferencias = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
@@ -48,16 +51,13 @@
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.PictureBox();
-            this.btnRelatorio = new System.Windows.Forms.Button();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.imgLogoSistema = new System.Windows.Forms.PictureBox();
-            this.btnIncluir = new System.Windows.Forms.Button();
+            this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.pnlBarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogoSistema)).BeginInit();
             this.pnlMenuLateral.SuspendLayout();
             this.pnlBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLogoSistema)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBarraTitulo
@@ -65,9 +65,9 @@
             this.pnlBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(57)))), ((int)(((byte)(90)))));
             this.pnlBarraTitulo.Controls.Add(this.lblNomeSistema);
             this.pnlBarraTitulo.Controls.Add(this.btnRelatorio);
-            this.pnlBarraTitulo.Controls.Add(this.btnConsultar);
+            this.pnlBarraTitulo.Controls.Add(this.btnConsulta);
             this.pnlBarraTitulo.Controls.Add(this.imgLogoSistema);
-            this.pnlBarraTitulo.Controls.Add(this.btnIncluir);
+            this.pnlBarraTitulo.Controls.Add(this.btnInclusao);
             this.pnlBarraTitulo.Controls.Add(this.btnRestaurar);
             this.pnlBarraTitulo.Controls.Add(this.btnMinimizar);
             this.pnlBarraTitulo.Controls.Add(this.btnMaximizar);
@@ -89,6 +89,67 @@
             this.lblNomeSistema.Size = new System.Drawing.Size(112, 21);
             this.lblNomeSistema.TabIndex = 3;
             this.lblNomeSistema.Text = "Sistema Sebo";
+            // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.FlatAppearance.BorderSize = 0;
+            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelatorio.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
+            this.btnRelatorio.Image = global::ProjetoSebo.Properties.Resources.relatorio_titulo;
+            this.btnRelatorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRelatorio.Location = new System.Drawing.Point(513, 5);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(116, 30);
+            this.btnRelatorio.TabIndex = 4;
+            this.btnRelatorio.Text = "Relatório";
+            this.btnRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRelatorio.UseVisualStyleBackColor = true;
+            this.btnRelatorio.Click += new System.EventHandler(this.BtnRelatorio_Click);
+            // 
+            // btnConsulta
+            // 
+            this.btnConsulta.FlatAppearance.BorderSize = 0;
+            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsulta.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsulta.ForeColor = System.Drawing.Color.White;
+            this.btnConsulta.Image = global::ProjetoSebo.Properties.Resources.consultar;
+            this.btnConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsulta.Location = new System.Drawing.Point(379, 5);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(116, 30);
+            this.btnConsulta.TabIndex = 3;
+            this.btnConsulta.Text = "Consulta";
+            this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.BtnConsulta_Click);
+            // 
+            // imgLogoSistema
+            // 
+            this.imgLogoSistema.Image = global::ProjetoSebo.Properties.Resources.line;
+            this.imgLogoSistema.Location = new System.Drawing.Point(7, 3);
+            this.imgLogoSistema.Name = "imgLogoSistema";
+            this.imgLogoSistema.Size = new System.Drawing.Size(35, 35);
+            this.imgLogoSistema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgLogoSistema.TabIndex = 2;
+            this.imgLogoSistema.TabStop = false;
+            // 
+            // btnInclusao
+            // 
+            this.btnInclusao.FlatAppearance.BorderSize = 0;
+            this.btnInclusao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInclusao.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInclusao.ForeColor = System.Drawing.Color.White;
+            this.btnInclusao.Image = global::ProjetoSebo.Properties.Resources.adicionar_titulo;
+            this.btnInclusao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInclusao.Location = new System.Drawing.Point(250, 5);
+            this.btnInclusao.Name = "btnInclusao";
+            this.btnInclusao.Size = new System.Drawing.Size(98, 30);
+            this.btnInclusao.TabIndex = 2;
+            this.btnInclusao.Text = "Inclusão";
+            this.btnInclusao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInclusao.UseVisualStyleBackColor = true;
+            this.btnInclusao.Click += new System.EventHandler(this.BtnInclusao_Click);
             // 
             // btnRestaurar
             // 
@@ -178,15 +239,6 @@
             this.pnlBotoes.Size = new System.Drawing.Size(250, 536);
             this.pnlBotoes.TabIndex = 2;
             // 
-            // pnlPrincipal
-            // 
-            this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPrincipal.Location = new System.Drawing.Point(250, 40);
-            this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(650, 660);
-            this.pnlPrincipal.TabIndex = 4;
-            // 
             // btnClientes
             // 
             this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -261,7 +313,7 @@
             this.btnDoações.TabIndex = 3;
             this.btnDoações.Text = "Doações";
             this.btnDoações.UseVisualStyleBackColor = true;
-            this.btnDoações.Click += new System.EventHandler(this.BtnDoações_Click);
+            this.btnDoações.Click += new System.EventHandler(this.BtnDoacoes_Click);
             // 
             // btnRelatorios
             // 
@@ -364,69 +416,14 @@
             this.btnMenu.TabStop = false;
             this.btnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
             // 
-            // btnRelatorio
+            // pnlPrincipal
             // 
-            this.btnRelatorio.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnRelatorio.FlatAppearance.BorderSize = 0;
-            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRelatorio.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
-            this.btnRelatorio.Image = global::ProjetoSebo.Properties.Resources.relatorio_titulo;
-            this.btnRelatorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRelatorio.Location = new System.Drawing.Point(513, 5);
-            this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(116, 30);
-            this.btnRelatorio.TabIndex = 4;
-            this.btnRelatorio.Text = "Relatório";
-            this.btnRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRelatorio.UseVisualStyleBackColor = true;
-            this.btnRelatorio.Click += new System.EventHandler(this.BtnRelatorio_Click);
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnConsultar.FlatAppearance.BorderSize = 0;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Image = global::ProjetoSebo.Properties.Resources.consultar;
-            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(379, 5);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(116, 30);
-            this.btnConsultar.TabIndex = 3;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.BtnConsultar_Click);
-            // 
-            // imgLogoSistema
-            // 
-            this.imgLogoSistema.Image = global::ProjetoSebo.Properties.Resources.line;
-            this.imgLogoSistema.Location = new System.Drawing.Point(7, 3);
-            this.imgLogoSistema.Name = "imgLogoSistema";
-            this.imgLogoSistema.Size = new System.Drawing.Size(35, 35);
-            this.imgLogoSistema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgLogoSistema.TabIndex = 2;
-            this.imgLogoSistema.TabStop = false;
-            // 
-            // btnIncluir
-            // 
-            this.btnIncluir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnIncluir.FlatAppearance.BorderSize = 0;
-            this.btnIncluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIncluir.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncluir.ForeColor = System.Drawing.Color.White;
-            this.btnIncluir.Image = global::ProjetoSebo.Properties.Resources.adicionar_titulo;
-            this.btnIncluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIncluir.Location = new System.Drawing.Point(250, 5);
-            this.btnIncluir.Name = "btnIncluir";
-            this.btnIncluir.Size = new System.Drawing.Size(98, 30);
-            this.btnIncluir.TabIndex = 2;
-            this.btnIncluir.Text = "Incluir";
-            this.btnIncluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIncluir.UseVisualStyleBackColor = true;
-            this.btnIncluir.Click += new System.EventHandler(this.BtnIncluir_Click);
+            this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPrincipal.Location = new System.Drawing.Point(250, 40);
+            this.pnlPrincipal.Name = "pnlPrincipal";
+            this.pnlPrincipal.Size = new System.Drawing.Size(650, 660);
+            this.pnlPrincipal.TabIndex = 4;
             // 
             // TelaPrincipal
             // 
@@ -442,11 +439,11 @@
             this.Text = "TelaPrincipal";
             this.pnlBarraTitulo.ResumeLayout(false);
             this.pnlBarraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogoSistema)).EndInit();
             this.pnlMenuLateral.ResumeLayout(false);
             this.pnlBotoes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLogoSistema)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -475,7 +472,7 @@
         private System.Windows.Forms.Panel pnlBotoes;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnRelatorio;
-        private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.Button btnIncluir;
+        private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.Button btnInclusao;
     }
 }
