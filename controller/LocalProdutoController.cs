@@ -37,31 +37,36 @@ namespace ProjetoSebo.controller
 
         public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
         {
-            //Local local = dados as Local;
-
             return new ResultadoSucesso();
         }
 
-        public List<LocalProduto> BuscarTodos()
+        public List<LocalProduto> Buscar()
         {
-            List<LocalProduto> lista = new List<LocalProduto>();
+            return Context.LocaisProduto.ToList();
+        }
 
-            foreach(LocalProduto model in Context.LocaisProduto)
-            {
-                lista.Add(model);
-            }
+        public List<LocalProduto> Buscar(LocalProduto filtro)
+        {
+            IQueryable<LocalProduto> query = from localProduto in Context.LocaisProduto
+                                             where (filtro.Id == 0 || localProduto.Id == filtro.Id) &&
+                                                   (string.IsNullOrEmpty(filtro.Descricao) || localProduto.Descricao == filtro.Descricao)
+                                             select localProduto;
 
-            return lista;
+            return query.ToList();
         }
 
         public LocalProduto BuscarPelaDescricao(string descricao)
         {
-            IQueryable<LocalProduto> resultado = Context.LocaisProduto.Where(t => t.Descricao == descricao);
+            LocalProduto filtro = new LocalProduto()
+            {
+                Descricao = descricao
+            };
+            List<LocalProduto> resultado = Buscar(filtro);
 
-            if (resultado.Count() > 0)
-                return resultado.First();
+            if (resultado.Count == 0)
+                return null;
 
-            return new LocalProduto();
+            return resultado.First();
         }
     }
 }

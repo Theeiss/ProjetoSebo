@@ -54,30 +54,20 @@ namespace ProjetoSebo.controller
             return Context.Produtos.ToList();
         }
 
-        public List<Produto> Buscar(Produto produtoFiltro)
+        public List<Produto> Buscar(Produto filtro)
         {
-            List<Produto> produtos = new List<Produto>();
-            IQueryable<Produto> resultado = Context.Produtos;
+            IQueryable<Produto> query = from produto in Context.Produtos
+                                        where (filtro.Id == 0 || produto.Id == filtro.Id) &&
+                                              (string.IsNullOrEmpty(filtro.Descricao) || produto.Descricao == filtro.Descricao) &&
+                                              (string.IsNullOrEmpty(filtro.CodigoBarras) || produto.CodigoBarras == filtro.CodigoBarras) &&
+                                              (filtro.Preco == 0 || produto.Preco == filtro.Preco) &&
+                                              (filtro.Tipo == null || produto.Tipo.Id == filtro.Tipo.Id) &&
+                                              (filtro.Quantidade == 0 || produto.Quantidade == filtro.Quantidade) &&
+                                              (filtro.Local == null || produto.Local.Id == filtro.Local.Id) &&
+                                              (filtro.PalavrasChave == null || produto.PalavrasChave.Contains(filtro.PalavrasChave))
+                                        select produto;
 
-            if (produtoFiltro.Id != 0)
-                resultado = resultado.Where(produto => produto.Id == produtoFiltro.Id);
-
-            if (!string.IsNullOrEmpty(produtoFiltro.Descricao))
-                resultado = resultado.Where(produto => produto.Descricao == produtoFiltro.Descricao);
-
-            if (!string.IsNullOrEmpty(produtoFiltro.CodigoBarras))
-                resultado = resultado.Where(produto => produto.CodigoBarras == produtoFiltro.CodigoBarras);
-
-            if (produtoFiltro.Tipo != null)
-                resultado = resultado.Where(produto => produto.Tipo == produtoFiltro.Tipo);
-
-            if (produtoFiltro.Local != null)
-                resultado = resultado.Where(produto => produto.Local == produtoFiltro.Local);
-
-            if (!string.IsNullOrEmpty(produtoFiltro.PalavrasChave))
-                resultado = resultado.Where(produto => produto.PalavrasChave.Contains(produto.PalavrasChave)); //Tem que trocar para ser uma lista de string.
-
-            return resultado.ToList();
+            return query.ToList();
         }
     }
 }

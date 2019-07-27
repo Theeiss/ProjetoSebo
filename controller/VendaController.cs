@@ -3,6 +3,7 @@ using ProjetoSebo.model;
 using ProjetoSebo.validator;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjetoSebo.controller
 {
@@ -76,6 +77,22 @@ namespace ProjetoSebo.controller
             }
 
             return new ResultadoSucesso();
+        }
+
+        public List<Venda> Buscar()
+        {
+            return Context.Vendas.ToList();
+        }
+
+        public List<Venda> Buscar(Venda filtro)
+        {
+            IQueryable<Venda> query = from venda in Context.Vendas
+                                      where (filtro.Id == 0 || venda.Id == filtro.Id) &&
+                                            (filtro.DataHoraVenda == DateTime.MinValue || venda.DataHoraVenda == filtro.DataHoraVenda) &&
+                                            (filtro.Cliente == null || venda.Cliente == filtro.Cliente)
+                                      select venda;
+
+            return query.ToList();
         }
     }
 }

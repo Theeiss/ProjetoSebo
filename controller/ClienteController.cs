@@ -1,6 +1,9 @@
 ﻿using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.validator;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjetoSebo.controller
 {
@@ -66,6 +69,27 @@ namespace ProjetoSebo.controller
             }
 
             return new ResultadoSucesso();
+        }
+
+        public List<Cliente> Buscar()
+        {
+            return Context.Clientes.ToList();
+        }
+
+        public List<Cliente> Buscar(Cliente filtro)
+        {
+            IQueryable<Cliente> query = from cliente in Context.Clientes
+                                        where (filtro.Id == 0 || cliente.Id == filtro.Id) &&
+                                              (string.IsNullOrEmpty(filtro.Nome) || cliente.Nome == filtro.Nome) &&
+                                              (string.IsNullOrEmpty(filtro.Cpf) || cliente.Cpf == filtro.Cpf) &&
+                                              (filtro.DataNascimento == DateTime.MinValue || cliente.DataNascimento == filtro.DataNascimento) &&
+                                              (filtro.Sexo == Cliente.TipoSexo.Nenhum || cliente.Sexo == filtro.Sexo) &&
+                                              (string.IsNullOrEmpty(filtro.Telefone) || cliente.Telefone == filtro.Telefone) &&
+                                              (string.IsNullOrEmpty(filtro.Email) || cliente.Email == filtro.Email) &&
+                                              (string.IsNullOrEmpty(filtro.Observacao) || cliente.Observacao == filtro.Observacao)
+                                        select cliente;
+
+            return query.ToList();
         }
     }
 }

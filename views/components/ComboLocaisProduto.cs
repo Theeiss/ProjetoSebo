@@ -21,7 +21,7 @@ namespace ProjetoSebo.views.components
 
         private void Carregar()
         {
-            this.Locais = this.Controller.BuscarTodos();
+            this.Locais = this.Controller.Buscar();
 
             this.Locais.Sort();
 

@@ -1,6 +1,7 @@
 ﻿using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.validator;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ProjetoSebo.controller
@@ -52,6 +53,22 @@ namespace ProjetoSebo.controller
                 return new ResultadoAviso("Este login já foi utilizado por outro usuário.");
 
             return new ResultadoSucesso();
-        }        
+        }     
+        
+        public List<Usuario> Buscar()
+        {
+            return Context.Usuarios.ToList();
+        }
+
+        public List<Usuario> Buscar(Usuario filtro)
+        {
+            IQueryable<Usuario> query = from usuario in Context.Usuarios
+                                        where (filtro.Id == 0 || usuario.Id == filtro.Id) &&
+                                              (string.IsNullOrEmpty(filtro.Login) || usuario.Login == filtro.Login) &&
+                                              (string.IsNullOrEmpty(filtro.Senha) || usuario.Senha == filtro.Senha)
+                                        select usuario;
+
+            return query.ToList();
+        }
     }
 }
