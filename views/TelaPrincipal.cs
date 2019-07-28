@@ -1,5 +1,6 @@
 ﻿using ProjetoSebo.dao;
 using ProjetoSebo.views.telas_finais;
+using ProjetoSebo.views.telas_finais.inclusao;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -117,7 +118,7 @@ namespace ProjetoSebo.views
 
         private void BtnVendas_Click(object sender, EventArgs e)
         {
-            TelaVendas telaVendas = new TelaVendas(_context);
+            TelaVendas2 telaVendas = new TelaVendas2();
             AbrirTelaInterna(telaVendas);
         }
 

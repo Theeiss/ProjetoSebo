@@ -208,6 +208,12 @@
     <Compile Include="views\telas_finais\inclusao\TelaProdutos.Designer.cs">
       <DependentUpon>TelaProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\telas_finais\inclusao\TelaVendas2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_finais\inclusao\TelaVendas2.Designer.cs">
+      <DependentUpon>TelaVendas2.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\telas_finais\outras\TelaTeste.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +295,9 @@
     <EmbeddedResource Include="views\telas_finais\inclusao\TelaLocal.resx">
       <DependentUpon>TelaLocal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\telas_finais\inclusao\TelaVendas2.resx">
+      <DependentUpon>TelaVendas2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\telas_finais\outras\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,6 +366,8 @@
     <None Include="images\email.png" />
     <None Include="images\imagem.png" />
     <None Include="images\feito.png" />
+    <None Include="images\impirmir.png" />
+    <None Include="images\imprimir.png" />
     <Content Include="images\livro.png" />
     <None Include="images\local.png" />
     <Content Include="images\logo.png" />
@@ -380,6 +391,7 @@
     <None Include="images\usuario_login.png" />
     <Content Include="images\venda.png" />
     <None Include="images\voltar.png" />
+    <None Include="images\vender.png" />
     <Content Include="views\config\MySql.Data.dll" />
     <None Include="Resources\Logo.png" />
   </ItemGroup>
