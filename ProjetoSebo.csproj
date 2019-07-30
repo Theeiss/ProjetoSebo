@@ -125,9 +125,6 @@
     <Compile Include="views\components\BaseParaTelas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\components\ComboLocaisProduto.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="views\components\ComboTipoProduto.cs">
       <SubType>Component</SubType>
     </Compile>
