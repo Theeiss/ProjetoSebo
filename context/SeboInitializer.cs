@@ -28,6 +28,15 @@ namespace ProjetoSebo.dao
 
             tiposProduto.ForEach(tipo => context.TiposProduto.Add(tipo));
 
+            var locaisProduto = new List<LocalProduto>
+            {
+                new LocalProduto{Descricao="Prateleira A"},
+                new LocalProduto{Descricao="Prateleira B"},
+                new LocalProduto{Descricao="Prateleira C"}
+            };
+
+            locaisProduto.ForEach(local => context.LocaisProduto.Add(local));
+
             context.SaveChanges();
         }
     }
