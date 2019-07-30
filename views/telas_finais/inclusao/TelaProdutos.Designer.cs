@@ -29,8 +29,10 @@
         protected override void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            ProjetoSebo.model.LocalProduto localProduto1 = new ProjetoSebo.model.LocalProduto();
             ProjetoSebo.model.TipoProduto tipoProduto1 = new ProjetoSebo.model.TipoProduto();
             this.pnlCentral = new System.Windows.Forms.Panel();
+            this.cbxLocal = new ProjetoSebo.views.components.ComboLocaisProduto(this.components);
             this.txtQuantidade = new ProjetoSebo.views.components.TextBoxValor();
             this.txtPreco = new ProjetoSebo.views.components.TextBoxValor();
             this.cbxTipo = new ProjetoSebo.views.components.ComboTipoProduto(this.components);
@@ -79,6 +81,7 @@
             // 
             // pnlCentral
             // 
+            this.pnlCentral.Controls.Add(this.cbxLocal);
             this.pnlCentral.Controls.Add(this.txtQuantidade);
             this.pnlCentral.Controls.Add(this.txtPreco);
             this.pnlCentral.Controls.Add(this.cbxTipo);
@@ -112,6 +115,22 @@
             this.pnlCentral.Name = "pnlCentral";
             this.pnlCentral.Size = new System.Drawing.Size(700, 490);
             this.pnlCentral.TabIndex = 2;
+            // 
+            // cbxLocal
+            // 
+            this.cbxLocal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxLocal.BackColor = System.Drawing.SystemColors.Control;
+            this.cbxLocal.DropDownWidth = 250;
+            this.cbxLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxLocal.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxLocal.FormattingEnabled = true;
+            localProduto1.Descricao = null;
+            localProduto1.Id = 0;
+            this.cbxLocal.LocalProdutoSelecionado = localProduto1;
+            this.cbxLocal.Location = new System.Drawing.Point(3, 327);
+            this.cbxLocal.Name = "cbxLocal";
+            this.cbxLocal.Size = new System.Drawing.Size(300, 29);
+            this.cbxLocal.TabIndex = 50;
             // 
             // txtQuantidade
             // 
@@ -544,5 +563,6 @@
         private components.ComboTipoProduto cbxTipo;
         private System.Windows.Forms.TextBox txtDescricao;
         private components.TextBoxValor txtQuantidade;
+        private components.ComboLocaisProduto cbxLocal;
     }
 }

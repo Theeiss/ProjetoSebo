@@ -23,12 +23,18 @@ namespace ProjetoSebo.controller
             if (resultado.VerificarFalhaOperacao())
                 return resultado;
 
-            if (Context.LocaisProduto.Where(t => t.Descricao == local.Descricao).Count() == 0)
+            LocalProduto retorno = BuscarPelaDescricao(local.Descricao);
+
+            if (retorno == null)
             {
                 if (ExibirQuestionamento(string.Format("O local {0} não existe no sistema. Deseja adicioná-lo?", local.Descricao), TipoQuestionamento.ExcetoTelaCadastro))
                 {
                     Context.LocaisProduto.Add(local);
                     Context.SaveChanges();
+                }
+                else
+                {
+                    return new ResultadoSilencioso();
                 }
             }
 

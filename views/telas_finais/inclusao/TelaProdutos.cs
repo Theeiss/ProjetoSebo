@@ -13,6 +13,7 @@ namespace ProjetoSebo.views.telas_finais
             base(context, new ProdutoController())
         {
             this.cbxTipo.SetContext(context);
+            this.cbxLocal.SetContext(context);
         }
 
         private void BtnGravar_Click(object sender, System.EventArgs e)
@@ -24,6 +25,7 @@ namespace ProjetoSebo.views.telas_finais
                 Tipo = this.cbxTipo.TipoProdutoSelecionado,
                 Preco = this.txtPreco.Valor,
                 Quantidade = Convert.ToInt32(this.txtQuantidade.Valor),
+                Local = this.cbxLocal.LocalProdutoSelecionado,
                 PalavrasChave = this.txtPalavrasChave.Text
             };
 
@@ -43,7 +45,7 @@ namespace ProjetoSebo.views.telas_finais
                 case ProdutoController.CAMPO_TIPO: this.cbxTipo.Focus(); break;
                 case ProdutoController.CAMPO_PRECO: this.txtPreco.Focus(); break;
                 case ProdutoController.CAMPO_QUANTIDADE: this.txtQuantidade.Focus(); break;
-                //case ProdutoController.CAMPO_LOCAL: this.cbxLocal.Focus(); break;
+                case ProdutoController.CAMPO_LOCAL: this.cbxLocal.Focus(); break;
                 case ProdutoController.CAMPO_PALAVRAS_CHAVE: this.txtPalavrasChave.Focus(); break;
             }
         }
@@ -55,6 +57,9 @@ namespace ProjetoSebo.views.telas_finais
             this.txtPreco.Clear();
             this.txtQuantidade.Clear();
             this.txtPalavrasChave.Clear();
+
+            this.cbxTipo.Limpar();
+            this.cbxLocal.Limpar();
 
             this.txtDescricao.Focus();
         }

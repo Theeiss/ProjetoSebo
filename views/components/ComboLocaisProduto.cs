@@ -9,23 +9,23 @@ using System.Windows.Forms;
 
 namespace ProjetoSebo.views.components
 {
-    public partial class ComboTipoProduto : ComboBox
+    public partial class ComboLocaisProduto : ComboBox
     {
-        private TipoProdutoController Controller { get; set; }
-        private List<TipoProduto> TiposProduto { get; set; }
-        public TipoProduto TipoProdutoSelecionado { get; set; }
-        public ComboTipoProduto()
+        private LocalProdutoController Controller { get; set; }
+        private List<LocalProduto> LocaisProduto { get; set; }
+        public LocalProduto LocalProdutoSelecionado { get; set; }
+        public ComboLocaisProduto()
         {
-            this.Controller = new TipoProdutoController();
-            this.TipoProdutoSelecionado = new TipoProduto();
+            this.Controller = new LocalProdutoController();
+            this.LocalProdutoSelecionado = new LocalProduto();
 
             InitializeComponent();
         }
 
-        public ComboTipoProduto(IContainer container)
+        public ComboLocaisProduto(IContainer container)
         {
-            this.Controller = new TipoProdutoController();
-            this.TipoProdutoSelecionado = new TipoProduto();
+            this.Controller = new LocalProdutoController();
+            this.LocalProdutoSelecionado = new LocalProduto();
 
             container.Add(this);
 
@@ -34,14 +34,14 @@ namespace ProjetoSebo.views.components
 
         private void Carregar()
         {
-            this.TiposProduto = this.Controller.Buscar();
+            this.LocaisProduto = this.Controller.Buscar();
 
-            this.TiposProduto.Sort();
+            this.LocaisProduto.Sort();
 
             this.Items.Clear();
-            this.TiposProduto.ForEach(tipo => this.Items.Add(tipo.Descricao));
+            this.LocaisProduto.ForEach(tipo => this.Items.Add(tipo.Descricao));
 
-            this.TipoProdutoSelecionado = new TipoProduto();
+            this.LocalProdutoSelecionado = new LocalProduto();
         }
 
         protected override void OnDropDown(EventArgs e)
@@ -56,12 +56,12 @@ namespace ProjetoSebo.views.components
             if (this.Text.Length == 0)
                 return;
 
-            TipoProduto tipoProduto = new TipoProduto
+            LocalProduto localProduto = new LocalProduto
             {
                 Descricao = this.Text
             };
 
-            ResultadoOperacao resultado = Controller.Gravar(tipoProduto);
+            ResultadoOperacao resultado = Controller.Gravar(localProduto);
             if (resultado.VerificarFalhaOperacao())
             {
                 resultado.Exibir();
@@ -70,7 +70,7 @@ namespace ProjetoSebo.views.components
 
             }
 
-            this.TipoProdutoSelecionado = Controller.BuscarPelaDescricao(this.Text);
+            this.LocalProdutoSelecionado = Controller.BuscarPelaDescricao(this.Text);
 
             base.OnLostFocus(e);
         }
@@ -84,12 +84,12 @@ namespace ProjetoSebo.views.components
 
         protected override void OnSelectedItemChanged(EventArgs e)
         {
-            this.TipoProdutoSelecionado = new TipoProduto();
+            this.LocalProdutoSelecionado = new LocalProduto();
 
             if (this.Text.Length == 0)
                 return;
 
-            this.TipoProdutoSelecionado = Controller.BuscarPelaDescricao(this.Text);
+            this.LocalProdutoSelecionado = Controller.BuscarPelaDescricao(this.Text);
 
             base.OnLostFocus(e);
         }
@@ -97,7 +97,7 @@ namespace ProjetoSebo.views.components
         public void Limpar()
         {
             this.Text = "";
-            this.TipoProdutoSelecionado = new TipoProduto();
+            this.LocalProdutoSelecionado = new LocalProduto();
         }
     }
 }
