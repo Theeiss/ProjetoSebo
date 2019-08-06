@@ -2,6 +2,8 @@
 using ProjetoSebo.model;
 using ProjetoSebo.validator;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 
 namespace ProjetoSebo.controller
@@ -19,11 +21,13 @@ namespace ProjetoSebo.controller
             Validator = new UsuarioValidator();
         }
 
-        public ResultadoOperacao Gravar(Usuario usuario)
+        public ResultadoOperacao Gravar(Usuario usuario, Image foto)
         {
             ResultadoOperacao resultado = ConsistirDados(usuario);
             if (resultado.VerificarFalhaOperacao())
                 return resultado;
+
+            usuario.Foto = ConverterImagemParaArquivo(foto);
 
             Context.Usuarios.Add(usuario);
             Context.SaveChanges();
@@ -69,6 +73,28 @@ namespace ProjetoSebo.controller
                                         select usuario;
 
             return query.ToList();
+        }
+
+        private Arquivo ConverterImagemParaArquivo(Image foto)
+        {
+            Arquivo arquivo = new Arquivo();
+
+            if (foto != Properties.Resources.foto_usuario)
+            {
+                MemoryStream ms = new MemoryStream();
+                foto.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+
+                arquivo.Conteudo = ms.ToArray();
+            }
+
+            return arquivo;
+        }
+
+        public Image LerFotoUsuario(Usuario usuario)
+        {
+            MemoryStream ms = new MemoryStream(usuario.Foto.Conteudo);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
         }
     }
 }

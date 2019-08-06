@@ -5,6 +5,6 @@
         public int Id { get; set; }
         public string Login { get; set; }
         public string Senha { get; set; }
-        public string Foto { get; set; }
+        public Arquivo Foto { get; set; }
     }
 }

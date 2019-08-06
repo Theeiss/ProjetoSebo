@@ -88,6 +88,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="data\model\Arquivo.cs" />
     <Compile Include="data\model\BaseParaModel.cs" />
     <Compile Include="data\model\Cliente.cs" />
     <Compile Include="data\model\ItemVenda.cs" />

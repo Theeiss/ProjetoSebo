@@ -10,12 +10,9 @@ namespace ProjetoSebo.views
 {
     public partial class TelaUsuariosCadastro : BaseParaTela<UsuarioController>
     {
-        private string _foto;
-
         public TelaUsuariosCadastro(SeboContext context) : 
             base(context, new UsuarioController())
         {
-            this._foto = "";
         }
 
         private void BtnGravar_Click(object sender, EventArgs e)
@@ -23,10 +20,10 @@ namespace ProjetoSebo.views
             Usuario usuario = new Usuario()
             {
                 Login = this.txtLogin.Text,
-                Senha = this.txtSenha.Text
+                Senha = this.txtSenha.Text,
             };
 
-            ResultadoOperacao resultado = Controller.Gravar(usuario);
+            ResultadoOperacao resultado = Controller.Gravar(usuario, this.imgFotoUsuario.Image);
             if (resultado.VerificarSucessoOperacao())
             {
                 Limpar();
@@ -68,8 +65,7 @@ namespace ProjetoSebo.views
             if (string.IsNullOrEmpty(telaAbrir.FileName))
                 return;
 
-            this._foto = telaAbrir.FileName;
-            this.imgFotoUsuario.Load(this._foto);
+            this.imgFotoUsuario.Load(telaAbrir.FileName);
         }
     }
 }

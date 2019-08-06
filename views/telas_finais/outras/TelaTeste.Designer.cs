@@ -43,6 +43,11 @@
             this.txtProduto = new ProjetoSebo.views.components.TextBoxProduto(this.components);
             this.btnBuscarProduto = new System.Windows.Forms.Button();
             this.lblResultadoProduto = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.btnFoto = new System.Windows.Forms.Button();
+            this.imgFotoUsuario = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFotoUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // lblValor
@@ -135,7 +140,7 @@
             this.txtProduto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtProduto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtProduto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtProduto.Location = new System.Drawing.Point(128, 259);
+            this.txtProduto.Location = new System.Drawing.Point(125, 259);
             this.txtProduto.Name = "txtProduto";
             this.txtProduto.Produto = null;
             produtoController1.Context = null;
@@ -165,11 +170,50 @@
             this.lblResultadoProduto.TabIndex = 12;
             this.lblResultadoProduto.Text = "Resultado";
             // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(125, 306);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(209, 20);
+            this.txtUsuario.TabIndex = 13;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(78, 309);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
+            this.lblUsuario.TabIndex = 14;
+            this.lblUsuario.Text = "Usuário";
+            // 
+            // btnFoto
+            // 
+            this.btnFoto.Location = new System.Drawing.Point(354, 306);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(75, 23);
+            this.btnFoto.TabIndex = 15;
+            this.btnFoto.Text = "Foto";
+            this.btnFoto.UseVisualStyleBackColor = true;
+            this.btnFoto.Click += new System.EventHandler(this.BtnFoto_Click);
+            // 
+            // imgFotoUsuario
+            // 
+            this.imgFotoUsuario.Location = new System.Drawing.Point(472, 306);
+            this.imgFotoUsuario.Name = "imgFotoUsuario";
+            this.imgFotoUsuario.Size = new System.Drawing.Size(179, 132);
+            this.imgFotoUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFotoUsuario.TabIndex = 16;
+            this.imgFotoUsuario.TabStop = false;
+            // 
             // TelaTeste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.imgFotoUsuario);
+            this.Controls.Add(this.btnFoto);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblResultadoProduto);
             this.Controls.Add(this.btnBuscarProduto);
             this.Controls.Add(this.txtProduto);
@@ -185,6 +229,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaTeste";
             this.Text = "TelaTeste";
+            ((System.ComponentModel.ISupportInitialize)(this.imgFotoUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +248,9 @@
         private components.TextBoxProduto txtProduto;
         private System.Windows.Forms.Button btnBuscarProduto;
         private System.Windows.Forms.Label lblResultadoProduto;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.PictureBox imgFotoUsuario;
     }
 }
