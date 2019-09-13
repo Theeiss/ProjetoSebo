@@ -54,7 +54,7 @@ namespace ProjetoSebo.views.components
             {
                 this.Produto = this._produtos[pesquisa.ToLower()];
             }
-            catch (KeyNotFoundException e)
+            catch (KeyNotFoundException)
             {
                 this.Produto = null;
                 Clear();   

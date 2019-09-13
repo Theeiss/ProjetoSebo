@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using ProjetoSebo.controller;
+using ProjetoSebo.dao;
+using ProjetoSebo.views.components;
 
 namespace ProjetoSebo.views.telas_finais
 {
-    public partial class TelaCompras : Form
+    public partial class TelaCompras : BaseParaTela<ProdutoController> //ToDo: ComprasController
     {
-        public TelaCompras()
+        public TelaCompras(SeboContext context) :
+            base(context, new ProdutoController())
         {
             InitializeComponent();
         }

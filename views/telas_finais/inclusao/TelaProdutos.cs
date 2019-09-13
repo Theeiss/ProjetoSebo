@@ -12,6 +12,10 @@ namespace ProjetoSebo.views.telas_finais
         public TelaProdutos(SeboContext context) :
             base(context, new ProdutoController())
         {
+            base.AtalhoTelaInclusao = this;
+            base.AtalhoTelaConsulta = new TelaConsultaProdutos(Controller.Context);
+            base.AtalhoTelaRelatorio = new TelaTipoProduto(Controller.Context); //Tela apenas para teste
+
             this.cbxTipo.SetContext(context);
             this.cbxLocal.SetContext(context);
         }

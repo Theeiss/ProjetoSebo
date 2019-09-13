@@ -1,4 +1,5 @@
 ﻿using ProjetoSebo.dao;
+using ProjetoSebo.views.components;
 using ProjetoSebo.views.telas_finais;
 using ProjetoSebo.views.telas_finais.inclusao;
 using System;
@@ -10,6 +11,7 @@ namespace ProjetoSebo.views
     public partial class TelaPrincipal : Form
     {
         private readonly SeboContext _context;
+        private IBaseParaTela TelaAberta { get; set; }
 
         const int TAM_MENU_MINIMIZADO = 70;
         const int TAM_MENU_MAXIMIZADO = 250;
@@ -97,7 +99,7 @@ namespace ProjetoSebo.views
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void AbrirTelaInterna(object telaInterna)
+        private void AbrirTelaInterna(object telaInterna, bool abrindoAtalho = false)
         {
             if (this.pnlPrincipal.Controls.Count > 0)
                 this.pnlPrincipal.Controls.RemoveAt(0);
@@ -107,7 +109,17 @@ namespace ProjetoSebo.views
             nova.Dock = DockStyle.Fill;
             this.pnlPrincipal.Controls.Add(nova);
             this.pnlPrincipal.Tag = nova;
-           nova.Show();
+
+            if (!abrindoAtalho)
+            {
+                TelaAberta = telaInterna as IBaseParaTela;
+
+                btnInclusao.Visible = TelaAberta != null && TelaAberta.GetAtalhoTelaInclusao() != null;
+                btnConsulta.Visible = TelaAberta != null && TelaAberta.GetAtalhoTelaConsulta() != null;
+                btnRelatorio.Visible = TelaAberta != null && TelaAberta.GetAtalhoTelaRelatorio() != null;
+            }
+
+            nova.Show();
         }
 
         private void BtnProdutos_Click(object sender, EventArgs e)
@@ -145,32 +157,47 @@ namespace ProjetoSebo.views
 
         private void BtnCompras_Click(object sender, EventArgs e)
         {
-            TelaCompras telaCompras = new TelaCompras();
+            TelaCompras telaCompras = new TelaCompras(_context);
             AbrirTelaInterna(telaCompras);
         }
 
         private void BtnDoacoes_Click(object sender, EventArgs e)
         {
-            TelaDoacoes telaDoacoes = new TelaDoacoes();
+            TelaDoacoes telaDoacoes = new TelaDoacoes(_context);
             AbrirTelaInterna(telaDoacoes);
         }
 
         private void BtnConsulta_Click(object sender, EventArgs e)
         {
-            TelaConsultaProdutos telaConsultaProdutos = new TelaConsultaProdutos();
-            AbrirTelaInterna(telaConsultaProdutos);
+            if (this.TelaAberta == null)
+                return;
+
+            if (this.TelaAberta.GetAtalhoTelaConsulta() != null)
+            {
+                AbrirTelaInterna(this.TelaAberta.GetAtalhoTelaConsulta(), true);
+            }
         }
 
         private void BtnInclusao_Click(object sender, EventArgs e)
         {
-            TelaProdutos telaProdutos = new TelaProdutos(_context);
-            AbrirTelaInterna(telaProdutos);
+            if (this.TelaAberta == null)
+                return;
+
+            if (this.TelaAberta.GetAtalhoTelaInclusao() != null)
+            {
+                AbrirTelaInterna(this.TelaAberta.GetAtalhoTelaInclusao(), true);
+            }
         }
 
         private void BtnRelatorio_Click(object sender, EventArgs e)
         {
-            TelaTipoProduto telaTipoProduto = new TelaTipoProduto(_context);
-            AbrirTelaInterna(telaTipoProduto);
+            if (this.TelaAberta == null)
+                return;
+
+            if (this.TelaAberta.GetAtalhoTelaRelatorio() != null)
+            {
+                AbrirTelaInterna(this.TelaAberta.GetAtalhoTelaRelatorio(), true);
+            }
         }
     }
 }
