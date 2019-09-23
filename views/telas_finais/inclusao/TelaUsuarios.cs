@@ -3,6 +3,7 @@ using ProjetoSebo.dao;
 using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.views.components;
+using ProjetoSebo.views.telas_finais;
 using System;
 using System.Windows.Forms;
 
@@ -13,6 +14,9 @@ namespace ProjetoSebo.views
         public TelaUsuariosCadastro(SeboContext context) : 
             base(context, new UsuarioController())
         {
+            base.AtalhoTelaInclusao = this;
+            base.AtalhoTelaConsulta = new TelaConsultaUsuarios(context);
+            base.AtalhoTelaRelatorio = new TelaTipoProduto(context); //Tela apenas para teste
         }
 
         private void BtnGravar_Click(object sender, EventArgs e)

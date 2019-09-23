@@ -164,6 +164,12 @@
     <Compile Include="views\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\telas_finais\consulta\TelaConsultaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\telas_finais\consulta\TelaConsultaUsuarios.Designer.cs">
+      <DependentUpon>TelaConsultaUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\telas_finais\inclusao\TelaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +290,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GlobalResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\telas_finais\consulta\TelaConsultaUsuarios.resx">
+      <DependentUpon>TelaConsultaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\telas_finais\inclusao\TelaClientes.resx">
       <DependentUpon>TelaClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,7 +344,7 @@
     <EmbeddedResource Include="views\telas_finais\inclusao\TelaUsuarios.resx">
       <DependentUpon>TelaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="views\config\packages.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -347,7 +356,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="views\config\App.config" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="images\codigo_barras.png" />
@@ -399,7 +408,7 @@
     <Content Include="images\venda.png" />
     <None Include="images\voltar.png" />
     <None Include="images\vender.png" />
-    <Content Include="views\config\MySql.Data.dll" />
+    <Content Include="MySql.Data.dll" />
     <None Include="Resources\Logo.png" />
   </ItemGroup>
   <ItemGroup>
