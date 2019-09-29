@@ -384,6 +384,8 @@
     <None Include="images\feito.png" />
     <None Include="images\impirmir.png" />
     <None Include="images\imprimir.png" />
+    <None Include="images\editar_tbl.png" />
+    <None Include="images\excluir_tbl.png" />
     <Content Include="images\livro.png" />
     <None Include="images\local.png" />
     <Content Include="images\logo.png" />

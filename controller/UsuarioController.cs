@@ -35,6 +35,30 @@ namespace ProjetoSebo.controller
             return new ResultadoSucesso("Usuário cadastrado com sucesso.");
         }
 
+        public List<Usuario> Buscar()
+        {
+            return Context.Usuarios.ToList();
+        }
+
+        public List<Usuario> Buscar(Usuario filtro)
+        {
+            IQueryable<Usuario> query = from usuario in Context.Usuarios
+                                        where (filtro.Id == 0 || usuario.Id == filtro.Id) &&
+                                              (string.IsNullOrEmpty(filtro.Login) || usuario.Login == filtro.Login) &&
+                                              (string.IsNullOrEmpty(filtro.Senha) || usuario.Senha == filtro.Senha)
+                                        select usuario;
+
+            return query.ToList();
+        }
+
+        public ResultadoOperacao Excluir(Usuario usuario)
+        {
+            Context.Usuarios.Remove(usuario);
+            Context.SaveChanges();
+
+            return new ResultadoSucesso("Usuário excluído com sucesso.");
+        }
+
         public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
         {
             Usuario usuario = dados as Usuario;
@@ -59,22 +83,6 @@ namespace ProjetoSebo.controller
             return new ResultadoSucesso();
         }     
         
-        public List<Usuario> Buscar()
-        {
-            return Context.Usuarios.ToList();
-        }
-
-        public List<Usuario> Buscar(Usuario filtro)
-        {
-            IQueryable<Usuario> query = from usuario in Context.Usuarios
-                                        where (filtro.Id == 0 || usuario.Id == filtro.Id) &&
-                                              (string.IsNullOrEmpty(filtro.Login) || usuario.Login == filtro.Login) &&
-                                              (string.IsNullOrEmpty(filtro.Senha) || usuario.Senha == filtro.Senha)
-                                        select usuario;
-
-            return query.ToList();
-        }
-
         private Arquivo ConverterImagemParaArquivo(Image foto)
         {
             Arquivo arquivo = new Arquivo();

@@ -1,9 +1,10 @@
 ﻿using ProjetoSebo.controller;
 using ProjetoSebo.dao;
+using ProjetoSebo.error;
+using ProjetoSebo.model;
 using ProjetoSebo.views.components;
 using System;
-using System.Data;
-using System.Linq;
+using System.Windows.Forms;
 
 namespace ProjetoSebo.views.telas_finais
 {
@@ -26,20 +27,63 @@ namespace ProjetoSebo.views.telas_finais
 
         private void CarregarTabela()
         {
-            var data = from cliente in Controller.Buscar()
-                       orderby cliente.Nome
-                       select new
-                       {
-                           cliente.Nome,
-                           cliente.Cpf,
-                           cliente.DataNascimento,
-                           cliente.Sexo,
-                           cliente.Telefone,
-                           cliente.Email,
-                           cliente.Observacao
-                       };
+            this.tblClientes.DataSource = Controller.Buscar();
+        }
 
-            this.tblClientes.DataSource = data.ToList();
+        private void TblClientes_DataBindingComplete(object sender, System.Windows.Forms.DataGridViewBindingCompleteEventArgs e)
+        {
+            int qtdColunas = this.tblClientes.Columns.Count;
+            foreach (DataGridViewColumn coluna in this.tblClientes.Columns)
+            {
+                switch (coluna.Name)
+                {
+                    case "Cpf":
+                        coluna.HeaderText = "CPF";
+                        break;
+                    case "DataNascimento":
+                        coluna.HeaderText = "Data Nascimento";
+                        break;
+                    case "Email":
+                        coluna.HeaderText = "E-mail";
+                        break;
+                    case "Observacao":
+                        coluna.HeaderText = "Observação";
+                        break;
+                    case "Nome":
+                    case "Sexo":
+                    case "Telefone":
+                        break;
+                    case "btnEditar":
+                        coluna.DisplayIndex = qtdColunas - 2;
+                        break;
+                    case "btnExcluir":
+                        coluna.DisplayIndex = qtdColunas - 1;
+                        break;
+                    default:
+                        coluna.Visible = false;
+                        break;
+                }
+                coluna.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
+        }
+
+        private void TblClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Cliente clienteSelecionado = tblClientes.Rows[e.RowIndex].DataBoundItem as Cliente;
+            if (clienteSelecionado == null)
+                return;
+
+            if (this.tblClientes.Columns[e.ColumnIndex] == this.tblClientes.Columns["btnEditar"])
+                MessageBox.Show("Chamaremos a tela de inclusão.", "Sistema Sebo", MessageBoxButtons.OK);
+            else if (this.tblClientes.Columns[e.ColumnIndex] == this.tblClientes.Columns["btnExcluir"])
+            {
+                if (MessageBox.Show("O cliente será excluído. Confirma a operação?", "Sistema Sebo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    ResultadoOperacao resultado = this.Controller.Excluir(clienteSelecionado);
+                    if (resultado.VerificarSucessoOperacao())
+                        CarregarTabela();
+                }
+            }
         }
     }
 }

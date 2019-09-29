@@ -1,8 +1,10 @@
 ﻿using ProjetoSebo.controller;
 using ProjetoSebo.dao;
+using ProjetoSebo.error;
+using ProjetoSebo.model;
 using ProjetoSebo.views.components;
 using ProjetoSebo.views.telas_finais;
-using System.Linq;
+using System.Windows.Forms;
 
 namespace ProjetoSebo.views
 {
@@ -24,14 +26,50 @@ namespace ProjetoSebo.views
 
         private void CarregarTabela()
         {
-            var data = from usuario in Controller.Buscar()
-                       orderby usuario.Login
-                       select new
-                       {
-                           usuario.Login,
-                       };
+            this.tblUsuarios.DataSource = Controller.Buscar();
+        }
 
-            this.tblUsuarios.DataSource = data.ToList();
+        private void TblUsuarios_DataBindingComplete(object sender, System.Windows.Forms.DataGridViewBindingCompleteEventArgs e)
+        {
+            int qtdColunas = this.tblUsuarios.Columns.Count;
+            foreach(DataGridViewColumn coluna in this.tblUsuarios.Columns)
+            {
+                switch(coluna.Name)
+                {
+                    case "Login":
+                        coluna.HeaderText = "Login";
+                        break;
+                    case "btnEditar":
+                        coluna.DisplayIndex = qtdColunas - 2;
+                        break;
+                    case "btnExcluir":
+                        coluna.DisplayIndex = qtdColunas - 1;
+                        break;
+                    default:
+                        coluna.Visible = false;
+                        break;
+                }
+                coluna.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
+        }
+
+        private void TblUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Usuario usuarioSelecionado = tblUsuarios.Rows[e.RowIndex].DataBoundItem as Usuario;
+            if (usuarioSelecionado == null)
+                return;
+            
+            if(this.tblUsuarios.Columns[e.ColumnIndex] == this.tblUsuarios.Columns["btnEditar"])
+                MessageBox.Show("Chamaremos a tela de inclusão.", "Sistema Sebo", MessageBoxButtons.OK);
+            else if(this.tblUsuarios.Columns[e.ColumnIndex] == this.tblUsuarios.Columns["btnExcluir"])
+            {
+                if (MessageBox.Show("O usuário será excluído. Confirma a operação?", "Sistema Sebo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    ResultadoOperacao resultado = this.Controller.Excluir(usuarioSelecionado);
+                    if (resultado.VerificarSucessoOperacao())
+                        CarregarTabela();
+                }
+            }
         }
     }
 }

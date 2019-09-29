@@ -35,20 +35,6 @@ namespace ProjetoSebo.controller
             return new ResultadoSucesso("Produto cadastrado com sucesso.");
         }
 
-        public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
-        {
-            Produto produto = dados as Produto;
-
-            ResultadoOperacao resultado = this.Validator.ConsistirDescricao(produto.Descricao);
-            if (resultado.VerificarFalhaOperacao())
-            {
-                resultado.Campo = CAMPO_DESCRICAO;
-                return resultado;
-            }
-
-            return new ResultadoSucesso();
-        }
-
         public List<Produto> Buscar()
         {
             return Context.Produtos.ToList();
@@ -68,6 +54,28 @@ namespace ProjetoSebo.controller
                                         select produto;
 
             return query.ToList();
+        }
+
+        public ResultadoOperacao Excluir(Produto produto)
+        {
+            Context.Produtos.Remove(produto);
+            Context.SaveChanges();
+
+            return new ResultadoSucesso("Produto excluído com sucesso.");
+        }
+
+        public override ResultadoOperacao OnConsistirDados(BaseParaModel dados)
+        {
+            Produto produto = dados as Produto;
+
+            ResultadoOperacao resultado = this.Validator.ConsistirDescricao(produto.Descricao);
+            if (resultado.VerificarFalhaOperacao())
+            {
+                resultado.Campo = CAMPO_DESCRICAO;
+                return resultado;
+            }
+
+            return new ResultadoSucesso();
         }
     }
 }

@@ -33,9 +33,11 @@
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.pnlDireita = new System.Windows.Forms.Panel();
             this.pnlCentral = new System.Windows.Forms.Panel();
+            this.tblProdutos = new System.Windows.Forms.DataGridView();
+            this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnExcluir = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlInferior = new System.Windows.Forms.Panel();
-            this.tblProdutos = new System.Windows.Forms.DataGridView();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.pnlCentral.SuspendLayout();
@@ -91,6 +93,36 @@
             this.pnlCentral.Size = new System.Drawing.Size(800, 570);
             this.pnlCentral.TabIndex = 1;
             // 
+            // tblProdutos
+            // 
+            this.tblProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnEditar,
+            this.btnExcluir});
+            this.tblProdutos.Location = new System.Drawing.Point(107, 6);
+            this.tblProdutos.Name = "tblProdutos";
+            this.tblProdutos.Size = new System.Drawing.Size(686, 478);
+            this.tblProdutos.TabIndex = 0;
+            this.tblProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TblProdutos_CellContentClick);
+            this.tblProdutos.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TblProdutos_DataBindingComplete);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.HeaderText = "";
+            this.btnEditar.Image = global::ProjetoSebo.Properties.Resources.editar_tbl;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Width = 30;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.HeaderText = "";
+            this.btnExcluir.Image = global::ProjetoSebo.Properties.Resources.excluir_tbl;
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Width = 30;
+            // 
             // pnlEsquerda
             // 
             this.pnlEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
@@ -106,17 +138,6 @@
             this.pnlInferior.Name = "pnlInferior";
             this.pnlInferior.Size = new System.Drawing.Size(700, 80);
             this.pnlInferior.TabIndex = 1;
-            // 
-            // tblProdutos
-            // 
-            this.tblProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblProdutos.Location = new System.Drawing.Point(107, 6);
-            this.tblProdutos.Name = "tblProdutos";
-            this.tblProdutos.Size = new System.Drawing.Size(686, 478);
-            this.tblProdutos.TabIndex = 0;
             // 
             // TelaConsultaProdutos
             // 
@@ -151,5 +172,7 @@
         private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.Label lblIdentificacaoTela;
         private System.Windows.Forms.DataGridView tblProdutos;
+        private System.Windows.Forms.DataGridViewImageColumn btnEditar;
+        private System.Windows.Forms.DataGridViewImageColumn btnExcluir;
     }
 }
