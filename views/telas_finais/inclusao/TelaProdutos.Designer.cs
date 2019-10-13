@@ -141,7 +141,7 @@
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(294, 22);
             this.txtQuantidade.TabIndex = 0;
-            this.txtQuantidade.Tipo = ProjetoSebo.views.components.TextBoxValor.TipoDado.dinheiro;
+            this.txtQuantidade.Tipo = ProjetoSebo.views.components.TextBoxValor.TipoDado.inteiro;
             this.txtQuantidade.Valor = 0D;
             // 
             // txtPreco

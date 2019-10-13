@@ -2,6 +2,7 @@
 using ProjetoSebo.views.components;
 using ProjetoSebo.views.telas_finais;
 using ProjetoSebo.views.telas_finais.inclusao;
+using ProjetoSebo.views.telas_finais.outras;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -151,11 +152,8 @@ namespace ProjetoSebo.views
             //TelaPreferencias telaPreferencias = new TelaPreferencias();
             //AbrirTelaInterna(telaPreferencias);
 
-            //TelaTeste telaTeste = new TelaTeste(_context);
-            //AbrirTelaInterna(telaTeste);
-
-            TelaConsultaUsuarios telaConsultaUsuarios = new TelaConsultaUsuarios(_context);
-            AbrirTelaInterna(telaConsultaUsuarios);
+            TelaTeste telaTeste = new TelaTeste(_context);
+            AbrirTelaInterna(telaTeste);
         }
 
         private void BtnCompras_Click(object sender, EventArgs e)

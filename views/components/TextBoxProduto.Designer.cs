@@ -1,4 +1,6 @@
-﻿namespace ProjetoSebo.views.components
+﻿using System.Windows.Forms;
+
+namespace ProjetoSebo.views.components
 {
     partial class TextBoxProduto
     {
@@ -28,11 +30,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            Lista = new ListBox();
+            this.KeyDown += This_KeyDown;
+            this.KeyUp += This_KeyUp;
 
-            this.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            components = new System.ComponentModel.Container();
         }
 
         #endregion
