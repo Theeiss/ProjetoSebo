@@ -3,11 +3,9 @@ using ProjetoSebo.dao;
 using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.views.components;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
-namespace ProjetoSebo.views.telas_finais
+namespace ProjetoSebo.views.telas_finais.consulta
 {
     public partial class TelaConsultaProdutos : BaseParaTela<ProdutoController>
     {
@@ -24,7 +22,6 @@ namespace ProjetoSebo.views.telas_finais
 
         private void CarregarTabela()
         {
-            List<Produto> produtos = Controller.Buscar();
             this.tblProdutos.DataSource = Controller.Buscar();
         }
 
@@ -43,13 +40,6 @@ namespace ProjetoSebo.views.telas_finais
                         break;
                     case "Preco":
                         coluna.HeaderText = "Preço";
-                        break;
-                    case "PalavrasChave":
-                        coluna.HeaderText = "Palavras-chave";
-                        break;
-                    case "Tipo":
-                    case "Quantidade":
-                    case "Local":
                         break;
                     case "btnEditar":
                         coluna.DisplayIndex = qtdColunas - 2;
@@ -75,10 +65,11 @@ namespace ProjetoSebo.views.telas_finais
                 MessageBox.Show("Chamaremos a tela de inclusão.", "Sistema Sebo", MessageBoxButtons.OK);
             else if (this.tblProdutos.Columns[e.ColumnIndex] == this.tblProdutos.Columns["btnExcluir"])
             {
-                if (MessageBox.Show("O Produto será excluído. Confirma a operação?", "Sistema Sebo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("O produto será excluído. Confirma a operação?", "Sistema Sebo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    ResultadoOperacao resultado = Controller.Excluir(produtoSelecionado);
-                    this.CarregarTabela();
+                    ResultadoOperacao resultado = this.Controller.Excluir(produtoSelecionado);
+                    if (resultado.VerificarSucessoOperacao())
+                        CarregarTabela();
                 }
             }
         }

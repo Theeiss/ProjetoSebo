@@ -21,7 +21,7 @@ namespace ProjetoSebo.views.components
             Controller = new ProdutoController();
 
             InitializeComponent();
-            EncerraLista();
+            EncerrarBusca();
         }
 
         public void SetContext(SeboContext context)
@@ -55,7 +55,7 @@ namespace ProjetoSebo.views.components
             Lista.BringToFront();
         }
 
-        private void EncerraLista()
+        private void EncerrarBusca()
         {
             Lista.Visible = false;
         }
@@ -75,7 +75,7 @@ namespace ProjetoSebo.views.components
                         if (Lista.Visible)
                         {
                             Text = Lista.SelectedItem.ToString();
-                            EncerraLista();
+                            EncerrarBusca();
                             ValorAnterior = Text;
                             this.Select(this.Text.Length, 0);
                             e.Handled = true;
@@ -115,49 +115,54 @@ namespace ProjetoSebo.views.components
 
         private void UpdateListBox()
         {
+            if (this.Valores == null)
+                this.Carregar();
+
             if (Text == ValorAnterior)
                 return;
 
             ValorAnterior = this.Text;
             string word = this.Text;
 
-            if (this.Valores == null)
-                this.Carregar();
+            if (word.Length == 0)
+            {
+                EncerrarBusca();
+                return;
+            }
 
-            if (word.Length > 0)
+            string[] matches = Array.FindAll(this.Valores, x => (x.ToLower().Contains(word.ToLower())));
+
+            if (matches.Length == 0)
             {
-                string[] matches = Array.FindAll(this.Valores, x => (x.ToLower().Contains(word.ToLower())));
-                if (matches.Length > 0)
+                EncerrarBusca();
+                return;
+            }
+
+            MostrarLista();
+            Lista.BeginUpdate();
+            Lista.Items.Clear();
+            Array.ForEach(matches, x => Lista.Items.Add(x));
+            Lista.SelectedIndex = 0;
+            Lista.Height = 0;
+            Lista.Width = 0;
+            Focus();
+            using (Graphics graphics = Lista.CreateGraphics())
+            {
+                for (int i = 0; i < Lista.Items.Count; i++)
                 {
-                    MostrarLista();
-                    Lista.BeginUpdate();
-                    Lista.Items.Clear();
-                    Array.ForEach(matches, x => Lista.Items.Add(x));
-                    Lista.SelectedIndex = 0;
-                    Lista.Height = 0;
-                    Lista.Width = 0;
-                    Focus();
-                    using (Graphics graphics = Lista.CreateGraphics())
-                    {
-                        for (int i = 0; i < Lista.Items.Count; i++)
-                        {
-                            if (i < 20)
-                                Lista.Height += Lista.GetItemHeight(i);
-                            int itemWidth = (int)graphics.MeasureString(((string)Lista.Items[i]) + "_", Lista.Font).Width;
-                            Lista.Width = (Lista.Width < itemWidth) ? itemWidth : this.Width; ;
-                        }
-                    }
-                    Lista.EndUpdate();
-                }
-                else
-                {
-                    EncerraLista();
+                    if (i < 20)
+                        Lista.Height += Lista.GetItemHeight(i);
+                    int itemWidth = (int)graphics.MeasureString(((string)Lista.Items[i]) + "_", Lista.Font).Width;
+                    Lista.Width = (Lista.Width < itemWidth) ? itemWidth : this.Width; ;
                 }
             }
-            else
-            {
-                EncerraLista();
-            }
+            Lista.EndUpdate();
+        }
+
+        protected override void OnLeave(EventArgs e)
+        {
+            EncerrarBusca();
+            base.OnLeave(e);
         }
 
         public List<String> ValoresSelecionados

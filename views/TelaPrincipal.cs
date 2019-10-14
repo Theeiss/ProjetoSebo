@@ -1,6 +1,7 @@
 ﻿using ProjetoSebo.dao;
 using ProjetoSebo.views.components;
 using ProjetoSebo.views.telas_finais;
+using ProjetoSebo.views.telas_finais.consulta;
 using ProjetoSebo.views.telas_finais.inclusao;
 using ProjetoSebo.views.telas_finais.outras;
 using System;
@@ -125,8 +126,11 @@ namespace ProjetoSebo.views
 
         private void BtnProdutos_Click(object sender, EventArgs e)
         {
-            TelaProdutos telaProdutos = new TelaProdutos(_context);
-            AbrirTelaInterna(telaProdutos);
+            //TelaProdutos telaProdutos = new TelaProdutos(_context);
+            //AbrirTelaInterna(telaProdutos);
+
+            TelaConsultaProdutos telaConsultaProdutos = new TelaConsultaProdutos(_context);
+            AbrirTelaInterna(telaConsultaProdutos);
         }
 
         private void BtnVendas_Click(object sender, EventArgs e)

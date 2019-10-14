@@ -1,4 +1,4 @@
-﻿namespace ProjetoSebo.views.telas_finais
+﻿namespace ProjetoSebo.views.telas_finais.consulta
 {
     partial class TelaConsultaProdutos
     {
@@ -26,18 +26,18 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        protected override void InitializeComponent()
+        private void InitializeComponent()
         {
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.lblIdentificacaoTela = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
-            this.pnlDireita = new System.Windows.Forms.Panel();
             this.pnlCentral = new System.Windows.Forms.Panel();
             this.tblProdutos = new System.Windows.Forms.DataGridView();
             this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnExcluir = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlInferior = new System.Windows.Forms.Panel();
+            this.pnlDireita = new System.Windows.Forms.Panel();
+            this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.pnlCentral.SuspendLayout();
@@ -76,21 +76,13 @@
             this.btnVoltar.TabIndex = 5;
             this.btnVoltar.TabStop = false;
             // 
-            // pnlDireita
-            // 
-            this.pnlDireita.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlDireita.Location = new System.Drawing.Point(800, 80);
-            this.pnlDireita.Name = "pnlDireita";
-            this.pnlDireita.Size = new System.Drawing.Size(100, 570);
-            this.pnlDireita.TabIndex = 1;
-            // 
             // pnlCentral
             // 
             this.pnlCentral.Controls.Add(this.tblProdutos);
             this.pnlCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCentral.Location = new System.Drawing.Point(0, 80);
             this.pnlCentral.Name = "pnlCentral";
-            this.pnlCentral.Size = new System.Drawing.Size(800, 570);
+            this.pnlCentral.Size = new System.Drawing.Size(900, 570);
             this.pnlCentral.TabIndex = 1;
             // 
             // tblProdutos
@@ -102,9 +94,9 @@
             this.tblProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnEditar,
             this.btnExcluir});
-            this.tblProdutos.Location = new System.Drawing.Point(107, 6);
+            this.tblProdutos.Location = new System.Drawing.Point(104, 3);
             this.tblProdutos.Name = "tblProdutos";
-            this.tblProdutos.Size = new System.Drawing.Size(686, 478);
+            this.tblProdutos.Size = new System.Drawing.Size(690, 481);
             this.tblProdutos.TabIndex = 0;
             this.tblProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TblProdutos_CellContentClick);
             this.tblProdutos.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TblProdutos_DataBindingComplete);
@@ -114,40 +106,46 @@
             this.btnEditar.HeaderText = "";
             this.btnEditar.Image = global::ProjetoSebo.Properties.Resources.editar_tbl;
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Width = 30;
             // 
             // btnExcluir
             // 
             this.btnExcluir.HeaderText = "";
             this.btnExcluir.Image = global::ProjetoSebo.Properties.Resources.excluir_tbl;
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Width = 30;
+            // 
+            // pnlInferior
+            // 
+            this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlInferior.Location = new System.Drawing.Point(0, 570);
+            this.pnlInferior.Name = "pnlInferior";
+            this.pnlInferior.Size = new System.Drawing.Size(900, 80);
+            this.pnlInferior.TabIndex = 1;
+            // 
+            // pnlDireita
+            // 
+            this.pnlDireita.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlDireita.Location = new System.Drawing.Point(800, 80);
+            this.pnlDireita.Name = "pnlDireita";
+            this.pnlDireita.Size = new System.Drawing.Size(100, 490);
+            this.pnlDireita.TabIndex = 1;
             // 
             // pnlEsquerda
             // 
             this.pnlEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlEsquerda.Location = new System.Drawing.Point(0, 80);
             this.pnlEsquerda.Name = "pnlEsquerda";
-            this.pnlEsquerda.Size = new System.Drawing.Size(100, 570);
+            this.pnlEsquerda.Size = new System.Drawing.Size(100, 490);
             this.pnlEsquerda.TabIndex = 1;
-            // 
-            // pnlInferior
-            // 
-            this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlInferior.Location = new System.Drawing.Point(100, 570);
-            this.pnlInferior.Name = "pnlInferior";
-            this.pnlInferior.Size = new System.Drawing.Size(700, 80);
-            this.pnlInferior.TabIndex = 1;
             // 
             // TelaConsultaProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 650);
-            this.Controls.Add(this.pnlInferior);
             this.Controls.Add(this.pnlEsquerda);
-            this.Controls.Add(this.pnlCentral);
             this.Controls.Add(this.pnlDireita);
+            this.Controls.Add(this.pnlInferior);
+            this.Controls.Add(this.pnlCentral);
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaConsultaProdutos";
@@ -165,10 +163,10 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlSuperior;
-        private System.Windows.Forms.Panel pnlDireita;
         private System.Windows.Forms.Panel pnlCentral;
-        private System.Windows.Forms.Panel pnlEsquerda;
         private System.Windows.Forms.Panel pnlInferior;
+        private System.Windows.Forms.Panel pnlDireita;
+        private System.Windows.Forms.Panel pnlEsquerda;
         private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.Label lblIdentificacaoTela;
         private System.Windows.Forms.DataGridView tblProdutos;

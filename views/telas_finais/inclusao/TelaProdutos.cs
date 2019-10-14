@@ -3,6 +3,7 @@ using ProjetoSebo.dao;
 using ProjetoSebo.error;
 using ProjetoSebo.model;
 using ProjetoSebo.views.components;
+using ProjetoSebo.views.telas_finais.consulta;
 using System;
 
 namespace ProjetoSebo.views.telas_finais
